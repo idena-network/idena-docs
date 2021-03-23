@@ -100,11 +100,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/idena-network/idena-docs/edit/master/',
+          editUrl: 'https://github.com/idena-network/idena-docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/idena-network/idena-docs/edit/master/',
+          editUrl: 'https://github.com/idena-network/idena-docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
