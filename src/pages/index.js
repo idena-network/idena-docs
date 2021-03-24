@@ -56,7 +56,7 @@ const clients = [
 
   {
     caption: 'Idena forum',
-    infoLink: 'https://forum.idena.website/',
+    infoLink: 'https://discuss.idena.website/',
     image: 'img/idenaforum.png',
   },
 
