@@ -1,25 +1,25 @@
 module.exports = {
-  docs: [
+  developer: [
     {
       type: 'category',
       label: 'Idena node',
       items: [
-        'node/general',
-        'node/node-rpc',
+        'developer/node/general',
+        'developer/node/node-rpc',
         {
           type: 'category',
           label: 'Smart contracts',
           items: [
-            'node/smart-contracts',
-            'node/smart-contracts-methods',
+            'developer/node/smart-contracts',
+            'developer/node/smart-contracts-methods',
             {
               type: 'category',
               label: 'Predefined contracts',
               items: [
-                'node/oracle-lock',
-                'node/refundable-oracle-lock',
-                'node/multisig',
-                'node/time-lock',
+                'developer/node/oracle-lock',
+                'developer/node/refundable-oracle-lock',
+                'developer/node/multisig',
+                'developer/node/time-lock',
               ],
             },
           ],
@@ -29,7 +29,21 @@ module.exports = {
     {
       type: 'category',
       label: 'Idena desktop',
-      items: ['desktop/dna-url', 'desktop/sign-in'],
+      items: ['developer/desktop/dna-url', 'developer/desktop/sign-in'],
+    },
+  ],
+
+  wp: [
+    {
+      type: 'category',
+      label: 'Whitepaper',
+      items: [
+        'wp/summary',
+        'wp/manifesto',
+        'wp/technology',
+        'wp/flip-challenge',
+        'wp/economics',
+      ],
     },
   ],
 };

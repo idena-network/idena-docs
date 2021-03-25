@@ -18,9 +18,16 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/node/general/',
-          activeBasePath: 'docs',
-          label: 'Documentation',
+          to: 'docs/wp/summary/',
+          activeBasePath: 'docs/wp',
+          label: 'Whitepaper',
+          position: 'left',
+        },
+
+        {
+          to: 'docs/developer/node/general/',
+          activeBasePath: 'docs/developer',
+          label: 'Developers',
           position: 'left',
         },
 
@@ -54,6 +61,14 @@ module.exports = {
             {
               label: 'Node RPC',
               href: 'http://rpc.idena.io',
+            },
+            {
+              label: 'Pitch deck',
+              href: 'https://idena.io/IdenaPitchDeck.pdf',
+            },
+            {
+              label: 'One pager',
+              href: 'https://idena.io/IdenaOnePager.pdf',
             },
           ],
         },
