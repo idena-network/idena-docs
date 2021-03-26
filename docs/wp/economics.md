@@ -65,7 +65,7 @@ Mining reward is capped at 25 920 iDNA per day. It includes block proposer rewar
 | Block committee reward cap per day  | 17 280 iDNA (~67%) |
 | Minimum block time                  | 12 sec             |
 | Maximum number of blocks per minute | 3                  |
-| Maximum block size                  | 1 Mb               |
+| Maximum block size                  | 300 Kb             |
 | Maximum number of blocks per day    | 4 320              |
 | Block proposer reward (per block)   | 1 iDNA             |
 | Block committee reward (per block)  | 5 iDNA             |

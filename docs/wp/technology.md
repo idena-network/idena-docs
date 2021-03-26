@@ -250,15 +250,19 @@ Each flip is available only for those participants who solve it during the valid
 
 [![Why machines have no common sense](/img/wp/ai-biggest-problem.png)](https://content.jwplatform.com/players/RdnxHErX-FvQKszTI.html)
 
-## Consensus mechanism
+## Idena blockchain
 
-Idena implements a Proof-of-Person Sybil control mechanism and committee-based consensus with fast finaility. The public blockchain structure is used to store the state of validated identities, implement cryptoeconomic incentives for network participants, and enable transactions of the native coin enriched with additional metadata (such as P2P-encrypted messages). Every full node corresponds to one validated person with an equal chance to be rewarded for the minting of new blocks and equal voting power in the consensus and governance process.
+The public blockchain structure is used to store the state of validated identities, implement cryptoeconomic incentives for network participants, and enable transactions of the native coin enriched with additional metadata (such as P2P-encrypted messages). Every full node corresponds to one validated person with an equal chance to be rewarded for the minting of new blocks and equal voting power in the consensus and governance process.
+
+### BFT
+
+Idena implements a Proof-of-Person Sybil control mechanism and committee-based consensus with fast finaility.
 
 Every validated participant has an equal voting power in the network to produce blocks and validate transactions. Randomly selected participants generate block proposals and broadcast them into the network. A random committee is selected to reach consensus about whether to include a block into the blockchain.
 
 Idena provides a secure way to run multiple sub-chains in parallel driven by different sets of independent participants in a process called sharding. A network with millions of nodes driven by diverse people can be safely split into thousands of groups (or shards) that are processing transactions at the same time.
 
-### Blockchain scalability
+### Scalability
 
 Unlike many blockchains that utilize centralization to increase capacity, we solve the scalability problem by exaggerating decentralization. It might be considered as a counterintuitive approach because of the well-known “Scalability-Security-Decentralization” trilemma. However, Idena offers decentralization-based scalability without sacrificing security.
 
@@ -273,3 +277,69 @@ The Idena protocol formalizes the notion of the human on the blockchain. It brin
 Idena enables democratic access to mining: Neither expensive mining hardware nor a bunch of money for stake is needed, but rather an average laptop that is online.
 
 All validated participants are encouraged to do useful work for the network (hosting their nodes, creating and solving flips, inviting new users, and so on). This resource sharing is rewarded with a universal basic income (UBI).
+
+### Transaction fees
+
+The transaction fee is calculated automatically by protocol. The fee goes up or down based on how full the previous block was, targeting an average block utilization of 50%. When the previous block is more than 50% full, the transaction fee goes up proportionally. When it is below 50% usage, fees go down. A user can specify the maximum fee limit for the transaction.
+
+```
+transactionFee = currFeeRate x transactionSize
+
+currFeeRate = max(
+     1e-16,
+     0.1/networkSize,
+     prevFeeRate*(1+0.25*(prevBlockSize/300Kb-0.5))
+    )
+```
+
+90% of paid fees are burnt. The rest 10% are paid to the block proposer.
+
+#### Smart contracts gas costs
+
+In addition to transaction fee per byte a gas consumption has to be paid when a smart contract is called.
+GasCost is calculated as a total amount of gas consumed by the smart contract operations multiplied to the current `GasPrice`.
+`GasPrice` is calculated automatically by the protocol. The minimum `GasPrice` is: GasPrice= 0.01/NetworkSize.
+
+#### Validation ceremony transactions
+
+Validation ceremony transactions are not charged. However, they affect the fee rate because of the block consumtion.
+
+### Idena smart contracts
+
+Currently only predefined smart contracts available:
+
+#### OracleVoting
+
+The Idena network can provide the Oracle voting service to anyone who sets a high enough reward for oracles and correctly formulates a question. The Oracle voting mechanism is flexible. In order for your voting to be successful, define the purpose of getting an oracle service.
+
+1. Oracle voting to certify a fact
+   Oracles can certify a fait accompli (an accomplished fact). Such an Oracle voting may unlock the coins locked by another smart contract (e.g. OracleLock). For correct voting, the fact to be confirmed must be generally known or verified by several sources of information. To prevent a possible attack on voting, a high threshold for consensus among voters is set to prove facts. Oracles who vote against the majority are penalized.
+2. Oracle voting for governance
+   Oracle voting may unlock the coins locked by another smart contract (e.g OracleLock, RefundableOracleLock), depending on their subjective opinion. In some cases, such voting may not lead to a consensus. Penalization of oracles for voting outside the majority is not used in such a voting. However, if a consensus is reached, then those oracles who voted in the majority will be rewarded. If no consensus has been reached (no decision has been made), then all oracles who have voted will be rewarded, regardless of the vote cast.
+3. Oracle voting as a simple poll
+   Oracles can vote for any option. Rewards will be paid to everyone regardless of the outcome of the vote.
+
+You can participate in voting if you are a validated participant and receive voting rewards. Rewards can be set either by those who create the votings, or by other smart contracts. You can also create your own voting, for example:
+
+#### OracleLock
+
+OracleLock is a non-refundable smart contract that locks coins until a decision is made by oracles. If the voting result matches the expected value, coins are transferred to address A, otherwise to address B. Both addresses have to be specified beforehand.
+
+- Example: The contractor promises to complete the work by a certain date. The customer creates an oracle voting in order for oracles to vote in the future whether the work is done. The customer blocks the money on the OracleLock contract. If the result of oracle voting confirms that the work is done, the money is transferred to the contractor. Otherwise, the money is sent back to the customer.
+
+#### RefundableOracleLock
+
+RefundableOracleLock is a refundable smart contract address that can lock coins from multiple users until a decision is made by oracles. It works similarly to OracleLock: if the voting result matches the expected value, coins are transferred to address A (if specified), otherwise to address B (if specified). However, a refund is provided to all users if the destination address A or B is not specified or oracle voting fails to reach a consensus. The amount of the refund is equal to the initial deposit or proportional to the initial deposit if the RefundableOracleLock address has been funded additionally.
+
+- Example 1: The contractor promises to complete the work by a certain deadline. The community is ready to fund the work. An oracle voting is created so that oracles at some point in the future confirm whether the work is done. Community members fund the work by depositing money from different wallets to RefundableOracleLock. If the result of the oracle voting confirms that the work is done, the money is transferred to the contractor. Otherwise, all contributors get a refund.
+
+- Example 2: Prediction Market. An oracle voting is created so that oracles at some point in the future confirm the occurrence or non-occurrence of the event. Bets on the occurrence or non-occurrence of the event are locked on two linked RefundableOracleLock contracts. According to the results of the oracle voting, one of the two contracts will be the RefundableOracleLock-winner and the other will be the RefundableOracleLock-loser.
+  All money locked on the RefundableOracleLock-loser contract is sent to the address of the RefundableOracleLock-winner contract. After that, the money from the RefundableOracleLock-winner is returned to the winning users in the form of a refund in proportion to the bets made.
+
+#### Multisig
+
+A multisignature wallet address with specified M and N locks coins. In order to send the coins from the multisig, M specific participants out of N have to provide their signatures.
+
+#### TimeLock
+
+Smart contract locks coins on the smart contract address until the specified time. Once a newly mined block has a timestamp greater than that time, the coins can be transferred to any address specified by the owner.
