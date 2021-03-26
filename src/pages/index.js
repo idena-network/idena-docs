@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: 'Use cases',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    imageUrl: 'img/usecases-icn.svg',
     description: (
       <>
         DAO, governance, quadratic funding, UBI, airdrops, oracles, individual
@@ -21,7 +21,7 @@ const features = [
   },
   {
     title: 'Internet for people, not bots',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    imageUrl: 'img/users-icn.svg',
     description: (
       <>
         Authorize users with Idena. Don`t ask users who they are. Ask them if
@@ -31,7 +31,7 @@ const features = [
   },
   {
     title: 'Smart contracts for everyone',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    imageUrl: 'img/contracts-icn.svg',
     description: (
       <>
         We cannot make blockchain transactions cheap. But we can make it so that
@@ -45,36 +45,31 @@ const clients = [
   {
     caption: 'Gitcoin',
     infoLink: 'https://gitcoin.io',
-    image: 'img/gitcoin.png',
+    image: 'img/gitcoin-logo.svg',
   },
 
   {
     caption: 'Idena discord bot',
     infoLink: 'https://github.com/iyomisc/idenauth',
-    image: 'img/discord.png',
+    image: 'img/discord-logo.svg',
   },
 
   {
     caption: 'Idena forum',
     infoLink: 'https://discuss.idena.website/',
-    image: 'img/idenaforum.png',
+    image: 'img/idena-logo.svg',
   },
 
   {
     caption: 'Fairdrop',
     infoLink: 'https://fairdrop.io/',
-    image: 'img/fairdrop.png',
+    image: 'img/fairdrop-logo.svg',
   },
 
   {
     caption: 'Idenary',
     infoLink: 'https://idenary.com/',
-    image: 'img/idenary.png',
-  },
-  {
-    caption: 'iOS/Android app',
-    infoLink: 'https://github.com/redDwarf03/my-idena',
-    image: 'img/iosandroid.png',
+    image: 'img/idenary-logo.svg',
   },
 ];
 
@@ -83,8 +78,8 @@ function Feature({ imageUrl, title, description }) {
   return (
     <div className={clsx('col col--4', styles.feature)}>
       {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+        <div className="text--left">
+          <img height="60px" src={imgUrl} alt={title} />
         </div>
       )}
       <h3>{title}</h3>
@@ -98,13 +93,9 @@ function Client({ image, caption, infoLink }) {
   return (
     <div className={clsx('col col--2', styles.feature)}>
       {imgUrl && (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', margin: '15px 0' }}>
           <a href={infoLink}>
-            <img
-              style={{ minHeight: '40px', maxHeight: '40px' }}
-              src={imgUrl}
-              alt={caption}
-            />
+            <img style={{ height: '20px' }} src={imgUrl} alt={caption} />
           </a>
         </div>
       )}
@@ -126,10 +117,7 @@ export default function Home() {
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted
-              )}
+              className={clsx('button button--secondary ', styles.getStarted)}
               to={useBaseUrl('docs/developer/node/general/')}
             >
               Get Started
@@ -151,10 +139,13 @@ export default function Home() {
         )}
 
         {clients && clients.length > 0 && (
-          <section className={styles.features}>
+          <section className="projects" style={{ padding: '90px 0' }}>
             <div className="container">
-              <h1 style={{ textAlign: 'center' }}>Projects using Idena</h1>
-              <div className="row">
+              <h3 style={{ textAlign: 'center' }}>Projects using Idena</h3>
+              <div
+                className="row"
+                style={{ justifyContent: 'center', alignItems: 'center' }}
+              >
                 {clients.map((props, idx) => (
                   <Client key={idx} {...props} />
                 ))}
