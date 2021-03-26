@@ -15,6 +15,7 @@ module.exports = {
       logo: {
         alt: 'Idena Logo',
         src: 'img/idena_black.svg',
+        srcDark: 'img/idena_white.svg',
       },
       items: [
         {
@@ -47,6 +48,11 @@ module.exports = {
           position: 'right',
         },
       ],
+    },
+    colorMode: {
+      switchConfig: {
+        darkIcon: '🌙',
+      },
     },
     footer: {
       style: 'dark',
