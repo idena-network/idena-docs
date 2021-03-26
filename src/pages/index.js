@@ -130,7 +130,7 @@ export default function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted
               )}
-              to={useBaseUrl('docs/node/general/')}
+              to={useBaseUrl('docs/developer/node/general/')}
             >
               Get Started
             </Link>
