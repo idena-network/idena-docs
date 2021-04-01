@@ -150,6 +150,12 @@ export default function Home() {
                   <Client key={idx} {...props} />
                 ))}
               </div>
+              <br />
+              <div className={styles.buttons}>
+                <Link to={useBaseUrl('docs/community/resources/')}>
+                  See more...
+                </Link>
+              </div>
             </div>
           </section>
         )}

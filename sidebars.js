@@ -43,7 +43,20 @@ module.exports = {
         'wp/technology',
         'wp/flip-challenge',
         'wp/economics',
+        'wp/roadmap',
       ],
     },
   ],
+
+  community: [
+    {
+      type: 'category',
+      label: 'Community',
+      items: [
+        'community/resources',
+        'community/channels',
+      ],
+    },
+  ],
+
 };

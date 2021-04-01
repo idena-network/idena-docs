@@ -33,6 +33,13 @@ module.exports = {
         },
 
         {
+          to: 'docs/community/resources/',
+          activeBasePath: 'docs/community',
+          label: 'Community',
+          position: 'left',
+        },
+
+        {
           href: 'https://api.idena.io',
           label: 'Indexer API',
           position: 'right',
