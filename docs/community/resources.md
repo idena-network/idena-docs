@@ -31,16 +31,16 @@ _Click `Edit this page` below to add your project_
 - [My-Idena](https://github.com/redDwarf03/my-idena/releases) - Idena wallet app for iOS/Android
 - [Idena Ledger](https://github.com/idelse/idena-ledger) - Idena wallet application framework for Nano S and Nano X
 
-### Extentions
+### Extensions
 
-- [Chrome extention](https://chrome.google.com/webstore/detail/kjofkncddljaibaboapilmhoanacaoil/) - Unofficial chrome extension which adds extra information to official blockchain explorer
+- [Chrome extension](https://chrome.google.com/webstore/detail/kjofkncddljaibaboapilmhoanacaoil/) - Unofficial chrome extension which adds extra information to official blockchain explorer
 
 ### Bots
 
 - [Discord bot](https://github.com/iyomisc/idenauth) - Discord bot to authenticate users with Idena
 - [Price bot](https://t.me/idenarobot) - Telegram price, charts and whalewatcher
 
-### Usefull links
+### Useful links
 
 - [Idena node manager](https://gitlab.com/crackowich/idena-manager) - tool used for easier installation, maintenance and update of idena nodes
 - [Idena node public docker](https://hub.docker.com/r/rinzlerfr/idena-node) - A ready to run idena-node public docker image
