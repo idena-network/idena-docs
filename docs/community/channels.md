@@ -36,3 +36,4 @@ _Click `Edit this page` below to add your community channel_
 - [Telegram German-speaking group](https://t.me/idenagermany)
 - [Telegram Indian telegram group](https://t.me/idena_india)
 - [Telegram Netherlands and Belgium telegram group](https://t.me/idenanederlandbelgie)
+- [Telegram Polish-speaking group](https://t.me/idenapl)
