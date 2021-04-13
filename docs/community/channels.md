@@ -32,6 +32,7 @@ _Click `Edit this page` below to add your community channel_
 - [Telegram Turkish-speaking group](https://t.me/Idena_Turkiye)
 - [Telegram Ukrainian-speaking group](https://t.me/idena_ukraine)
 - [Telegram Spanish-speaking group](https://t.me/idenaespaniol)
+- [Telegram Brasil group](https://t.me/idenabrasil)
 - [Telegram Arabic-speaking group](https://t.me/IdenaArabic)
 - [Telegram German-speaking group](https://t.me/idenagermany)
 - [Telegram Indian telegram group](https://t.me/idena_india)
