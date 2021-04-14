@@ -25,6 +25,7 @@ _Click `Edit this page` below to add your community channel_
 
 ### Telegram
 
+- [Telegram French-speaking group](https://t.me/Idena_FR)
 - [Telegram Indonesian-speaking group](https://t.me/idena_indonesia)
 - [Telegram Chinese-speaking group](https://t.me/idena_cn)
 - [Telegram Russian-speaking group](https://t.me/Idena_RU)
@@ -38,3 +39,7 @@ _Click `Edit this page` below to add your community channel_
 - [Telegram Indian telegram group](https://t.me/idena_india)
 - [Telegram Netherlands and Belgium telegram group](https://t.me/idenanederlandbelgie)
 - [Telegram Polish-speaking group](https://t.me/idenapl)
+- [Telegram Philippines group](https://t.me/idena_PH)
+- [Telegram Korean-speaking group](https://t.me/Idena_Korea)
+- [Telegram Vietnam group](https://t.me/idena_vietnamese)
+- [Telegram Italian-speaking group](https://t.me/idenaitalia)
