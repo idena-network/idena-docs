@@ -4,20 +4,9 @@ title: Idena community channels
 sidebar_label: Community channels
 ---
 
-# Non-official Idena community channels
-
 _Click `Edit this page` below to add your community channel_
 
-### Social media
-
-- Idena unofficial [Facebook page](https://www.facebook.com/idenanetwork)
-- [Idena Gang](https://twitter.com/IdenaGang) - Idena community twitter
-
-### Forums
-
-- [Idena Forum](https://discuss.idena.website/) - Posts allowed for Idena validated participants
-- [Bitcointalk](https://bitcointalk.org/index.php?topic=5194871.new#new) non-official forum
-- [Altcoinstalks](https://www.altcoinstalks.com/index.php?topic=185607.0) non-official forum
+# Idena community channels
 
 ### Discord
 
@@ -25,6 +14,7 @@ _Click `Edit this page` below to add your community channel_
 
 ### Telegram
 
+- [Telegram Official Idena community group](https://t.me/IdenaNetworkPublic)
 - [Telegram French-speaking group](https://t.me/Idena_FR)
 - [Telegram Indonesian-speaking group](https://t.me/idena_indonesia)
 - [Telegram Chinese-speaking group](https://t.me/idena_cn)
@@ -43,3 +33,14 @@ _Click `Edit this page` below to add your community channel_
 - [Telegram Korean-speaking group](https://t.me/Idena_Korea)
 - [Telegram Vietnam group](https://t.me/idena_vietnamese)
 - [Telegram Italian-speaking group](https://t.me/idenaitalia)
+
+### Social media
+
+- Idena unofficial [Facebook page](https://www.facebook.com/idenanetwork)
+- [Idena Gang](https://twitter.com/IdenaGang) - Idena community twitter
+
+### Forums
+
+- [Idena Forum](https://discuss.idena.website/) - Posts allowed for Idena validated participants
+- [Bitcointalk](https://bitcointalk.org/index.php?topic=5194871.new#new) non-official forum
+- [Altcoinstalks](https://www.altcoinstalks.com/index.php?topic=185607.0) non-official forum
