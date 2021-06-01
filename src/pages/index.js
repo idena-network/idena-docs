@@ -14,7 +14,7 @@ const features = [
       <>
         DAO, governance, quadratic funding, UBI, airdrops, oracles, individual
         loans, courts, decentralized ads, censorship free publications,
-        reputation system, prediction markets, decentralized escrow and many
+        reputation system, prediction markets, decentralized insurance, decentralized escrow and many
         more.
       </>
     ),
