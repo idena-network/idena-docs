@@ -91,7 +91,7 @@ The invitation reward fund is distributed to all identities whose invitations ha
 Invitation rewards for the 2nd and 3rd validation are not paid to the Idena foundation.
 Fees are estimated based on the average occupancy of blocks, targeting 50% fill rate. Miners get 10% of transaction fees, 90% of the fees are burnt.
 
-## iDNA coin untility
+## iDNA coin utility
 
 There are the following cases for supply utilization:
 
