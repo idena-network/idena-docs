@@ -30,6 +30,8 @@ _Click `Edit this page` below to add your project_
 - [Paper wallet](https://angainordev.github.io/DnaMask/) - Paper wallet for DNA crypto currency
 - [My-Idena](https://github.com/redDwarf03/my-idena/releases) - Idena wallet app for iOS/Android
 - [Idena Ledger](https://github.com/idelse/idena-ledger) - Idena wallet application framework for Nano S and Nano X
+- [Idena CLI wallet](https://github.com/Toni-d-e-v/Idena-cli-wallet) - Idena Comand line wallet for managing idena without using idena client
+
 
 ### Extensions
 
