@@ -32,7 +32,7 @@ _Click `Edit this page` below to add your community channel_
 - [Telegram Philippines group](https://t.me/idena_PH)
 - [Telegram Korean-speaking group](https://t.me/Idena_Korea)
 - [Telegram Vietnam group](https://t.me/idena_vietnamese)
-- [Telegram Italian-speaking group](https://t.me/idenaitalia)
+- [Telegram Italian-speaking group](https://t.me/idenaita)
 
 ### Social media
 
