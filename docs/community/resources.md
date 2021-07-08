@@ -41,6 +41,7 @@ _Click `Edit this page` below to add your project_
 
 - [Discord bot](https://github.com/iyomisc/idenauth) - Discord bot to authenticate users with Idena
 - [Price bot](https://t.me/idenarobot) - Telegram price, charts and whalewatcher
+- [Discord Idena Node Watcher](https://github.com/Toni-d-e-v/discord-idena-node-watcher/) - Checks if your node is offline and notfy you before you get penal!
 
 ### Usefull links
 
