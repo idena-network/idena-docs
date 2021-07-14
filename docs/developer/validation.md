@@ -8,7 +8,7 @@ sidebar_label: Validation ceremony
 
 ## Flips
 
-Newly created flips are not available to anyone before the validation ceremony starts. Flips are stored in the IPFS in encrypted form. When validation starts then the public part of flips become available to anyone and private part of flips become available only to users who have to solve them.
+Newly created flips are not available to anyone before the validation ceremony starts. Flips are stored in the IPFS in encrypted form. When validation starts then the public part of flips becomes available to anyone and the private part of flips become available only to users who have to solve them.
 
 Public part of a flip contains 2 random images. Private part of the flip contains another 2 images and the images order.
 
@@ -16,16 +16,14 @@ Public part of a flip contains 2 random images. Private part of the flip contain
 
 ![image](/img/developer/flip-decryption1.png)
 
-1. Public part
-   Public part of a flip can be decrypted by anyone using a `temporary key` which is broadcasted by the flip’s author during the short session.
+1. _Public part:_ Public part of a flip can be decrypted by anyone using a `temporary key` which is broadcasted by the flip’s author during the short session.
 
    Node automatically collects all temporary keys broadcasted by all participants.
 
-2. Private part
-   Private part of the flip can be decrypted only by users who have to solve it. Once the flip lottery starts the author of the flips calculates which addresses must solve their flip. During the flip lottery authors broadcast packages with secret key encrypted in a way that user who should solve these flips can decrypt it:
+2. _Private part:_ Private part of the flip can be decrypted only by users who have to solve this flip. Once the flip lottery starts the author calculates which addresses must solve their flips. During the flip lottery authors broadcast packages with secret key encrypted in a way that user who should solve these flips can decrypt it:
 
    - Every `secret key` in the package is encrypted with a user’s public key so they need their private key to decrypt the flip
-   - The whole package of the secret keys is encrypted with the `temporary key`, thus non of users can decrypt it before validation starts
+   - The whole package of the secret keys is encrypted with the `temporary key`, thus none of the users can decrypt it before the validation starts
 
 ![image](/img/developer/flip-decryption2.png)
 
@@ -51,11 +49,11 @@ See code example: `todo: link`
 
 Validation session consists of the following stages (UTC time):
 
-- 13:25:00 or later: `Flip lottery` starts when a block is mined with the `flip lottery` flag
+- 13:25:00 or later: `Flip lottery` starts when a block with the `flip lottery` flag is mined
 - 13:30:00: `Short session`
-- 13:32:00 or later: `Long session` starts when a block is mined with the `long session` flag
-- 14:00:00: `After-long session` starts when a block mined with a `long session finished` flag.
-- 14:05:00 or later: New epoch starts when a block is mined with the `validation finished` flag. The new epoch can be started only after mining 5 blocks in a row without any ceremonial transactions. This ensures that all pending ceremonial transactions are mined.
+- 13:32:00 or later: `Long session` starts when a block with the `long session` flag is mined
+- 14:00:00: `After-long session` starts when a block with a `long session finished` flag is mined
+- 14:05:00 or later: New epoch starts when a block with the `validation finished` flag is mined. The new epoch can be started only after mining 5 blocks in a row without any ceremonial transactions. This ensures that all pending ceremonial transactions are mined.
 
 ### Flip lottery
 
@@ -73,11 +71,11 @@ Every node collects all `temporary keys` required for the flips decrypting both 
 
 First of all 8 flips for the short session are decrypted. 6 out of 8 flips are displayed for the user. If some of the keys are not available within the first 30 seconds then other 1 or 2 extra flips are shown instead. If the extra flips are not available, the user should solve remaining flips.
 
-Once the user provides the answer, only the answers proof must be broadcasted. The full set of answers should be broadcasted during the long session.
+Once the user provides the answer, only the proofs of the answers must be broadcasted. The full set of answers is broadcasted during the long session.
 
 ### Long session
 
-All flips for the long sessions are decrypted and shown to the user. The user can start solving and qualifying these flips even before the long session starts. The user can submit the answers and flips qualification votes for the flips at any point during the long session.
+All flips for the long sessions are decrypted and shown to the user. The user can start solving and qualifying these flips even before the long session starts. The user can submit the answers and qualification votes for the flips at any point during the long session.
 
 ## Ceremonial transactions
 
@@ -131,7 +129,7 @@ Codes for flags:
 
 `SubmitShortAnswersHashTx` transaction has to be broadcasted within a short session not later than 13:32:00 UTC
 
-See example of creating [`SubmitShortAnswersHashTx` transaction](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/screens/validation/machine.js#L1765)
+See the example of creating [`SubmitShortAnswersHashTx` transaction](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/screens/validation/machine.js#L1765)
 
 ### Short session answers
 
@@ -140,11 +138,11 @@ In addition, the short answers transaction reveals the keywords which were used 
 
 Short session answers should be published not later than 13:35:00. Otherwise other users will not be able to qualify flips keywords and the user will be penalized.
 
-See example of creating [`SubmitShortAnswersTx` transaction](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/screens/validation/machine.js#L1786)
+See the example of creating [`SubmitShortAnswersTx` transaction](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/screens/validation/machine.js#L1786)
 
 ### Long session answers
 
-See example of creating [`SubmitLongAnswersTx` transaction](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/screens/validation/machine.js#L1810)
+See the example of creating [`SubmitLongAnswersTx` transaction](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/screens/validation/machine.js#L1810)
 
 ### EvidenceTx
 
@@ -173,7 +171,7 @@ The private key of a user is stored in the browser local storage. It’s never s
 - Fetch the temporary keys for loaded flips
 - Broadcast temporary key
 - Decrypt 8 flips for the short session
-- Display 6 flips for user (use 2 extra flips is there are some flips not available after 35 seconds)
+- Display 6 flips the for user (use 2 extra flips is there are some flips not available after 35 seconds)
 - Once the user has solved the flips, answers are stored locally.
 - Generate SubmitAnswersHashTx and SubmitShortAnswersTx transactions and sign them with the private key
 - Push SubmitAnswersHashTx to the shared node.
