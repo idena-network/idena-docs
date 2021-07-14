@@ -33,6 +33,7 @@ module.exports = {
       items: ['developer/desktop/dna-url'],
     },
     'developer/desktop/sign-in',
+    'developer/validation',
   ],
 
   wp: [
