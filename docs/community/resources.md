@@ -26,7 +26,7 @@ _Click `Edit this page` below to add your project_
 
 ### Wallets
 
-- [Paper wallet](https://pocket.idena.dev/#/) - A Lightweight web wallet for Idena
+- [Web wallet and Nano S](https://pocket.idena.dev/#/) - A Lightweight web wallet for Idena
 - [Paper wallet](https://angainordev.github.io/DnaMask/) - Paper wallet for DNA crypto currency
 - [My-Idena](https://github.com/redDwarf03/my-idena/releases) - Idena wallet app for iOS/Android
 - [Idena Ledger](https://github.com/idelse/idena-ledger) - Idena wallet application framework for Nano S and Nano X
@@ -41,6 +41,7 @@ _Click `Edit this page` below to add your project_
 
 - [Discord bot](https://github.com/iyomisc/idenauth) - Discord bot to authenticate users with Idena
 - [Price bot](https://t.me/idenarobot) - Telegram price, charts and whalewatcher
+- [Discord Idena Node Watcher](https://github.com/Toni-d-e-v/discord-idena-node-watcher/) - Checks if your node is offline and notfy you before you get penal!
 
 ### Usefull links
 
