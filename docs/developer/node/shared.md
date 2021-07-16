@@ -8,7 +8,7 @@ sidebar_label: Shared Node
 
 If you want to run a shared Idena node, please follow these steps:
  - Deploy a new Idena node on VPS
- Follow this guide if you need help: [Shared node setup on VPS - a guide by Rioda](https://idena.site/faq.php#shared-node-setup-on-vps)
+ Follow this guide if you need help: [Shared node setup on VPS - a guide by Mahmoud and Rioda](https://idena.site/faq.php#shared-node-setup-on-vps)
  - [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSe1CiBmlynqNp2rnUlSWPFLTQ5I4BlIQWoCJ8ZTjAF7coGH7w/viewform?entry.900154518=https://t.me/&entry.1478741470=https://&entry.19432100=1) to add your shared node to the shared node marketplace in the Idena Web App.
 
 Attach a csv file with API keys for the next epochs to your application form. The file should be in the following format:
