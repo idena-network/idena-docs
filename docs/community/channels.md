@@ -41,6 +41,6 @@ _Click `Edit this page` below to add your community channel_
 
 ### Forums
 
-- [Idena Forum](https://discuss.idena.website/) - Posts allowed for Idena validated participants
+- [Idena Forum](https://discuss.idena.site/) - Posts allowed for Idena validated participants
 - [Bitcointalk](https://bitcointalk.org/index.php?topic=5194871.new#new) non-official forum
 - [Altcoinstalks](https://www.altcoinstalks.com/index.php?topic=185607.0) non-official forum
