@@ -58,6 +58,7 @@ module.exports = {
       items: [
         'community/resources',
         'community/channels',
+        'community/affiliate',
       ],
     },
   ],
