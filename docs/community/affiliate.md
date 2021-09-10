@@ -21,3 +21,12 @@ The identity is considered a referee if the following conditions are met:
 - the referee has received an invite via Twitter on https://www.idena.io/join-idena;
 - the referee opened https://www.idena.io/join-idena with your referral link;
 - the referee has successfully activated the invite and passed the following validation.
+
+### Rewards
+
+The reward is set to 50 iDNA for a validated invite and paid from the foundation wallet.
+
+
+
+
+The Idena team reserves the rights to change and adjust these terms in case necessary.
