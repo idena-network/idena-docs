@@ -4,7 +4,7 @@ title: Sign-in with Idena protocol
 sidebar_label: Sign-in with Idena
 ---
 
-# Sign-in with Idena protocol
+# Sign-in with Idena
 
 The sign-in with Idena function can be used on your website to determine the Idena user's address and its status.
 You can grant a user a certain privileges depending on their Idena status:
@@ -17,13 +17,49 @@ You can grant a user a certain privileges depending on their Idena status:
 - `Suspended` - validated user missed the last validation
 - `Zombie`- validated user missed the two last validations
 
-Sign-in protocol provides you a proof that user possesses a private key of their Idena address.
+Sign-in with Idena protocol provides you a proof that user possesses a private key of their Idena address.
 
 Your auth server should generate a random `nonce` which Idena app signs with users private key. Your auth server should follow the Sign-in with Idena protocol and check `nonce` the signature. You can find Auth server exmple [here](https://github.com/idena-network/idena-auth).
 
-## Protocol steps
+## Sign-in with Idena app URL
 
-1. The Idena app pops up automatically when the user clicks `dna://signin/...` link on your website (see more about [Idena app URL scheme](./dna-url)). The following dialog appears in Idena app:
+You can authorise users with [Idena Web App](https://app.idena.io) or [Idena Desktop App](https://idena.io/download):
+
+1. Sign-in URL for Idena Web App (recommended)
+
+It's recommended to use Idena Web App as a default method for users authorization.
+
+URL example for signing in with Idena Web App:
+
+```
+https://app.idena.io/dna/signin?token=session_token&
+            callback_url=https%3A%2F%2Fmywebsite.com&
+            nonce_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fstart-session&
+            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate
+            favicon_url=https%3A%2F%2Fmywebsite.com%2Ffavicon.ico
+```
+
+> Users who have no Idena account in the browser can use the Idena Desktop App by clicking `Open in Idena app` link below:
+>
+> ![image](/img/developer/signin-with-idena-web.png)
+
+2. Sign-in URL for Idena Desktop App
+
+The Idena Desktop App pops up automatically when the user clicks `dna://signin/...` URL (see more about [Idena app URL scheme](./dna-url)).
+
+URL example for signing in with Idena Desktop App:
+
+```
+dna://signin/v1?token=session_token&
+            callback_url=https%3A%2F%2Fmywebsite.com&
+            nonce_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fstart-session&
+            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate
+            favicon_url=https%3A%2F%2Fmywebsite.com%2Ffavicon.ico
+```
+
+## Sign-in with Idena protocol
+
+1. The following dialog appears automatically in Idena App:
 
 ![image](https://user-images.githubusercontent.com/47352542/105166500-5444f180-5b39-11eb-9292-c4a65c9610be.png)
 

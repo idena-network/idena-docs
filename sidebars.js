@@ -5,6 +5,7 @@ module.exports = {
       label: 'Idena node',
       items: [
         'developer/node/general',
+        'developer/node/shared',
         'developer/node/node-rpc',
         {
           type: 'category',
@@ -29,8 +30,10 @@ module.exports = {
     {
       type: 'category',
       label: 'Idena desktop',
-      items: ['developer/desktop/dna-url', 'developer/desktop/sign-in'],
+      items: ['developer/desktop/dna-url'],
     },
+    'developer/desktop/sign-in',
+    'developer/validation',
   ],
 
   wp: [
@@ -55,6 +58,7 @@ module.exports = {
       items: [
         'community/resources',
         'community/channels',
+        'community/affiliate',
       ],
     },
   ],
