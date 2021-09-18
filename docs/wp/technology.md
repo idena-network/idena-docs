@@ -54,6 +54,8 @@ The validation time of 13:30 UTC covers most countries when most people are awak
 - Delhi, India 19:00
 - Beijing, China 21:30
 - Sydney, Australia 23:30
+- Auckland, New Zealand 01:30
+- Honolulu, Hawaii, USA 03:30
 
 ### Short session and Long session
 
