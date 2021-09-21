@@ -38,7 +38,7 @@ The Foundation wallet is designed to fund Idena community-driven development and
 
 The core team controls the foundation wallet in a centralized way until governance mechanisms are proposed and implemented.
 
-Wallet address: 0xcbb98843270812eeCE07BFb82d26b4881a33aA9
+Wallet address: 0xcbb98843270812eeCE07BFb82d26b4881a33aA91
 
 ## Zero wallet (DAO)
 
