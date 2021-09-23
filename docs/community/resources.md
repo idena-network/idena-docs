@@ -49,7 +49,7 @@ _Click `Edit this page` below to add your project_
 - [Idena node public docker](https://hub.docker.com/r/rinzlerfr/idena-node) - A ready to run idena-node public docker image
 - [Idena node public docker](https://hub.docker.com/repository/docker/idenadev/idena) - A ready to run idena-node public docker image
 - [Idena auto-update script](https://github.com/codev911/idena-autoupdate-windows) - Idena auto-update for windows with powershell (script)
-- [Invites tracker](https://realmahmoud.github.io/InvitesTracker/) - invitation codes checker
+- [Invites tracker](https://github.com/DevkoDev/InvitesTracker) - invitation codes checker
 - [idena public shared node monitor](https://github.com/pocoloko/idena-shared-node-monitor/) - Remote monitor for idena public shared node
 - [Idena shared node guide](https://github.com/pocoloko/idena-shared-node-guide/) - Idena public shared node setup guide using your own SSL termination
 - [Idena node proxy logparser](https://github.com/pocoloko/idena-node-proxy-logparser/) - A command-line log parser for idena-node-proxy logs
