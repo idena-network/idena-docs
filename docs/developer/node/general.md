@@ -32,7 +32,7 @@ To connect to Idena `experimental mainnet` network run executable without parame
 Custom json configuration can be used if `--config=<config file name>` parameter is specified. Use `server` IPFS profile if you run `idena-go` on VPS to prevent local network scanning.
 ```json
 {
-  "DataDir": "",
+  "DataDir": "datadir",
   "P2P": {
     "MaxInboundPeers": 12,
     "MaxOutboundPeers": 6
