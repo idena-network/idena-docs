@@ -46,6 +46,7 @@ _Click `Edit this page` below to add your project_
 ### Usefull links
 
 - [Idena node manager](https://gitlab.com/crackowich/idena-manager) - tool used for easier installation, maintenance and update of idena nodes
+- [Idena runner](https://github.com/ltraveler/idena-runner) - script that deploy, configure, secure and import keys of idena node in user friendly way on Ubuntu 18.04 and above
 - [Idena node public docker](https://hub.docker.com/r/rinzlerfr/idena-node) - A ready to run idena-node public docker image
 - [Idena node public docker](https://hub.docker.com/repository/docker/idenadev/idena) - A ready to run idena-node public docker image
 - [Idena auto-update script](https://github.com/codev911/idena-autoupdate-windows) - Idena auto-update for windows with powershell (script)
