@@ -18,8 +18,8 @@ To encourage and reward Idena ambassadors, advocates, local community leaders, i
 
 The identity is considered a referee if the following conditions are met:
 
-- the referee has received an invite via Twitter on https://www.idena.io/join-idena;
 - the referee opened https://www.idena.io/join-idena with your referral link;
+- the referee has received an invite via Twitter on https://www.idena.io/join-idena;
 - the referee has successfully activated the invite and passed the following validation.
 
 ### Rewards
