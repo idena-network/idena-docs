@@ -7,6 +7,30 @@ sidebar_label: Running Idena
 
 # Running Idena
 
+## Windows
+
+Please go to the idena [website](https://idena.io/download) and download the lastest idena node application to run it make a new file called ```start.bat```
+and in there insert > 
+```
+@echo off
+:start
+idena-node.exe # your node name
+timeout /t 5
+goto start
+```
+## Mac Os
+Download the lastest idena node for mac os in folder where is node open termina land run ```./idena-node```
+
+## Linux
+Idena should work on all linux distros soo you get just do this in few commands...
+You can manuly download it from our website and run ```./idena-node```
+Or you can use community made idena manager.
+
+
+
+
+
+
 To connect to Idena `experimental mainnet` network run executable without parameters. `idena-go` uses `go-ipfs` and private ipfs network to store data.
 
 ## CLI parameters
