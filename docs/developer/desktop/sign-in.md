@@ -35,7 +35,7 @@ URL example for signing in with Idena Web App:
 https://app.idena.io/dna/signin?token=session_token&
             callback_url=https%3A%2F%2Fmywebsite.com&
             nonce_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fstart-session&
-            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate
+            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate&
             favicon_url=https%3A%2F%2Fmywebsite.com%2Ffavicon.ico
 ```
 
@@ -53,7 +53,7 @@ URL example for signing in with Idena Desktop App:
 dna://signin/v1?token=session_token&
             callback_url=https%3A%2F%2Fmywebsite.com&
             nonce_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fstart-session&
-            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate
+            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate&
             favicon_url=https%3A%2F%2Fmywebsite.com%2Ffavicon.ico
 ```
 
@@ -83,7 +83,7 @@ URL example for signing in with the Idena public address:
 dna://signin/v1?token=session_token&
             callback_url=https%3A%2F%2Fmywebsite.com&
             nonce_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fstart-session&
-            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate
+            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate&
             favicon_url=https%3A%2F%2Fmywebsite.com%2Ffavicon.ico
 ```
 
