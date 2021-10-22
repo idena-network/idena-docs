@@ -13,6 +13,12 @@ _Click `Edit this page` below to add your project_
 - [fairdrop](https://fairdrop.io/) - Fair Airdrops in a snap
 - [idenary](https://idenary.com/) - Fresh air, a colorful game and art project
 
+### Idena blockchain snapshots
+
+- [GitHub Repository](https://github.com/ltraveler/idenachain.db) - Mirror 1
+- [Idena.site](https://sync.idena.site/idenachain.db.zip) - Mirror 2
+- [Idena Arabic](https://sync.idena-ar.com/idenachain.db.zip) - Mirror 3
+
 ### Websites
 
 - [Idena.site](https://idena.site/) - The comprehensive How-to Guide and FAQ about running Idena node on VPS
