@@ -61,6 +61,7 @@ _Click `Edit this page` below to add your project_
 - [Idena shared node guide](https://github.com/pocoloko/idena-shared-node-guide/) - Idena public shared node setup guide using your own SSL termination
 - [Idena node proxy logparser](https://github.com/pocoloko/idena-node-proxy-logparser/) - A command-line log parser for idena-node-proxy logs
 - [Idena node mining monitor](https://github.com/pocoloko/idena-mining-monitor/) -Script to check if an idena identity is mining...
+- - [Idena AIO](https://github.com/https://github.com/idena-Egyptian-Pharoh/idena-aio/) -Idena-AIO install and manage your node to make it easier than before...
 
 ### Developers
 
