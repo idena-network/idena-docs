@@ -25,6 +25,7 @@ _Click `Edit this page` below to add your project_
 - [Idena Apps](https://idena-apps.org/) - community-driven directory of all Idena resources
 - [Idena.top](http://idena.top/) - Chinese Forum and announcements website for Idena
 - [Idena Arabic](https://idena-ar.com/) - Arabic website about Idena project
+- [Idena - Identity Explorer](https://idena.hardcoder.xyz) - A lightweight identity-only explorer built with `PHP` on top of `idena-indexer-api`
 
 ### Stats
 
