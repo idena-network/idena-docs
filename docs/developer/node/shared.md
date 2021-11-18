@@ -23,5 +23,7 @@ a7820a66f88674ce0da374d22a072a59,68
 ```
 *Please adhere to this format. The applications with wrongly formated API key files can be turned down.* 
 
-If you have filled the application correctly, we will add your node to the marketplace shortly and inform you on Telegram on success.
+If you have filled the application correctly, we will add your node to the marketplace shortly.
 Please make sure your node is online and the API keys are working before you submit the form because we check the nodes before listing.
+
+If you want to update your shared node details or submit new keys, please use the same form and select "Update my shared node details" option.
