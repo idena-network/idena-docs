@@ -69,3 +69,11 @@ dna://raw/v1?tx=0x01234567891...&
              callback_url=https%3A%2F%2Fmywebsite.com
 
 ```
+## 5. Send invitation to address
+
+URL example for sending invitation to the specified address:
+
+```
+dna://vote/v1?address=0x01234567891...
+```
+
