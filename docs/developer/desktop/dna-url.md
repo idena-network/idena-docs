@@ -74,6 +74,6 @@ dna://raw/v1?tx=0x01234567891...&
 URL example for sending invitation to the specified address:
 
 ```
-dna://vote/v1?address=0x01234567891...
+dna://invite/v1?address=0x01234567891...
 ```
 
