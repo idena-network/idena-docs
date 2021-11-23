@@ -20,7 +20,7 @@ URL example for sending invite with Idena Web App:
 https://app.idena.io/dna/invite?address=0x01234567891asdasd
 ```
 
-URL example for sending invite coins using Idena Desktop App:
+URL example for sending invite using Idena Desktop App:
 
 ```
 dna://invite/v1?address=0x01234567891asdasd

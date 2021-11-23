@@ -25,7 +25,7 @@ URL example for sending iDNA with Idena Web App:
 ```
 https://app.idena.io/dna/raw?tx=0x0a2d0802104e22146bd...f9c7ab86fece7&
               callback_format=html&
-              callback_url=https%3A%2F%2Fmywebsite.com
+              callback_url=https://mywebsite.com
 ```
 
 URL example for sending DNA coins using Idena Desktop App:
@@ -81,4 +81,8 @@ Error response example:
 }
 ```
 
-Web page specified in `url` will be automatically opened in the user's browser once the transaction is sent to network.
+Once successful response is received, transaction will be sent to the network and the following dialog will be displayed:
+
+![image](/img/developer/dna-send-success.png)
+
+When _Continue_ button is clicked the web page specified in `url` will open in the user's browser.
