@@ -6,7 +6,7 @@ sidebar_label: dna:// URL
 
 # Idena app URL scheme dna://
 
-Idena app supports handling URL with the following format:
+Idena desktop app supports handling URL with the following format:
 
 ```
 dna://<method>/<version>?<parameters>
@@ -20,8 +20,9 @@ There are following methods supported:
 2. Open Oracle voting: `vote`
 3. Authentication with a client's public key: `signin`
 4. Sign and send a raw transaction: `raw`
+5. Send invite transaction: `invite`
 
-## 1. Send DNA coins
+## 1. Send iDNA coins
 
 URL example for sending DNA coins:
 
@@ -37,6 +38,8 @@ Once send transaction is successfully sent by user the `callback_url` will be op
 ```
 https://mywebsite.com?tx=0xFd242hGRg2dsdwertu23Fd242hGRg2dsdGRg2dsdGRg2d
 ```
+
+See more details about [Send iDNA with Idena App](./../send-dna).
 
 ## 2. Open Oracle voting
 
@@ -69,6 +72,9 @@ dna://raw/v1?tx=0x01234567891...&
              callback_url=https%3A%2F%2Fmywebsite.com
 
 ```
+
+See more details about [Send raw transactions with Idena App](./../send-raw).
+
 ## 5. Send invitation to address
 
 URL example for sending invitation to the specified address:
@@ -77,3 +83,4 @@ URL example for sending invitation to the specified address:
 dna://invite/v1?address=0x01234567891...
 ```
 
+See more details about [Send invites with Idena App](./../send-invite).

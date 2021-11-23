@@ -23,27 +23,25 @@ Your auth server should generate a random `nonce` which Idena app signs with use
 
 ## Sign-in with Idena app URL
 
-You can authorise users with [Idena Web App](https://app.idena.io) or [Idena Desktop App](https://idena.io/download):
+You can authorise users either with [Idena Web App](https://app.idena.io) or [Idena Desktop App](https://idena.io/download):
 
-1. Sign-in URL for Idena Web App (recommended)
+### 1. Sign-in URL for Idena Web App (recommended)
 
-It's recommended to use Idena Web App as a default method for users authorization.
+It's recommended to use Idena Web App as a default method for users authorization. Users who have no Idena account in the browser can use the Idena Desktop App by clicking `Open in Idena app` link below:
+
+![image](/img/developer/signin-with-idena-web.png)
 
 URL example for signing in with Idena Web App:
 
 ```
 https://app.idena.io/dna/signin?token=session_token&
-            callback_url=https%3A%2F%2Fmywebsite.com&
-            nonce_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fstart-session&
-            authentication_endpoint=https%3A%2F%2Fmywebsite.com%2Fauth%2Fv1%2Fauthenticate&
-            favicon_url=https%3A%2F%2Fmywebsite.com%2Ffavicon.ico
+            callback_url=https://mywebsite.com&
+            nonce_endpoint=https://mywebsite.com/auth/v1/start-session&
+            authentication_endpoint=https://mywebsite.com/auth/v1/authenticate&
+            favicon_url=https://mywebsite.com/favicon.ico
 ```
 
-> Users who have no Idena account in the browser can use the Idena Desktop App by clicking `Open in Idena app` link below:
->
-> ![image](/img/developer/signin-with-idena-web.png)
-
-2. Sign-in URL for Idena Desktop App
+### 2. Sign-in URL for Idena Desktop App
 
 The Idena Desktop App pops up automatically when the user clicks `dna://signin/...` URL (see more about [Idena app URL scheme](./dna-url)).
 
