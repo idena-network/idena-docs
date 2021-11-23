@@ -5,8 +5,8 @@ module.exports = {
       label: 'Idena node',
       items: [
         'developer/node/general',
-        'developer/node/shared',
         'developer/node/node-rpc',
+        'developer/node/shared',
         {
           type: 'category',
           label: 'Smart contracts',
@@ -25,15 +25,18 @@ module.exports = {
             },
           ],
         },
+        'developer/validation',
       ],
     },
+    'developer/desktop/sign-in',
+    'developer/send-dna',
+    'developer/send-invite',
+    'developer/send-raw',
     {
       type: 'category',
-      label: 'Idena desktop',
+      label: 'Desktop app',
       items: ['developer/desktop/dna-url'],
     },
-    'developer/desktop/sign-in',
-    'developer/validation',
   ],
 
   wp: [
