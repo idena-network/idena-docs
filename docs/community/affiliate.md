@@ -24,8 +24,7 @@ The identity is considered a referee if the following conditions are met:
 
 ### Rewards
 
-The reward is set to 50 iDNA for a validated invite and paid from the foundation wallet.
-Starting from Epoch #78 the reward will be changed to 20 iDNA for a validated invite.
+The reward is set to 20 iDNA for a validated invite.
 
 
 
