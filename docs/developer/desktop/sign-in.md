@@ -156,7 +156,6 @@ Successful response must be returned if user's address is equal to address deriv
    fromRpcSig,
    keccak256,
    pubToAddress,
-   rlp,
  } from 'ethereumjs-util'
    ...
    const nonce = 'signin-0652c409-17ef-4ad6-b580-3faaefcc204d'
