@@ -26,6 +26,13 @@ module.exports = {
           ],
         },
         'developer/validation',
+        {
+          type: 'category',
+          label: 'IPFS',
+          items: [
+            'developer/ipfs/upload',
+          ],
+          },
       ],
     },
     'developer/desktop/sign-in',
