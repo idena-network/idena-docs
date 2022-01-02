@@ -45,12 +45,12 @@ Let's upload the following `html` file into Idena IPFS network:
 ### 1. Convert text into bytes
 You can use online tool to convert text into bytes: https://onlineasciitools.com/convert-ascii-to-bytes
 ```
-0x3c21444f43545950452...
+3c21444f43545950452...
 ```
 ### 2. Add prefix 
 Add `0x` prefix to data as follows:
 ```
-0x0x3c21444f43545950452...
+0x3c21444f43545950452...
 ```
 ### 3. Upload data
 
