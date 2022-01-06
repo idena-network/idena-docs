@@ -25,6 +25,7 @@ The identity is considered a referee if the following conditions are met:
 ### Rewards
 
 The reward for a validated invite depends on the validation success rate of the affiliate.
+
 | Validation success rate | Reward for one validated invite  |
 | ------------ | ------------ |
 |  Less than 40% |  10 iDNA |
@@ -37,7 +38,10 @@ The validation success rate of the affiliate is calculated as follows:
 `Validation success rate = ( Number of validated invites / Number of issued invites ) * 100%`
 
 Important:
-> To get rewarded, the affiliate should own an identity validated for the epoch when the invites are shared. The affiliate submits the address of this identity in the application form above as payment address. If the identity of the payment adress is not validated, the reward will not be paid. 
+
+> To get rewarded, the affiliate should own an identity validated for the epoch when the invites are shared. The affiliate submits the address of this identity in the application form above as payment address. If the identity of the payment adress is not validated, the reward will not be paid.
+
+**The reward fund is limited to 20 000 iDNA. The payment order is determined by the invite issue time: earlier invites are rewarded first.**
 
 
 *The Idena team reserves the rights to change and adjust these terms in case necessary.*
