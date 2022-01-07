@@ -48,7 +48,7 @@ To get rewarded, the affiliate should own an identity, which status is both:
 
 The affiliate submits the address of this identity in the application form above as payment address.
 
-The status of the identity is checked for the epoch when the invites are shared. If the identity of the payment adress does not comply with these requirements, the reward will not be paid.
+The status of the identity is checked for the epoch when the invites are shared. If the identity of the payment address does not comply with these requirements, the reward will not be paid.
 
 ### Reward fund
 
