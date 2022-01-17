@@ -36,6 +36,7 @@ module.exports = {
       ],
     },
     'developer/desktop/sign-in',
+    'developer/identity-bridge',
     'developer/send-dna',
     'developer/send-invite',
     'developer/send-raw',
