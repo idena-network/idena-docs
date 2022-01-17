@@ -74,22 +74,62 @@ Validation session fund is capped at 25 920 iDNA per day. It accumulates daily a
 
 | Total rewards            | 100% |
 | ------------------------ | ---- |
-| Validation rewards       | 24%  |
-| Flip rewards             | 40%  |
-| Iinvitation rewards      | 24%  |
+| Validation rewards       | 20%  |
+| Flip rewards             | 35%  |
+| Invitation rewards       | 18%  |
+| Reports rewards          | 15%  |
 | Idena foundation payouts | 10%  |
 | Zero wallet fund         | 2%   |
 
-Validation reward is distributed proportional to age to all validated identities, who have no flips irrelevant to seed words for the session.
+### Validation reward fund
+
+Validation reward fund is distributed proportional to age to all validated identities, who have no flips irrelevant to seed words for the session.
+
+### Flip reward fund
+
 The flip reward fund is distributed equally to all validated participants proportionally to the number of their qualified flips. Non-qualified flips are not paid for.
+
+### Invitation reward fund
+
 The invitation reward fund is distributed to all identities whose invitations have been validated. Invitation reward is paid up to 3 epochs in a row proportionally to the invited person's age:
 
-- A reward for the second validation of an invitee is 3 times bigger than a basic reward for a validated Candidate.
-- A reward for a Verified invitee is 6 times bigger than a basic reward for a validated Candidate.
-- A person who does not share their invitation is rewarded with at least 1/3 of the basic invitation reward with 50% probability to win 2/3 of the basic invitation reward for a non-spent invitation.
+- A `basic reward` is paid for the first successfull validation of invited Candidate.
+- A reward for the second validation of an invitee is 3 times bigger than a `basic reward` for a validated Candidate.
+- A reward for the third validation of an invitee is 6 times bigger than a `basic reward` for a validated Candidate.
+
+`Basic reward` for the invitation is calculated based on how early in the epoch the invitation was activated. The later the invitation is activated, the lower the `basic reward`. The reduction factor _k_ is calculated for each invitation as `k = 1−t⁴ · 0.5`, where `t ∈ [0..1]` is the amount of time that has passed from the start of the epoch to the moment of the activation.
+
+![image](/img/wp/idena-invitation-rewards-curve.png)
 
 Invitation rewards for the 2nd and 3rd validation are not paid to the Idena foundation.
-Fees are estimated based on the average occupancy of blocks, targeting 50% fill rate. Miners get 10% of transaction fees, 90% of the fees are burnt.
+
+### Reports rewards fund
+
+The flip reward fund is distributed equally to all validated participants proportionally to the number of successfully reported flips during the long session.
+
+### Idena foundation
+
+Idena foundation rewards are paid to [Foundation wallet (DAO)](#foundation-wallet-dao)
+
+### Zero wallet fund
+
+Zero wallet fund is paid to [Zero wallet (DAO)](#zero-wallet-dao)
+
+## Transaction fees
+
+The transaction fee is calculated automatically by protocol. Fees are estimated based on the average occupancy of blocks, targeting 50% fill rate. The fee goes up or down based on how full the previous block was, targeting an average block utilization of 50%. When the previous block is more than 50% full, the transaction fee goes up proportionally. When it is below 50% usage, fees go down.
+
+```
+transactionFee = currFeeRate * transactionSize
+
+currFeeRate = max(
+     1e-16,
+     0.1/networkSize,
+     prevFeeRate*(1+0.25*(prevBlockSize/300Kb-0.5))
+    )
+```
+
+Miners get 10% of transaction fees, 90% of the fees are burnt.
 
 ## iDNA coin utility
 
