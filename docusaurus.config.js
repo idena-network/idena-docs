@@ -38,6 +38,12 @@ module.exports = {
           label: 'Community',
           position: 'left',
         },
+        {
+          to: 'docs/iip/iips/',
+          activeBasePath: 'docs/iip',
+          label: 'IIPs',
+          position: 'left',
+        },
 
         {
           href: 'https://api.idena.io',
