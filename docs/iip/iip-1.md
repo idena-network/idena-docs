@@ -8,7 +8,7 @@ sidebar_label: IIP-1
 
 `Author`: midenaio
 
-`Status`: Active
+`Status`: Living
 
 `Type`: Process
 
@@ -75,7 +75,7 @@ Each IIP must begin with an header preamble. The headers must appear in the foll
 
 - `status`: Draft, Review, Final, Stagnant, Withdrawn, Living
 
-- `type`: One of Standards Track, Meta, or Informational
+- `type`: Standard, Meta, or Informational
 
 - `created`: Date the IIP was created on
 
