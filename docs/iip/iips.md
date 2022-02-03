@@ -13,4 +13,4 @@ Having a IIP here does not make it a formally accepted standard until its status
 
 | Number               | Title                              | Owner    | Type | Status |
 | -------------------- | ---------------------------------- | -------- | ---- | ------ |
-| [1](/docs/iip/iip-1) | Idena Improvement Proposal Process | midenaio | Meta | Active |
+| [1](/docs/iip/iip-1) | Idena Improvement Proposal Process | midenaio | Meta | Living |
