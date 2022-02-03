@@ -71,7 +71,7 @@ Each IIP must begin with an header preamble. The headers must appear in the foll
 
 - `author`: The list of the author’s or authors’ name(s) and/or username(s), or name(s) and email(s).
 
-- `discussions-to`: The url pointing to the discussion thread
+- `discussions-to`: The url pointing to the discussion thread (please create [Github discussion](https://github.com/idena-network/idena-docs/discussions))
 
 - `status`: Draft, Review, Final, Stagnant, Withdrawn, Living
 
