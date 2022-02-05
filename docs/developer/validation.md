@@ -133,7 +133,7 @@ See the example of creating [`SubmitShortAnswersHashTx` transaction](https://git
 
 ### Short session answers
 
-Once the long session has started, shot session answers should be published.
+Once the long session has started, short session answers should be published.
 In addition, the short answers transaction reveals the keywords which were used by the user to create flips.
 
 Short session answers should be published not later than 13:35:00. Otherwise other users will not be able to qualify flips keywords and the user will be penalized.
