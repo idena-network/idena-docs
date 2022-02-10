@@ -11,6 +11,7 @@ After discussion, please open a PR. After copy-editing and acceptance, it will b
 
 Having a IIP here does not make it a formally accepted standard until its status becomes Final.
 
-| Number               | Title                              | Owner    | Type | Status |
-| -------------------- | ---------------------------------- | -------- | ---- | ------ |
-| [1](/docs/iip/iip-1) | Idena Improvement Proposal Process | midenaio | Meta | Active |
+| Number               | Title                                      | Owner    | Type     | Status |
+| -------------------- | ------------------------------------------ | -------- | -------- | ------ |
+| [1](/docs/iip/iip-1) | Idena Improvement Proposal Process         | midenaio | Meta     | Active |
+| [2](/docs/iip/iip-2) | Change the time of the validation ceremony | midenaio | Standard | Review |
