@@ -32,6 +32,7 @@ New validation time for different time zones:
 - San Francisco, USA 7:00
 - New York, USA 11:00
 - Tunis, Tunisia 16:00
+- Cairo, Egypt 17:00
 - Berlin, Germany 16:00
 - Moscow, Russia 18:00
 - Delhi, India 20:30
