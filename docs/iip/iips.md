@@ -15,3 +15,4 @@ Having a IIP here does not make it a formally accepted standard until its status
 | -------------------- | ------------------------------------------ | -------- | -------- | ------ |
 | [1](/docs/iip/iip-1) | Idena Improvement Proposal Process         | midenaio | Meta     | Active |
 | [2](/docs/iip/iip-2) | Change the time of the validation ceremony | midenaio | Standard | Review |
+
