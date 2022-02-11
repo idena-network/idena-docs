@@ -37,6 +37,7 @@ New validation time for different time zones:
 - Delhi, India 20:30
 - Jakarta, Indonesia 22:00
 - Beijing, China 23:00
+- Seoul, South Korea 00:00 + 1 day
 - Sydney, Australia 01:00 + 1 day
 - Auckland, New Zealand 03:00 + 1 day
 - Honolulu, Hawaii, USA 05:00 + 1 day
