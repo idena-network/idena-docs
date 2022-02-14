@@ -18,7 +18,7 @@ sidebar_label: IIP-3
 
 ### Abstract
 
-Discriminate the voting power of identities that may be part of pools.
+Discriminate the voting power of pool delegators and newly validated identities.
 
 ### Motivation
 
@@ -28,14 +28,15 @@ One of the principles pools were designed on is "Accounts included in the pool (
 
 ### Specification
 
-After undelegating or passing the first validation (reaching age 1), identities will have to wait at least one month (or 2 epochs if they represent more than that). To calculate the time an identity will have to wait before gaining voting powers, the following is calculated: 
+After undelegating or passing the first validation (reaching age 1), identities will have to wait at least one month (or 2 epochs if they represent more than that).    
+To calculate the time an identity will have to wait before gaining voting powers, the following is calculated: 
 
 `x=max(2592000,epoch_duration*2)`   
 where:  
 2592000 = 1 month in seconds   
 epoch_duration = epoch duration in seconds in which undelegation took place `OR` epoch duration in seconds in which the identity became validated
 
-**For undelegated identities:** `x` is added to the timestamp of the block with 'List of mining identities was updated' flag in which the identity's mining status was changed from delegated to undelegated.   
+**For undelegated identities:** `x` is added to the timestamp of the block with the 'List of mining identities was updated' flag in which the identity's mining status was changed from delegated to undelegated.   
 **For newly validated identities:** `x` is added to the timestamp of the block they first become validated in (this would be the block changing the epoch).
 
 ### Rationale
@@ -45,9 +46,9 @@ Having an identity wait for 2 epochs (if they are newly validated or just undele
 Newly validated identities have to be discriminated in order to remove the possibility of pools re-inviting their identities to take part in a voting.     
 This would also make older identities more valuable and would incentivize people to not terminate their identity.
 
-Even though at the writing of the proposal the network size is big enough for epochs to be over 15 days, it was taken into consideration that a small network having the epoch duration of 3 days for example, would not benefit from the proposed change as the calculated value would be 6 days, not enough to prevent this kind manipulation.  
+Even though at the writing of the proposal the network size is big enough for epochs to be over 15 days, it was taken into consideration that a small network having the epoch duration of 3 days, for example, would not benefit from the proposed change as the calculated timeout period would be 6 days, not enough to prevent this kind manipulation.  
 
-Permanently removing voting powers from pool delegators was also considered, but this may incetivize people to terminate their identity once they decide to leave a pool and host their node for themselves, in order to regain their voting power.   
+Permanently removing voting powers from pool delegators was also considered, but this may incentivize people to terminate their identity once they decide to leave a pool and host a node for themselves, in order to regain their voting power.   
 
 An example where this kind of scenario happened was on 17th November 2021 (during a hard fork voting).    
 The voting number was stagnating right below the threshold for the hard fork to be activated. Two pools performed an operation where a significant number of identities undelegated, turned on mining (voted on the hard fork), and after the hard fork was activated redelegated to their pools.  
