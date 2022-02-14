@@ -4,7 +4,7 @@ title: IIP-3
 sidebar_label: IIP-3
 ---
 
-## IIP-3: Post-undelegation discrimination
+## IIP-3: Voting discrimination
 
 `Author`: Zen
 
@@ -18,7 +18,7 @@ sidebar_label: IIP-3
 
 ### Abstract
 
-Discriminate the voting power of identities that undelegate.
+Discriminate the voting power of identities that may be part of pools.
 
 ### Motivation
 
@@ -28,18 +28,22 @@ One of the principles pools were designed on is "Accounts included in the pool (
 
 ### Specification
 
-Identities will have to wait at least one month (or 2 epochs if they represent more than that) after undelegating from a pool to regain their voting powers. To calculate the time an identity will have to wait before regaining its voting powers, the following is calculated: 
+After undelegating or passing the first validation (reaching age 1), identities will have to wait at least one month (or 2 epochs if they represent more than that). To calculate the time an identity will have to wait before gaining voting powers, the following is calculated: 
 
 `x=max(2592000,epoch_duration*2)`   
 where:  
 2592000 = 1 month in seconds   
-epoch_duration = epoch duration in seconds in which undelegation took place 
+epoch_duration = epoch duration in seconds in which undelegation took place `OR` epoch duration in seconds in which the identity became validated
 
-`x` is added to the timestamp of the block with 'List of mining identities was updated' flag in which the identity's mining status was changed from delegated to undelegated.
+**For undelegated indetities:** `x` is added to the timestamp of the block with 'List of mining identities was updated' flag in which the identity's mining status was changed from delegated to undelegated.   
+**For newly validated identities:** `x` is added to the timestamp of the block they first become validated in (this would be the block changing the epoch).
 
 ### Rationale
 
-Identities undelegating should have to wait 2 epochs before taking part in governing the network (or 1 month if 2 epochs represent less). During this time a hard fork or oracle voting will expire and thus identities that undelegate when a voting is started will have their voting power reinstituted too late to affect the outcome of the oracle or hard fork vote.  
+Having an identity wait 2 epochs (if they are newly validated or just undelegated) beofre taking part in governing the network (or 1 month if 2 epochs represent less) would give enough time for a fork or oracle voting to expire thus pools won't be able to prepare any kind of setup where they'd be able to take part in a voting.
+
+Newly validated identities have to be discriminated in order to remove the possibility of pools re-inviting their identities to take part in a voting.     
+This would also make older identities more valuable and would incentivize people not terminating their identity.
 
 Even though at the writing of the proposal the network size is big enough for epochs to be over 15 days, it was taken into consideration that a small network having the epoch duration of 3 days for example, would not benefit from the proposed change as the calculated value would be 6 days, not enough to prevent this kind manipulation.  
 
@@ -53,4 +57,4 @@ Even if this was done with good intentions, it proved pools can still take part 
 
 ### Security Considerations
 
-The security of forks and oracle votings (oracle votings may be tied to governance or fund management, i.e. polls regarding protocol changes and oracle locks respectively) is increased by eliminating the possibility of pools undelegating their identities and manipulating the outcome of a voting.
+The security of forks and oracle votings (oracle votings may be tied to governance or fund management, i.e. polls regarding protocol changes and oracle locks respectively) is increased by eliminating the possibility of pools undelegating their identities or re-inviting themselves with different addresses and manipulating the outcome of a voting. This would also prevent a potential bad actor trying to gather up a significant number of identities and perform the same form of attack.
