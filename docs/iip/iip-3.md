@@ -8,11 +8,11 @@ sidebar_label: IIP-3
 
 `Author`: Zen
 
-`Status`: Idea
+`Status`: Draft
 
 `Type`: Standard
 
-`Created`: XXX
+`Created`: 2022-02-15
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/64
 
@@ -24,7 +24,7 @@ Discriminate the voting power of pool delegators and newly validated identities.
 
 The motivation behind this proposal is fueled by large pools being able to undelegate a significant number of identities that instantly regain voting powers. Those identities can then vote in a coordinated manner and incline the outcome of an oracle or fork voting. This can also be used to manipulate the funds of an oracle lock. 
 
-One of the principles pools were designed on is "Accounts included in the pool (delegated accounts) should be excluded from the decision-making process, oracle voting, block confirmation keeping the pool’s rewards at the same level as if it were separate accounts."
+One of the principles pools were designed on is "Accounts included in a pool (delegated accounts) should be excluded from the decision-making process, oracle voting, block confirmation keeping the pool’s rewards at the same level as if it were separate accounts."
 
 ### Specification
 
@@ -33,8 +33,8 @@ To calculate the time an identity will have to wait before gaining voting powers
 
 `x=max(2592000,epoch_duration*2)`   
 where:  
-2592000 = 1 month in seconds   
-epoch_duration = epoch duration in seconds in which undelegation took place `OR` epoch duration in seconds in which the identity became validated
+2592000 = 1 month (30 days) in seconds   
+epoch_duration = epoch duration in seconds in which undelegation took place `OR` epoch duration in seconds in which the identity reached age 1
 
 **For undelegated identities:** `x` is added to the timestamp of the block with the 'List of mining identities was updated' flag in which the identity's mining status was changed from delegated to undelegated.   
 **For newly validated identities:** `x` is added to the timestamp of the block they first become validated in (this would be the block changing the epoch).
