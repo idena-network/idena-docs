@@ -18,7 +18,7 @@ sidebar_label: IIP-3
 
 ### Abstract
 
-Discriminate the voting power of pool delegators and newly validated identities.
+Discriminate the voting power of pool delegators that undelegate and newly validated identities.
 
 ### Motivation
 
@@ -28,7 +28,7 @@ One of the principles pools were designed on is "Accounts included in a pool (de
 
 ### Specification
 
-After undelegating or passing the first validation (reaching age 1), identities will have to wait at least one month (or 2 epochs if they represent more than that).    
+After undelegating or passing the first validation (reaching age 1), identities will have to wait at least one month (or 2 epochs if they represent more than that) to gain voting powers.    
 To calculate the time an identity will have to wait before gaining voting powers, the following is calculated: 
 
 `x=max(2592000,epoch_duration*2)`   
@@ -37,7 +37,9 @@ where:
 epoch_duration = epoch duration in seconds in which undelegation took place `OR` epoch duration in seconds in which the identity reached age 1
 
 **For undelegated identities:** `x` is added to the timestamp of the block with the 'List of mining identities was updated' flag in which the identity's mining status was changed from delegated to undelegated.   
-**For newly validated identities:** `x` is added to the timestamp of the block they first become validated in (this would be the block changing the epoch).
+**For newly validated identities:** `x` is added to the timestamp of the block they first become validated in (this would be the block changing the epoch). 
+
+During the time an identity's voting power is discriminated, they can still take part in oracles in order to receive rewards from prize pools. Their vote won't influence the outcome of an oracle voting, but if they are in consensus with the oracle's decision (or just participated in a poll) a discriminated identity will still be rewarded as a regular identity (like currently delegated identities do if they are not the last identity voting from that pool).
 
 ### Rationale
 
