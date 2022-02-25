@@ -14,7 +14,7 @@ To encourage and reward Idena ambassadors, advocates, local community leaders, i
 - Educate your community about Idena;
 - Share your referral link, motivate your audience to join and help them to get an invite by tweeting about Idena;
 - Help your invitees through the onboarding process, remind them about the validation ceremony and help them get validated;
-- After the validation ceremony contact the core team and get rewarded for each validated identity referred by you.
+- After the validation ceremony you will get rewarded for each validated identity referred by you.
 
 The identity is considered a referee if the following conditions are met:
 
@@ -57,4 +57,4 @@ Affiliate rewards are paid from the Idena Foundation Wallet.
 **The reward fund is limited to 20 000 iDNA. The payment order is determined by the invite issue time: earlier invites are rewarded first.**
 
 
-*The Idena team reserves the rights to change and adjust these terms in case necessary.*
+*The Idena team reserves the right to change and adjust these terms or cancel reward payments for individual affiliates in case of abuse.*
