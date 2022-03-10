@@ -185,7 +185,7 @@ weight=stake^p
 
 With usual linear staking where `p=1`, the yield is fixed for all participants, regardless of the amount of stake.
 
-| Investor | Stake, iDNA | Number of users | Weight (stake^0.9) | Epoch percentage yield |
+| Investor | Stake, iDNA | Number of users | Weight (stake^1.0) | Epoch percentage yield |
 | -------- | ----------- | --------------- | ------------------ | ---------------------- |
 | A        | 100,000     | 10              | 100,000            | 2.45% (2.4 iDNA)       |
 | B        | 10,000      | 100             | 10,000             | 2.45% (2.4 iDNA)       |
@@ -207,7 +207,7 @@ Let's also consider the alternative when p=0.5
 
 > _Note: The name of quadratic staking is taken from the name of quadratic funding where the weight of each investor depends on the square root of his contribution (power of 0.5). This allows taking into account the interests of many small independent investors_
 
-| Investor | Stake, iDNA | Number of users | Weight (stake^0.9) | Epoch percentage yield |
+| Investor | Stake, iDNA | Number of users | Weight (stake^0.5) | Epoch percentage yield |
 | -------- | ----------- | --------------- | ------------------ | ---------------------- |
 | A        | 100,000     | 10              | 316                | 0.21% (214.4 iDNA)     |
 | B        | 10,000      | 100             | 100                | 0.68% (67.8 iDNA)      |
