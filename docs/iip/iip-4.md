@@ -46,7 +46,7 @@ Stake withdrawal will be possible only by terminating the identity, as it is now
 
 #### Stake protection from burning
 
-The proposal does not change the existing mechanics of the stake protection. A stake is protected from burning only for the identities with the Human status. If a Human fails validation, the identity goes to the Suspended status, and the owner can terminate the identity and withdraw the stake. Identities of other statuses do not have stake protection privilege.
+The proposal extends existing mechanics of the stake protection. Identities with `Verified`, `Suspended` or `Zombie` status having age above or equal `5` epochs will have stake protection. It means that their stake will be transferred to the normal wallet if the validation is failed or missed.
 
 #### Rewards payment procedure
 
@@ -116,6 +116,10 @@ Quadratic staking can lead to the following effects:
 1. iDNA coin will become more attractive to invest in. Staking can reduce inflation by increasing the number of coins locked. This will lead to faster network growth.
 1. The security of the protocol will increase due to the capitalization of the stake of each individual identity. Large identity stakes prevent buying and selling identities because the seller can terminate the identity after the sell and withdraw the stake.
 1. Since the staking reward fund is limited to only 18% of the validation fund, and the other components of the validation fund remain the same, this small change in motivation can hardly reduce the security of the invitation system, cause lower quality flips, or affect reporting.
+
+### Stake protection
+
+Stake protection for identities with `age`=> `5 epochs` will reduce the rate of burning coins associated with a failed or missed validations by around 30%.
 
 ### Why Candidates Rewards Fund is 2%
 
