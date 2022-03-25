@@ -44,9 +44,40 @@ Any validated identity will be able to replenish the stake to earn quadratic sta
 
 Stake withdrawal will be possible only by terminating the identity, as it is now.
 
-#### Stake protection from burning
+#### Validation failure stake protection
 
-The proposal extends existing mechanics of the stake protection. Identities with `Verified`, `Suspended` or `Zombie` status having age above or equal `5` epochs will have stake protection. It means that their stake will be transferred to the normal wallet if the validation is failed or missed.
+The proposal extends existing mechanics of the stake protection in case of identitiy's validation failure. Identities with `Suspended` or `Zombie` status having age above or equal `5` epochs will have stake protection. A share of their stake can be burnt depending on their age as follows:
+
+| Age | Identity status     | Validation | Share of stake burnt | Identity status after validation |
+| --- | ------------------- | ---------- | -------------------- | -------------------------------- |
+| 0   | Candidate           | Fail       | 100%                 | Killed                           |
+| 1   | Newbie              | Fail       | 100%                 | Killed                           |
+| 2+  | Newbie              | Fail       | 100%                 | Killed                           |
+| any | Verified            | Fail       | 100%                 | Killed                           |
+| any | Human               | Fail       | 0%                   | Suspended                        |
+| 4   | Suspended           | Fail       | 100%                 | Killed                           |
+| 5   | Suspended or Zombie | Fail       | 5%                   | Killed                           |
+| 6   | Suspended or Zombie | Fail       | 4%                   | Killed                           |
+| 7   | Suspended or Zombie | Fail       | 3%                   | Killed                           |
+| 8   | Suspended or Zombie | Fail       | 2%                   | Killed                           |
+| 9   | Suspended or Zombie | Fail       | 1%                   | Killed                           |
+| 10+ | Suspended or Zombie | Fail       | 0%                   | Killed                           |
+
+Once an identity is killed and a share of their stake is burnt, the remaining part of the stake will be transferred to the normal wallet.
+
+#### Missing validation stake protection
+
+The proposal does not change the existing mechanics of the stake protection in case of missing validation.
+
+| Age | Identity status | Validation | Share of stake burnt | Identity status after validation |
+| --- | --------------- | ---------- | -------------------- | -------------------------------- |
+| 0   | Candidate       | Miss       | 100%                 | Killed                           |
+| 1   | Newbie          | Miss       | 100%                 | Killed                           |
+| 2+  | Newbie          | Miss       | 100%                 | Killed                           |
+| any | Verified        | Miss       | 0%                   | Suspended                        |
+| any | Human           | Miss       | 0%                   | Suspended                        |
+| any | Suspended       | Miss       | 0%                   | Zombie                           |
+| any | Zombie          | Miss       | 100%                 | Killed                           |
 
 #### Rewards payment procedure
 
@@ -119,7 +150,9 @@ Quadratic staking can lead to the following effects:
 
 ### Stake protection
 
-Stake protection for identities with `age`=> `5 epochs` will reduce the rate of burning coins associated with a failed or missed validations by around 30%.
+Due to the significant amount of coins that can be locked in the stake of identity with `age>=5`, the share of stake that can be burnt is between `5%` and `0%`.
+
+Identities with `Verified` status, regardless of their age, do not get additional privileges for their stake protection to motivate them keeping their identity score high.
 
 ### Why Candidates Rewards Fund is 2%
 
