@@ -19,7 +19,7 @@ _Click `Edit this page` below to add your community channel_
 - [Telegram Indonesian-speaking group](https://t.me/idena_indonesia)
 - [Telegram Chinese-speaking group](https://t.me/idena_cn)
 - [Telegram Russian-speaking group](https://t.me/Idena_RU)
-- [Telegram Balkan telegram group](https://t.me/idenabalkan)
+- [Telegram Balkan telegram group](https://t.me/balkanidena)
 - [Telegram Turkish-speaking group](https://t.me/Idena_Turkiye)
 - [Telegram Ukrainian-speaking group](https://t.me/idena_ukraine)
 - [Telegram Spanish-speaking group](https://t.me/idenaespaniol)
