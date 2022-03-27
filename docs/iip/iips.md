@@ -13,7 +13,7 @@ Having a IIP here does not make it a formally accepted standard until its status
 
 | Number               | Title                                      | Owner    | Type     | Status |
 | -------------------- | ------------------------------------------ | -------- | -------- | ------ |
-| [1](/docs/iip/iip-1) | Idena Improvement Proposal Process         | midenaio | Meta     | Active |
-| [2](/docs/iip/iip-2) | Change the time of the validation ceremony | midenaio | Standard | Review |
-| [3](/docs/iip/iip-3) | Voting discrimination                      | Zen      | Standard | Review |
-| [4](/docs/iip/iip-4) | Quadratic Staking                          | midenaio | Standard | Review |
+| 1 | [Idena Improvement Proposal Process](/docs/iip/iip-1)         | midenaio | Meta     | Active |
+| 2 | [Change the time of the validation ceremony](/docs/iip/iip-2) | midenaio | Standard | Review |
+| 3 | [Voting discrimination](/docs/iip/iip-3)                      | Zen      | Standard | Review |
+| 4 | [Quadratic Staking](/docs/iip/iip-4)                          | midenaio | Standard | Review |
