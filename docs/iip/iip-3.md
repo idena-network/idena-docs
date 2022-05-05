@@ -62,6 +62,11 @@ Reference blocks where some of the related transactions were confirmed:
 `3636579`,`3636615`,`3636660` and `3636661` (undelegation); `3636606`,`3636653`,`3636654`,`3636706` (mining status turned on); `3636769` (hard fork activation); `3636871`,`3636872` and `3636873` (redelegation)      
 Even if this was done with good intentions, it proved pools can still take part in the governance of the network which is against the vision of Idena pools.
 
+### Backwards Compatibility
+
+This proposal requires changes to the following parts of the protocol: voting mechanics, delegation requirements and, most notably, block consensus mechanics.    
+The changes require a hard fork.
+
 ### Security Considerations
 
 The security of forks and oracle votings (oracle votings may be tied to governance or fund management, i.e. polls regarding protocol changes and oracle locks respectively) is increased by eliminating the possibility of pools undelegating their identities or re-inviting themselves with different addresses and manipulating the outcome of a voting. This would also discourage a potential bad actor from trying to gather up a significant number of identities in a short time span just to perform the same form of attack.
