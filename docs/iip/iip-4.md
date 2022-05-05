@@ -224,10 +224,10 @@ With usual linear staking where `p=1`, the yield is fixed for all participants, 
 
 | Investor | Stake, iDNA | Number of users | Weight (stake^1.0) | Epoch percentage yield |
 | -------- | ----------- | --------------- | ------------------ | ---------------------- |
-| A        | 100,000     | 10              | 100,000            | 2.45% (2.4 iDNA)       |
-| B        | 10,000      | 100             | 10,000             | 2.45% (2.4 iDNA)       |
-| C        | 1,000       | 1,000           | 1,000              | 2.45% (2.4 iDNA)       |
-| D        | 100         | 10,000          | 100                | 2.45% (2.4 iDNA)       |
+| A        | 100,000     | 10              | 100,000            | 2.45% (2450 iDNA)      |
+| B        | 10,000      | 100             | 10,000             | 2.45% (245 iDNA)       |
+| C        | 1,000       | 1,000           | 1,000              | 2.45% (24.5 iDNA)      |
+| D        | 100         | 10,000          | 100                | 2.45% (2.45 iDNA)      |
 
 Model parameters:
 
