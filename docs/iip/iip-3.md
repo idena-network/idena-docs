@@ -42,6 +42,8 @@ To prevent a post-fork attack where discriminated identities run outdated node v
 - Discriminated identities' votes for blocks will only be used to identify their online mining status.   
 - Discriminated identities can propose blocks and get paid for that as a regular identity.   
 
+Discriminated identities won't be allowed to send 'Validation Evidence' transactions.   
+
 ### Rationale
 
 Having an identity wait for 2 epochs before taking part in governing the network would give enough time for a fork or oracle voting to expire thus pools won't be able to prepare any kind of setup where they'd be able to take part in a voting.
