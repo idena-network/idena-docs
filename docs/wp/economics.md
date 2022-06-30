@@ -74,16 +74,21 @@ Validation session fund is capped at 25 920 iDNA per day. It accumulates daily a
 
 | Total rewards            | 100% |
 | ------------------------ | ---- |
-| Validation rewards       | 20%  |
+| Staking rewards          | 18%  |
+| Candidate rewards        | 2%   |
 | Flip rewards             | 35%  |
 | Invitation rewards       | 18%  |
 | Reports rewards          | 15%  |
 | Idena foundation payouts | 10%  |
 | Zero wallet fund         | 2%   |
 
-### Validation reward fund
+### Staking rewards fund
 
-Validation reward fund is distributed proportional to age to all validated identities, who have no flips irrelevant to seed words for the session.
+The staking rewards fund is distrubuted among all validated identities depending on their stake size. ([Quadratic Staking proposal](/docs/iip/iip-4))
+
+### Candidate rewards fund
+
+The candidate rewards fund is distributed to new users for passing the validation.
 
 ### Flip reward fund
 
