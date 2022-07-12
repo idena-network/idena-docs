@@ -11,9 +11,10 @@ After discussion, please open a PR. After copy-editing and acceptance, it will b
 
 Having a IIP here does not make it a formally accepted standard until its status becomes Final.
 
-| Number               | Title                                      | Owner    | Type     | Status    |
-| -------------------- | ------------------------------------------ | -------- | -------- | --------- |
-| 1 | [Idena Improvement Proposal Process](/docs/iip/iip-1)         | midenaio | Meta     | Active    |
-| 2 | [Change the time of the validation ceremony](/docs/iip/iip-2) | midenaio | Standard | Withdrawn |
-| 3 | [Voting discrimination](/docs/iip/iip-3)                      | Zen      | Standard | Final     |
-| 4 | [Quadratic Staking](/docs/iip/iip-4)                          | midenaio | Standard | Final     |
+| Number | Title                                                         | Owner    | Type     | Status    |
+| ------ | ------------------------------------------------------------- | -------- | -------- | --------- |
+| 1      | [Idena Improvement Proposal Process](/docs/iip/iip-1)         | midenaio | Meta     | Active    |
+| 2      | [Change the time of the validation ceremony](/docs/iip/iip-2) | midenaio | Standard | Withdrawn |
+| 3      | [Voting discrimination](/docs/iip/iip-3)                      | Zen      | Standard | Final     |
+| 4      | [Quadratic Staking](/docs/iip/iip-4)                          | midenaio | Standard | Final     |
+| 5      | [Mining rewards based on Quadratic staking](/docs/iip/iip-5)  | midenaio | Standard | Review    |
