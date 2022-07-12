@@ -67,43 +67,43 @@ Validator block reward [i] = Validator share[i] * 6 iDNA
 
 Example for `N`=`12` if the stake of the block proposer and all stakes validators are equal:
 
-| Role         | Stake, iDNA | Weight | Share  | Block reward, iDNA |
-| ------------ | ----------- | ------ | ------ | ------------------ |
-| Proposer     | 100         | 2.40   | 0.1667 | 1.00               |
-| Validator 1  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 2  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 3  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 4  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 5  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 6  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 7  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 8  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 9  | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 10 | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 11 | 100         | 1.00   | 0.0694 | 0.42               |
-| Validator 12 | 100         | 1.00   | 0.0694 | 0.42               |
-| Total        |             | 14.40  | 1.0000 | 6.00               |
+| Role         | Stake, iDNA |    Weight |      Share | Block reward, iDNA |
+| ------------ | ----------: | --------: | ---------: | -----------------: |
+| Proposer     |           1 |      2.40 |     0.1667 |               1.00 |
+| Validator 1  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 2  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 3  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 4  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 5  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 6  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 7  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 8  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 9  |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 10 |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 11 |           1 |      1.00 |     0.0694 |               0.42 |
+| Validator 12 |           1 |      1.00 |     0.0694 |               0.42 |
+| **Total**    |             | **14.40** | **1.0000** |           **6.00** |
 
 #### Example 2
 
 Example for `N`=`12` if the stake of one of the validators and the stake of the proposer is 100
 
-| Role         | Stake, iDNA | Weight | Share  | Block reward, iDNA |
-| ------------ | ----------- | ------ | ------ | ------------------ |
-| Proposer     | 100         | 151.43 | 0.6715 | 4.03               |
-| Validator 1  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 2  | 100         | 63.10  | 0.2798 | 1.68               |
-| Validator 3  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 4  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 5  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 6  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 7  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 8  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 9  | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 10 | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 11 | 1           | 1.00   | 0.0044 | 0.03               |
-| Validator 12 | 1           | 1.00   | 0.0044 | 0.03               |
-| Total        |             | 225.53 | 1.0000 | 6.00               |
+| Role         | Stake, iDNA |     Weight |      Share | Block reward, iDNA |
+| ------------ | ----------: | ---------: | ---------: | -----------------: |
+| Proposer     |         100 |     151.43 |     0.6715 |               4.03 |
+| Validator 1  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 2  |         100 |      63.10 |     0.2798 |               1.68 |
+| Validator 3  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 4  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 5  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 6  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 7  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 8  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 9  |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 10 |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 11 |           1 |       1.00 |     0.0044 |               0.03 |
+| Validator 12 |           1 |       1.00 |     0.0044 |               0.03 |
+| **Total**    |             | **225.53** | **1.0000** |           **6.00** |
 
 ### Mining rewards in pools
 
@@ -130,6 +130,37 @@ In contrast with PoS system, the proposed changes affect only the reward distrib
 See the difference between PoP and PoS:
 
 ![image](/img/iip/iip-5/PoSvsPoP.png)
+
+### Modeling
+
+We've run a model emulating mining rewards distribution during the epoch `#0087` before and after the IIP-5 changes. The model doesn’t include possible mining rewards of the sleeping miners but reflects the possible mining rewards of validators who were actively running their nodes during the epoch `#0087`.
+
+| Category              | Number of nodes           | Mining rewards before IIP-5 | Mining rewards after IIP-5 |
+| --------------------- | ------------------------- | --------------------------: | -------------------------: |
+| Solo miners           | 618                       |                 28 282 iDNA |               110 085 iDNA |
+| Family pools [2..15]  | 237                       |                 40 284 iDNA |               113 642 iDNA |
+| Medium pools [16..50] | 39                        |                 31 854 iDNA |                30 275 iDNA |
+| Large pools [51+]     | 38                        |                240 810 iDNA |               163 868 iDNA |
+| Delegated identities  | 10 029 (not running node) |                168 968 iDNA |                92 325 iDNA |
+| **Total**             | **932**                   |            **510 198 iDNA** |           **510 198 iDNA** |
+
+Before IIP-5 changes were made there were 618 solo miners earning 28k iDNA per epoch. At the same time there were 38 large pools earning more than 400k iDNA together with their delegatees getting rewards into stakes.
+
+After the IIP-5 changes the distribution of rewards shifts in a favor of solo miners and family pools who mainly replenish their stakes.
+
+#### Stake distibution of the solo miners
+
+There were 618 solo miners running their nodes during the epoch `#0087`. We've run a model for the mining rewards of the solo miners depending on their stakes.
+
+| Category by stake        | Number of nodes | Avg. rewards before IIP-5 | Avg. rewards after IIP-5 |
+| ------------------------ | --------------- | ------------------------: | -----------------------: |
+| Small stake [0..500]     | 419             |                   46 iDNA |                  44 iDNA |
+| Medium stake [500..10k]  | 174             |                   45 iDNA |                 252 iDNA |
+| Large stake [10k..100k]  | 22              |                   47 iDNA |               1 670 iDNA |
+| Very large stake [100k+] | 3               |                   49 iDNA |               3 655 iDNA |
+| **Total**                | **618**         |                           |                          |
+
+Quadratic nature of the mining rewards gives a higher yield for the smaller stakes. This means that the mining income of the validators with a small stake is not affected significantly while encouraging them to increase their stakes.
 
 ## Backward Compatibility
 
