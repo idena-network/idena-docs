@@ -135,9 +135,9 @@ See the difference between PoP and PoS:
 
 We've run a model emulating mining rewards distribution during the epoch `#0087` before and after the IIP-5 changes. The model doesn’t include possible mining rewards of the sleeping miners but reflects the possible mining rewards of validators who were actively running their nodes during the epoch `#0087`.
 
-| Category              | Number of nodes           | Mining rewards before IIP-5 | Mining rewards after IIP-5 |
+| Category by pool size | Number of nodes           | Mining rewards before IIP-5 | Mining rewards after IIP-5 |
 | --------------------- | ------------------------- | --------------------------: | -------------------------: |
-| Solo miners           | 618                       |                 28 282 iDNA |               110 085 iDNA |
+| Solo miners [1]       | 618                       |                 28 282 iDNA |               110 085 iDNA |
 | Family pools [2..15]  | 237                       |                 40 284 iDNA |               113 642 iDNA |
 | Medium pools [16..50] | 39                        |                 31 854 iDNA |                30 275 iDNA |
 | Large pools [51+]     | 38                        |                240 810 iDNA |               163 868 iDNA |
