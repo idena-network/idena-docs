@@ -174,7 +174,7 @@ Invitations are distributed as follows:
 - If there are non-distributed invitations left, identities with the Human or Verified status get one invitation starting from the highest total score.
 - After the distribution, the minimal Total score of those entitled to receive invitations is known.
 - All identities with this minimal Total score receive invitations. If needed, additional invitations are issued by the Idena protocol to cover the demand.
-- The core Idena team is granted to issue a limited number of invitations per epoch to support the network growth. The number of available invitations for the foundation address is limited to `min(500, max(50, 1/3\*NetworkSize))`
+- The core Idena team is granted to issue a limited number of invitations per epoch to support the network growth. The number of available invitations for the foundation address is limited to `max(500, NetworkSize*0.1)`
 
 ## Flips
 
