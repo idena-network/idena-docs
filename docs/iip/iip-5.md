@@ -22,11 +22,25 @@ Change the block reward distribution so that instead of a fixed mining reward, t
 
 ## Motivation
 
+Despite the principle of `one person=one vote`, with the growth of the network, the number of nodes does not increase, but falls. This is due to the concentration of mining rewards earned by pools which demotivates solo users to keep their nodes. There are 8k accounts represented by only ~40 nodes (large pools). Solo users cannot compete with pools and simply shut down their nodes. The network growth associated with the growth of pools does not increase the number of nodes run by independent validators. We believe that this is contrary to our goals and interferes with the solution of the scalability trilemma which requires excessive decentralization.
+
+With quadratic mining rewards, several hundred dormant nodes can be back in the game. Due to the large stake discrimination (stake^0.9), we will provide resistance to the capture of the network by large stakeholders. With the dominance of large stakeholders, the degree can be revised by the network in future.
+
 Positive effects expected from the mining rewards based on Quadratic staking:
 
 - Increasing the number of validating nodes
 - Increasing the yield of Quadratic staking through the additional mining rewards that can be earned by running the Idena node
 - Amplifying the positive effects of Quadratic staking described in [IIP-4](/docs/iip/iip-4)
+- Reducing mining rewards of pools which do not replenish the stakes of their accounts
+
+See the difference between mining rewards distribution before and after IIP-5:
+
+![image](/img/iip/iip-5/BeforeAfterChart.png)
+![image](/img/iip/iip-5/BeforeAfterTable.png)
+
+For newcomers and users with small stakes the mining rewards in iDNA will decrease. On the other hand, stimulating competition for mining from large stakeholders is aimed at increasing the valuation of the network and increasing the income from mining, denominated in US dollars, for all network participants, including users with small stakes.
+
+You can check the estimated mining rewards using the [staking calculator](https://idena.io/staking).
 
 ## Specification
 
