@@ -127,6 +127,14 @@ currFeeRate = max(
 
 You can specify the maximum fee limit for the transaction `maxFee`.
 
+### Dust
+
+All addresses with balances less than dust are cleaned every time a new epoch starts. Dust coins are burnt to prevent spam and minimize the size of the blockchain state. You can calculate the dust size using [`bcn_feePerGas`](../node/smart-contracts-methods#bcn_feepergas-method) method as follows:
+
+```
+bcn_feePerGas * 1000
+```
+
 ### Raw transactions
 
 You can build and sign raw transaction offline. See `js` [examples](https://github.com/idena-network/idena-examples/tree/master/nodejs-protobuf-transaction-signing). Actual protobuf model of transactions see [here](https://github.com/idena-network/idena-go/blob/master/protobuf/models.proto#L6).

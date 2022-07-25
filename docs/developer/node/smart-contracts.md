@@ -46,7 +46,7 @@ The `maxFee` parameter can be omitted when calling estimation methods.
 
 `GasPrice` is calculated automatically by the protocol. The minimum `GasPrice` is: `GasPrice`= `0.01`/`NetworkSize`.
 
-The [`bcn_feePerGas`](#bcn_feePerGas-method) method should be called to get the current `GasPrice`.
+The [`bcn_feePerGas`](smart-contracts-methods#bcn_feepergas-method) method should be called to get the current `GasPrice`.
 
 Example:
 
