@@ -123,7 +123,7 @@ Codes for flags:
 | 100  | `GradeB` (\*) |
 | 101  | `GradeA` (\*) |
 
-(\*) - `GradeA`..`GradeD` are used to vote for extra rewards for the flip’s author (currently not used).
+(\*) - `GradeA`..`GradeD` are used to vote for extra rewards for the flip’s author (see [more](../wp/economics#flip-reward-fund)).
 
 ### Short session answers proof
 

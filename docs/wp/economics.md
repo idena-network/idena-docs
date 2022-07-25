@@ -92,7 +92,28 @@ The candidate rewards fund is distributed to new users for passing the validatio
 
 ### Flip reward fund
 
-The flip reward fund is distributed equally to all validated participants proportionally to the number of their qualified flips. Non-qualified flips are not paid for.
+The flip reward fund is distributed equally to all validated participants proportionally to the number of their qualified flips and their grades. Non-qualified flips are not paid for.
+
+The flip grade is determined by the votes of the committee members. During the long session committee members can vote as follows:
+
+| Code | Vote       | Desciption                                                |
+| ---- | ---------- | --------------------------------------------------------- |
+| 0    | `None`     | Do not approve flip                                       |
+| 1    | `Reported` | Report the flip                                           |
+| 2    | `GradeD`   | Approve flip with a basic reward                          |
+| 3    | `GradeC`   | Approve flip with a basic flip reward increased `2` times |
+| 4    | `GradeB`   | Approve flip with a basic flip reward increased `4` times |
+| 5    | `GradeA`   | Approve flip with a basic flip reward increased `8` times |
+
+Default flip grade is `GradeD`. At least `1/3` of committee members should approve the flip to increase the flip grade. Otherwise default grade is used. The flip grade is calculated as the average grade among the votes of committee members who approved the flip.
+
+Example:
+
+```
+Committee size: 10
+Votes: [0, 1, 2, 2, 3, 4, 5, 5, 5, 5]
+Flip grade = Round(Avg(2, 2, 3, 4, 5, 5, 5, 5)) = 4 //`GradeB`
+```
 
 ### Invitation reward fund
 
