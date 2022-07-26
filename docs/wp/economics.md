@@ -92,7 +92,7 @@ The candidate rewards fund is distributed to new users for passing the validatio
 
 ### Flip reward fund
 
-The flip reward fund is distributed equally to all validated participants proportionally to the number of their qualified flips and their grades. Non-qualified flips are not paid for.
+The flip reward fund is distributed equally to all participants proportionally to the number of their qualified flips and their grades. Non-qualified flips are not paid for.
 
 The flip grade is determined by the votes of the committee members. During the long session committee members can vote as follows:
 

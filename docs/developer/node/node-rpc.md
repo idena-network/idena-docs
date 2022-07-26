@@ -119,8 +119,8 @@ When the previous block is more than 50% full, the transaction fee goes up propo
 transactionFee = currFeeRate * transactionSize
 
 currFeeRate = max(
-     1e-16,
-     0.1/networkSize,
+     1e-17,
+     0.01/networkSize,
      prevFeeRate*(1+0.25*(prevBlockSize/300Kb-0.5))
     )
 ```
@@ -129,10 +129,10 @@ You can specify the maximum fee limit for the transaction `maxFee`.
 
 ### Dust
 
-All addresses with balances less than dust are cleaned every time a new epoch starts. Dust coins are burnt to prevent spam and minimize the size of the blockchain state. You can calculate the dust size using [`bcn_feePerGas`](../node/smart-contracts-methods#bcn_feepergas-method) method as follows:
+All addresses with balances less than dust are cleaned every time a new epoch starts. Dust coins are burnt to prevent spam and minimize the size of the blockchain state. You can calculate the dust size using the following formula:
 
 ```
-bcn_feePerGas * 1000
+0.01/networkSize
 ```
 
 ### Raw transactions
