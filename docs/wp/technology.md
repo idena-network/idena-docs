@@ -146,7 +146,7 @@ Newbies cannot terminate their identities to withdraw the stake.
 
 ### Losing stake
 
-If cryptoidentity is killed by the network, then stake gets burnt: 20% or 80% of all Idena rewards (mining, validation rewards, flip rewards, valid invitation rewards, and so on).
+If cryptoidentity is killed by the network, then a part or the entire stake gets burnt depending on the age and status of the identity: identities receive stake protection according to the stake protection implemented with [IIP-4](/docs/iip/iip-4#validation-failure-stake-protection).
 
 The coins stored on normal Idena wallets can not be burnt in any cases.
 
