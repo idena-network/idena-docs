@@ -16,7 +16,7 @@ sidebar_label: IIP-5
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/81
 
-`Translations`: [🇷 🇺](https://medium.com/idena/fd46e720304) 
+`Translations`: [🇷🇺](https://medium.com/idena/fd46e720304) 
 
 ## Abstract
 
