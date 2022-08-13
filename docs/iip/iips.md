@@ -11,7 +11,6 @@ After discussion, please open a PR. After copy-editing and acceptance, it will b
 
 Having a IIP here does not make it a formally accepted standard until its status becomes Final.
 
-<<<<<<< HEAD
 | Number | Title                                                         | Owner    | Type     | Status    | Translations |
 | ------ | ------------------------------------------------------------- | -------- | -------- | --------- | ------------ |
 | 1      | [Idena Improvement Proposal Process](/docs/iip/iip-1)         | midenaio | Meta     | Active    |              |
@@ -19,12 +18,3 @@ Having a IIP here does not make it a formally accepted standard until its status
 | 3      | [Voting discrimination](/docs/iip/iip-3)                      | Zen      | Standard | Final     | [🇷🇺](https://medium.com/idena/babf31b65994)           |
 | 4      | [Quadratic Staking](/docs/iip/iip-4)                          | midenaio | Standard | Final     | [🇷🇺](https://medium.com/idena/b7fd7e8b46e5)           |
 | 5      | [Mining rewards based on Quadratic staking](/docs/iip/iip-5)  | midenaio | Standard | Review    | [🇷🇺](https://medium.com/idena/fd46e720304)           |
-=======
-| Number | Title                                                         | Owner    | Type     | Status    | Translation |
-| ------ | ------------------------------------------------------------- | -------- | -------- | --------- | ----------- |
-| 1      | [Idena Improvement Proposal Process](/docs/iip/iip-1)         | midenaio | Meta     | Active    |             |
-| 2      | [Change the time of the validation ceremony](/docs/iip/iip-2) | midenaio | Standard | Withdrawn |             |
-| 3      | [Voting discrimination](/docs/iip/iip-3)                      | Zen      | Standard | Final     | [🇷🇺](https://medium.com/idena/babf31b65994)          |
-| 4      | [Quadratic Staking](/docs/iip/iip-4)                          | midenaio | Standard | Final     | [🇷🇺](https://medium.com/idena/b7fd7e8b46e5)          |
-| 5      | [Mining rewards based on Quadratic staking](/docs/iip/iip-5)  | midenaio | Standard | Review    | [🇷🇺](https://medium.com/idena/fd46e720304)          |
->>>>>>> 42426fc3fc8122801907da59632e76c63e6da83c
