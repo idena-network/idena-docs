@@ -16,6 +16,8 @@ sidebar_label: IIP-5
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/81
 
+`Translations`: [🇷 🇺](https://medium.com/idena/fd46e720304) 
+
 ## Abstract
 
 Change the block reward distribution so that instead of a fixed mining reward, the block proposer and block validators are paid in proportion to their stake to the power of `0.9`. The proposed change affects only mining rewards distribution and does not affect the consensus mechanism, which implies equality of votes when verifying blocks according to the principle: `one node = one vote`.

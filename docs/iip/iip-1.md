@@ -81,6 +81,8 @@ Each IIP must begin with an header preamble. The headers must appear in the foll
 
 - `withdrawal-reason`: A sentence explaining why the IIP was withdrawn. (Optional field, only needed when status is Withdrawn)
 
+- `Translations`: The url pointing to the translated version of IIP. Anchor of the URL must be an emoji with the flag of the language that represents the translated version of IIP.
+
 ### IIP Editors
 
 The current IIP editors are
