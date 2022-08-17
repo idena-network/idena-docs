@@ -209,7 +209,7 @@ Flips are created only by validated identities:
 
 ### Flips submission requirements
 
-Newbies and verified accounts must submit flips before the next validation ceremony. Not submitting flips is equal to missing a validation.
+Newbie, verified and human accounts must submit flips before the next validation ceremony. Not submitting flips is equal to missing a validation.
 
 Candidates, suspended accounts, and zombies do not submit flips for the validation ceremony.
 
