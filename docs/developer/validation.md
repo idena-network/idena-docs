@@ -39,11 +39,11 @@ Secret and temporary keys are used to encrypt the private and public part of all
 
 Both secret key and temporary keys are derived from the epoch number and can be calculated with identity’s private key at any time.
 
-See code example: `todo: link`
+See code example: [`generateFlipKey` function](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/shared/utils/crypto.js#L148)
 
 Packages of secret keys are generated during the flip lottery once the list of identities who need the secret keys becomes available.
 
-See code example: `todo: link`
+See code example: [`prepareFlipKeysPackage` function](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/shared/utils/crypto.js#L84)
 
 ## Validation session protocol
 
