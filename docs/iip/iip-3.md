@@ -16,6 +16,8 @@ sidebar_label: IIP-3
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/64
 
+`Translations`: [🇷🇺](https://medium.com/idena/babf31b65994) 
+
 ### Abstract
 
 Discriminate the voting power of pool delegators that undelegate and identities with newbie status.

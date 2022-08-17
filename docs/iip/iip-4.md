@@ -16,6 +16,8 @@ sidebar_label: IIP-4
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/69
 
+`Translations`: [🇷🇺](https://medium.com/idena/b7fd7e8b46e5)
+
 ## Abstract
 
 Instead of rewards paid for identity age, introduce quadratic staking rewards paid to validated identities proportional to their stake to the power of `0.9`. Allow identity stake replenishment. The amount of staked coins does not affect the voting power of the identity.
