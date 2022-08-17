@@ -135,6 +135,10 @@ All addresses with balances less than dust are cleaned every time a new epoch st
 bcn_feePerGas * 1000
 ```
 
+### The smallest unit of iDNA
+
+The smallest unit of iDNA is `1e-18` iDNA (`0.000000000000000001` iDNA).
+
 ### Raw transactions
 
 You can build and sign raw transaction offline. See `js` [examples](https://github.com/idena-network/idena-examples/tree/master/nodejs-protobuf-transaction-signing). Actual protobuf model of transactions see [here](https://github.com/idena-network/idena-go/blob/master/protobuf/models.proto#L6).
