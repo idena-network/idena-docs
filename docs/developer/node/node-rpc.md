@@ -132,7 +132,7 @@ You can specify the maximum fee limit for the transaction `maxFee`.
 All addresses with balances less than dust are cleaned every time a new epoch starts. Dust coins are burnt to prevent spam and minimize the size of the blockchain state. You can calculate the dust size using the following formula:
 
 ```
-0.01/networkSize
+bcn_feePerGas * 1000
 ```
 
 ### Raw transactions
