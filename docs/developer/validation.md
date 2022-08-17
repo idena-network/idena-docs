@@ -53,7 +53,7 @@ Validation session consists of the following stages (UTC time):
 - 13:30:00: `Short session`
 - 13:32:00 or later: `Long session` starts when a block with the `long session` flag is mined
 - 14:00:00: `After-long session` starts when a block with a `long session finished` flag is mined
-- 14:05:00 or later: New epoch starts when a block with the `validation finished` flag is mined. The new epoch can be started only after mining 5 blocks in a row without any ceremonial transactions. This ensures that all pending ceremonial transactions are mined.
+- 14:05:00 or later: New epoch starts when a block with the `validation finished` flag is mined. The new epoch can be started only after mining 5 blocks in a row without any ceremonial transactions for every existing shard. This ensures that all pending ceremonial transactions are mined.
 
 ### Flip lottery
 
