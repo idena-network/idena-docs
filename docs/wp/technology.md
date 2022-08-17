@@ -346,4 +346,4 @@ A multisignature wallet address with specified M and N locks coins. In order to 
 
 #### TimeLock
 
-Smart contract locks coins on the smart contract address until the specified time. Once a newly mined block has a timestamp greater than that time, the coins can be transferred to any address specified by the owner.
+Smart contract locks coins on the smart contract address until the specified time. Once a newly mined block has a timestamp greater or equal to that time, the coins can be transferred to any address specified by the owner.
