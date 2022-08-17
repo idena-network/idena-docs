@@ -144,6 +144,8 @@ Only 20% of earned coins is mined to the main wallet for Newbies. The rest 80% i
 
 Newbies cannot terminate their identities to withdraw the stake.
 
+Newbies cannot participate in the governance of the network. While adresses with this status can get rewards for mining and participating in oracle votes, their votes are not counted and do not make a difference in the final outcome of a voting: they cannot influence a hard fork voting or an oracle voting.
+
 ### Losing stake
 
 If cryptoidentity is killed by the network, then a part or the entire stake gets burnt depending on the age and status of the identity: identities receive stake protection according to the stake protection implemented with [IIP-4](/docs/iip/iip-4#validation-failure-stake-protection).
