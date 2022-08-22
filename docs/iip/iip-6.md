@@ -33,7 +33,7 @@ Examples:
 
 ### Specification
 
-For simplicity, the `sendVoteProof` function of the Oracle Vote smart contract can track pool votes count in an additional variable. This variable will be used to check if the quorum has been reached instead of `secretVotesCount`. The pool tracking mechanism used to increment this new variable can be similar to the one used in the `sendVote` function.
+For simplicity, the `sendVoteProof` function of the Oracle Vote smart contract can track the non-discriminated votes count in an additional variable. This variable will be used to check if the quorum has been reached instead of `secretVotesCount`. The pool tracking mechanism used to check if the variable should be incremented or not can be similar to the one used in the `sendVote` function.
 
 ### Rationale
 
