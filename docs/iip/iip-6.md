@@ -41,7 +41,7 @@ The variable is incremented according to the statement `1 pool = 1 vote`. This m
 
 The modification of the smart contract code provides the best solution to address this problem. Leaving the authors to artificially increase their quorum size to prevent similar scenarios does not solve the problem completely. It may even make it harder for their vote to reach quorum due to the artificial increase while still leaving room for potential pool manipulation to some extent.
 
-Authors may also be incentivized to not set a prize pool for oracles. Due to an oracle having no rewards for the casted votes, and pools only being able to cast one vote, farm-like pools would be encouraged to cast only one vote since they won't be getting increasing rewards with each vote, but losing funds to transaction fees.
+Authors may also be incentivized to not set any prize pool for oracles. Due to an oracle having no rewards for the voters, and pools only being able to send one counting vote, farm-like pools would be encouraged to only vote once using one identity since they won't be getting increasing rewards with each vote, but instead lose funds to transaction fees.
 
 These changes do not interfere with the way votes are counted. It only affects the quorum requirement.
 
