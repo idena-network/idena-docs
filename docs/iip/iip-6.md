@@ -35,11 +35,15 @@ Examples:
 
 For simplicity, the `sendVoteProof` function of the Oracle Vote smart contract can track the non-discriminated votes count in an additional variable. This variable will be used to check if the quorum has been reached instead of `secretVotesCount`. The pool tracking mechanism used to check if the variable should be incremented or not can be similar to the one used in the `sendVote` function.
 
+The variable is incremented according to the statement `1 pool = 1 vote`. This means that for the first vote coming from a pool, this variable will be incremented. Any votes coming after that from the same pool will no longer increment this variable. 
+
 ### Rationale
 
 The modification of the smart contract code provides the best solution to address this problem. Leaving the authors to artificially increase their quorum size to prevent similar scenarios does not solve the problem completely. It may even make it harder for their vote to reach quorum due to the artificial increase while still leaving room for potential pool manipulation to some extent.
 
 Authors may also be incentivized to not set a prize pool for oracles. Due to an oracle having no rewards for the casted votes, and pools only being able to cast one vote, farm-like pools would be encouraged to cast only one vote since they won't be getting increasing rewards with each vote, but losing funds to transaction fees.
+
+These changes do not interfere with the way votes are counted. It only affects the quorum requirement.
 
 The benefits of these changes outweigh the additional computation required by the `sendVoteProof` function (slightly higher fees).
 
