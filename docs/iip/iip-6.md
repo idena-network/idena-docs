@@ -33,7 +33,14 @@ Examples:
 
 ### Specification
 
-For simplicity, the `sendVoteProof` function of the Oracle Vote smart contract can track the non-discriminated votes count in an additional variable. This variable will be used to check if the quorum has been reached instead of `secretVotesCount`. The pool tracking mechanism used to check if the variable should be incremented or not can be similar to the one used in the `sendVote` function.
+The `sendVoteProof` function of the Oracle Vote smart contract can track the non-discriminated votes count in an additional variable. The pool tracking mechanism used to check if the variable should be incremented or not can be similar to the one used in the `sendVote` function. 
+This variable will be used to check if the quorum has been reached **only once**. 
+
+If this check returns `0`, the voting has to be prolonged and a one bit variable is flipped to track that the voting has been prolonged by this check and not allow it for a second time.
+
+The check has to be added in the `sendVote` function after the current quorum check. This will require oracle votings to first have enough votes to consider checking for non-discriminated ones.
+
+This check does not replace any present checks, it is an addition to allow a one-time prolongation for oracles that do not have enough non-discriminated votes to reach quorum.
 
 The variable is incremented according to the statement `1 pool = 1 vote`. This means that for the first vote coming from a pool, this variable will be incremented. Any votes coming after that from the same pool will no longer increment this variable. 
 
@@ -43,9 +50,15 @@ The modification of the smart contract code provides the best solution to addres
 
 Authors may also be incentivized to not set any prize pool for oracles. Due to an oracle having no rewards for the voters, and pools only being able to send one counting vote, farm-like pools would be encouraged to only vote once using one identity since they won't be getting increasing rewards with each vote, but instead lose funds to transaction fees.
 
-These changes do not interfere with the way votes are counted. It only affects the quorum requirement.
+These changes do not interfere with the way votes are counted.
 
-The benefits of these changes outweigh the additional computation required by the `sendVoteProof` function (slightly higher fees).
+It is still possible for an Oracle voting to start the public voting phase without the quorum fulfilled by non-discriminated votes (after 2 rounds of secret voting), but the prolongation allows for more votes to be cast if the first round of secret voting does not gather enough non-discriminated votes.   
+Due to the random nature of selecting committees, it is hard to set a hard requirement without running into problems. 
+
+This soft fix allows for edge cases to acummulate enough non-discriminated votes. For example:    
+- Ad review Oracle: quorum=3, votes=3, non_discriminated_votes=2 => It will be easy for this oracle to receive an additional vote for a complete quorum, because it only needs one vote.
+
+The benefits of these changes outweigh the additional computation required by counting mechanism and checks implemented.
 
 ### Backwards Compatibility
 
