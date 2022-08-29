@@ -25,7 +25,7 @@ The quorum represents the minimum number of votes in an Oracle Voting required t
 ### Motivation
   
 At the moment in time when an oracle reaches its quorum, it is expected that all votes sent to that point can be taken into consideration if published.    
-Currently, the quorum can be reached with pool votes, which do not make a difference in the final outcome of the voting. This can lead to a premature reaching of the quorum: an oracle moving to the public vote phase even if the total number of not-discriminated votes is below the quorum limit. 
+Currently, the quorum can be reached with pool votes, which do not make a difference in the final outcome of the voting. This can lead to a premature reaching of the quorum: an oracle moving to the public vote phase even if the total number of non-discriminated votes is below the quorum limit. 
 
 Examples:
 - An ad review oracle (3 votes required) receives 1 vote from an independent identity and 2 votes from identities within the same pool. This vote would move to the public voting phase, even if the total number of votes that can be counted is 2 (one from the independent identity, one from the pool), less than the set quorum.
@@ -55,10 +55,10 @@ These changes do not interfere with the way votes are counted.
 It is still possible for an Oracle voting to start the public voting phase without the quorum fulfilled by non-discriminated votes (after 2 rounds of secret voting), but the prolongation allows for more votes to be cast if the first round of secret voting does not gather enough non-discriminated votes.   
 Due to the random nature of selecting committees, it is hard to set a hard requirement without running into problems. 
 
-This soft fix allows for edge cases to acummulate enough non-discriminated votes. For example:    
-- Ad review Oracle: quorum=3, votes=3, non_discriminated_votes=2 => It will be easy for this oracle to receive an additional vote for a complete quorum, because it only needs one vote.
+This soft fix allows for edge cases to accumulate enough non-discriminated votes. For example:    
+- Ad review Oracle: quorum=3, votes=3, non_discriminated_votes=2 => It will be easy for this oracle to receive an additional vote for a complete quorum because it only needs one vote.
 
-The benefits of these changes outweigh the additional computation required by counting mechanism and checks implemented.
+The benefits of these changes outweigh the additional computation required by the counting mechanism and checks implemented.
 
 ### Backwards Compatibility
 
