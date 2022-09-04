@@ -17,4 +17,4 @@ Having a IIP here does not make it a formally accepted standard until its status
 | 2      | [Change the time of the validation ceremony](/docs/iip/iip-2) | midenaio | Standard | Withdrawn |              |
 | 3      | [Voting discrimination](/docs/iip/iip-3)                      | Zen      | Standard | Final     | [🇷🇺](https://medium.com/idena/babf31b65994)           |
 | 4      | [Quadratic Staking](/docs/iip/iip-4)                          | midenaio | Standard | Final     | [🇷🇺](https://medium.com/idena/b7fd7e8b46e5)           |
-| 5      | [Mining rewards based on Quadratic staking](/docs/iip/iip-5)  | midenaio | Standard | Review    | [🇷🇺](https://medium.com/idena/fd46e720304)           |
+| 5      | [Mining rewards based on Quadratic staking](/docs/iip/iip-5)  | midenaio | Standard | Final     | [🇷🇺](https://medium.com/idena/fd46e720304)           |
