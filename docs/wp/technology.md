@@ -254,6 +254,51 @@ Each flip is available only for those participants who solve it during the valid
 
 [![Why machines have no common sense](/img/wp/ai-biggest-problem.png)](https://content.jwplatform.com/players/RdnxHErX-FvQKszTI.html)
 
+### AI-resistance of flips
+
+Adversarial attacks can be applied to the flips to prevent AI from solving them. Since the flip is a common sense test there are two types of adversarial attacks possible: 1) Adversarial perturbation added to the images 2) Adversarial nonsense image added to the flip instead of one of the images.
+
+#### 1. Adversarial perturbations
+
+Adversarial perturbations can be added for each of the 4 images of a flip to make it harder for AI to classify the images.
+
+<img src="/img/wp/ai-noise.png" alt="Idena flip with adversarial noise" width="40%"
+style={{display: "block", margin: "auto"}}/>
+
+<center>Adversarial perturbations applied to the images of the flip</center>
+<br/>
+
+<img src="/img/wp/ai-google-vision.png" alt="Google Vision result for the image with adversarial perturbation" width="70%"
+style={{display: "block", margin: "auto"}} />
+
+<center>Google Vision result for the original image: Glove</center>
+<br/>
+
+<img src="/img/wp/ai-noise-google-vision.png" alt="Google Vision result for the original image" width="70%"
+style={{display: "block", margin: "auto"}} />
+
+<center>Google Vision result for the image with adversarial perturbation: Hat while original image is classified as Glove</center>
+
+#### 2. Adversarial nonsense images
+
+Adversarial nonsense images can be used to make it harder for AI to determine which sequence of images makes sense.
+
+<img src="/img/wp/ai-nonsense-image.png" alt="Idena flip with an adversarial nonsense image" width="40%"
+style={{display: "block", margin: "auto"}}/>
+
+<center>A flip with an adversarial nonsense image</center>
+<br/>
+
+Nonsense images added into flips do not stop people from solving them. In contrast, it makes it harder for AI to solve the flips.
+
+<img src="/img/wp/ai-nonsense-image-google-vision.png" alt="Google Vision result: Meaningful classification of the nonsense image" width="70%"
+style={{display: "block", margin: "auto"}} />
+
+<center>Nonsense images are classified as meaningful</center>
+<br/>
+
+Meaningful classification of the nonsense image leads to an unpredictable outcome for an AI that solves the entire flip based on the wrong image classification data.
+
 ## Idena blockchain
 
 The public blockchain structure is used to store the state of validated identities, implement cryptoeconomic incentives for network participants, and enable transactions of the native coin enriched with additional metadata (such as P2P-encrypted messages). Every full node corresponds to one validated person with an equal chance to be rewarded for the minting of new blocks and equal voting power in the consensus and governance process.
