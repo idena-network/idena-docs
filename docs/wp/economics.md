@@ -57,18 +57,15 @@ Total minting is capped at 51 840 iDNA per day depending on the actual number of
 | Mining reward cap per day             | 25 920 iDNA (50%) |
 | Validation session reward cap per day | 25 920 iDNA (50%) |
 
-Mining reward is capped at 25 920 iDNA per day. It includes block proposer reward (paid to block proposer) and block committee reward (distributed to members of final committee validating the block):
+Mining reward is capped at 25 920 iDNA per day. It includes block proposer reward (paid to block proposer) and block committee reward (distributed to members of final committee validating the block). The block reward is split between the block proposer and the block committee according to [IIP-5](/docs/iip/iip-5#specification).
 
 | Mining reward cap per day           | 25 920 iDNA        |
 | ----------------------------------- | ------------------ |
-| Block proposer reward cap per day   | 8 640 iDNA (~33%)  |
-| Block committee reward cap per day  | 17 280 iDNA (~67%) |
-| Minimum block time                  | 12 sec             |
+| Block reward                        | 6 iDNA             |
+| Minimum block time                  | 20 sec             |
 | Maximum number of blocks per minute | 3                  |
 | Maximum block size                  | 300 Kb             |
 | Maximum number of blocks per day    | 4 320              |
-| Block proposer reward (per block)   | 1 iDNA             |
-| Block committee reward (per block)  | 5 iDNA             |
 
 Validation session fund is capped at 25 920 iDNA per day. It accumulates daily and gets distributed at the end of validation session as follows:
 
@@ -82,13 +79,13 @@ Validation session fund is capped at 25 920 iDNA per day. It accumulates daily a
 | Idena foundation payouts | 10%  |
 | Zero wallet fund         | 2%   |
 
-### Staking rewards fund
+### Staking reward fund
 
-The staking rewards fund is distrubuted among all validated identities depending on their stake size. ([Quadratic Staking proposal](/docs/iip/iip-4))
+The staking reward fund is distrubuted among all validated identities depending on their stake size. ([Quadratic Staking proposal](/docs/iip/iip-4))
 
-### Candidate rewards fund
+### Candidate reward fund
 
-The candidate rewards fund is distributed to new users for passing the validation.
+The candidate reward fund is distributed to new users for passing their first validation.
 
 ### Flip reward fund
 

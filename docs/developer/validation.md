@@ -39,11 +39,11 @@ Secret and temporary keys are used to encrypt the private and public part of all
 
 Both secret key and temporary keys are derived from the epoch number and can be calculated with identity’s private key at any time.
 
-See code example: `todo: link`
+See code example: [`generateFlipKey` function](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/shared/utils/crypto.js#L148)
 
 Packages of secret keys are generated during the flip lottery once the list of identities who need the secret keys becomes available.
 
-See code example: `todo: link`
+See code example: [`prepareFlipKeysPackage` function](https://github.com/idena-network/idena-web/blob/5892535dfe79b06eabbe7a49e5c1a8ce4b0230a8/shared/utils/crypto.js#L84)
 
 ## Validation session protocol
 
@@ -53,7 +53,7 @@ Validation session consists of the following stages (UTC time):
 - 13:30:00: `Short session`
 - 13:32:00 or later: `Long session` starts when a block with the `long session` flag is mined
 - 14:00:00: `After-long session` starts when a block with a `long session finished` flag is mined
-- 14:05:00 or later: New epoch starts when a block with the `validation finished` flag is mined. The new epoch can be started only after mining 5 blocks in a row without any ceremonial transactions. This ensures that all pending ceremonial transactions are mined.
+- 14:05:00 or later: New epoch starts when a block with the `validation finished` flag is mined. The new epoch can be started only after mining 5 blocks in a row without any ceremonial transactions for every existing shard. This ensures that all pending ceremonial transactions are mined.
 
 ### Flip lottery
 
@@ -134,7 +134,7 @@ See the example of creating [`SubmitShortAnswersHashTx` transaction](https://git
 ### Short session answers
 
 Once the long session has started, short session answers should be published.
-In addition, the short answers transaction reveals the keywords which were used by the user to create flips.
+In addition, the short answers transaction reveals the keywords which were used by the user to create their own flips.
 
 Short session answers should be published not later than 13:35:00. Otherwise other users will not be able to qualify flips keywords and the user will be penalized.
 

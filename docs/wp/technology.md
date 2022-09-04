@@ -144,6 +144,8 @@ Only 20% of earned coins is mined to the main wallet for Newbies. The rest 80% i
 
 Newbies cannot terminate their identities to withdraw the stake.
 
+Newbies cannot participate in the governance of the network. While adresses with this status can get rewards for mining and participating in oracle votes, their votes are not counted and do not make a difference in the final outcome of a voting: they cannot influence a hard fork voting or an oracle voting.
+
 ### Losing stake
 
 If cryptoidentity is killed by the network, then a part or the entire stake gets burnt depending on the age and status of the identity: identities receive stake protection according to the stake protection implemented with [IIP-4](/docs/iip/iip-4#validation-failure-stake-protection).
@@ -162,7 +164,7 @@ The pace of network growth is restricted to minimize the probability of a Sybil 
 
 ### Selling and buying invitations
 
-The Idena protocol introduces incentives to prevent participants from buying and selling invitations. The person who sells an invitation can kill the invited participant and get the staked/locked coins during the next several epochs before their status is "Verified". The seller can double-spend the invitation by selling it multiple times. Invitations should be granted for free to trusted people only (relatives, friends, and so on).
+The Idena protocol introduces incentives to prevent participants from buying and selling invitations. The person who sells an invitation can kill the invited participant before they pass the first validation and their status is "Newbie". The seller can double-spend the invitation by selling it multiple times. Invitations should be granted for free to trusted people only (relatives, friends, and so on).
 
 ### Distribution of invitations
 
@@ -207,7 +209,7 @@ Flips are created only by validated identities:
 
 ### Flips submission requirements
 
-Newbies and verified accounts must submit flips before the next validation ceremony. Not submitting flips is equal to missing a validation.
+Newbie, verified and human accounts must submit flips before the next validation ceremony. Not submitting flips is equal to missing a validation.
 
 Candidates, suspended accounts, and zombies do not submit flips for the validation ceremony.
 
@@ -344,4 +346,4 @@ A multisignature wallet address with specified M and N locks coins. In order to 
 
 #### TimeLock
 
-Smart contract locks coins on the smart contract address until the specified time. Once a newly mined block has a timestamp greater than that time, the coins can be transferred to any address specified by the owner.
+Smart contract locks coins on the smart contract address until the specified time. Once a newly mined block has a timestamp greater or equal to that time, the coins can be transferred to any address specified by the owner.
