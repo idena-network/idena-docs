@@ -92,7 +92,7 @@ https://ipfs.idena.io/ipfs/bafkreicfjmxqcmzqt7yvl6ljpwl3kbkvh2einxpilggbczsx44gi
 The uploaded data is available as long as at least one Idena node stores it.
 You should use the `pin` parameter when uploading your content to make sure that your own node stores it permanently.
 
-Your Idena nodes will automatically delete all the unpinned data if there is a new data is uploaded (e.g. flips or blocks) and no free space left in your `/ipsf` folder.
+Your Idena nodes will automatically delete all the unpinned data if there is a new data is uploaded (e.g. flips or blocks) and no free space left in your `/ipfs` folder.
 By default `/ipfs` folder data is limited by `10Gb`.
 
 
@@ -122,7 +122,7 @@ Example:
 ```
 
 Once the `StoreToIpfsTx` transaction is confirmed, 20% of nodes are randomly selected to download the specified data.
-These Idena nodes do not pin your data so it may be deleted if there is no free space left in their `/ipsf` folder.
+These Idena nodes do not pin your data so it may be deleted if there is no free space left in their `/ipfs` folder.
 
 
 ### Fees
