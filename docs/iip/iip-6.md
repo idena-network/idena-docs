@@ -14,7 +14,7 @@ sidebar_label: IIP-6
 
 `Created`: 2022-10-06
 
-`Discussion`: https://github.com/idena-network/idena-docs/discussions/81
+`Discussion`: https://github.com/idena-network/idena-docs/discussions/101
 
 ## Abstract
 
