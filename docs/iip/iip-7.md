@@ -43,6 +43,8 @@ A number of non-discriminated delegators can be kept for every pool.
 - This number is incremented when a new non-discriminated identity delegates to a pool, when a newbie reaches verified status and has no pending undelegations, or when an identity's pending undelegation is removed.
 - This number is decremented when an identity that is not discriminated undelegates from the pool (even if it will become discriminated afterward) or if their status is no longer validated (case in which the effective pool size shrinks too).
 
+If the pool address is validated itself, it should be considered for pool voting rights just like a regular delegator.
+
 For the already existing pools, there will be an iteration over their delegators in order to initialize their non-discriminated delegators number.
 
 ### Rationale
