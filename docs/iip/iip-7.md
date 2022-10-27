@@ -14,7 +14,7 @@ sidebar_label: IIP-7
 
 `Created`: 2022-10-27
 
-`Discussion`: 
+`Discussion`: https://github.com/idena-network/idena-docs/discussions/104
 
 `Translations`: 
 
@@ -24,8 +24,11 @@ Adjust the discrimination mechanism of pools, newbies, and discriminated identit
 
 ### Motivation
 
-Due to the discrimination of pool delegators, identities participating in a pool are not allowed to switch pools immediately. When undelegating, an identity has to wait for the discrimination period to be over to be able to delegate to a different pool. This was implemented as a way to prevent a micro pool attack where many discriminated identities would regain voting power by creating pools of size one.   
-This restriction makes it hard for people to leave pools they were previously delegated to if they are not planning on solo mining. If they want to create a family pool, they have to wait for the discrimination period to be over before delegating to their own created pool.
+With the introduction of quadratic stake rewards for mining, people are incentivized to start mining on their own, and if they and their friends/family have a validated identity too, even create small family pools to cut down on resources needed to mine while maximizing income.
+The old reward structure made it convenient for people to delegate to public pools. Currently, people who want to start their own friend/family pools due to security considerations (protecting large stakes from the pool owners) have to wait a period of time before being able to delegate to a different pool. As a direct result, users are pressed to remain in their old pools.
+
+This restriction was implemented as a way to prevent a micro pool attack where many discriminated identities would regain voting power by creating pools of size one.
+This makes it inconvenient for people to leave pools they were previously delegated to if they are not planning on solo mining.
 
 Newbies are allowed to delegate to any address, and thus are able to gain voting rights during the time they should be discriminated.
 
@@ -33,7 +36,7 @@ Newbies are allowed to delegate to any address, and thus are able to gain voting
 
 A pool's vote will only be counted if and only if at least one of their delegators is not discriminated.
 
-Identities with pending undelegation status will be allowed to delegate to any pool.
+Identities with pending undelegation status will be allowed to delegate to any pool while still keeping track of their most recent undelegation.
 
 A number of non-discriminated delegators can be kept for every pool.
 - If this number is greater than 0, a pool has voting rights, otherwise it does not.  
