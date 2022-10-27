@@ -19,4 +19,4 @@ Having a IIP here does not make it a formally accepted standard until its status
 | 4      | [Quadratic Staking](/docs/iip/iip-4)                          | midenaio | Standard | Final     | [🇷🇺](https://medium.com/idena/b7fd7e8b46e5) |
 | 5      | [Mining rewards based on Quadratic staking](/docs/iip/iip-5)  | midenaio | Standard | Final     | [🇷🇺](https://medium.com/idena/fd46e720304)  |
 | 6      | [Quadratic invitation rewards](/docs/iip/iip-6)               | midenaio | Standard | Review    |                                             |
-| 7      | [Pool voting rights](/docs/iip/iip-7)                          | Zen      | Standard | Review    |                                             |
+| 7      | [Pool voting rights](/docs/iip/iip-7)                         | Zen      | Standard | Review    |                                             |
