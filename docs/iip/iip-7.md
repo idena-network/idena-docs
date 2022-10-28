@@ -36,7 +36,14 @@ Newbies are allowed to delegate to any address, and thus are able to gain voting
 
 A pool's vote will only be counted if and only if at least one of their delegators is not discriminated.
 
-Identities with pending undelegation status will be allowed to delegate to any pool while still keeping track of their most recent undelegation.
+Identities with pending undelegation status will be allowed to delegate to any address while still keeping track of their most recent undelegation.
+- This is done using the "pendingUndelegation" field and a new "undelegationEpoch" field in the identity's state, where "pendingUndelegation" stores the address from which the most recent undelegation occurred and "undelegationEpoch" stores the epoch when it happened. 
+- The "pendingUndelegation" field will no longer be cleared when a delegation happens, instead, it will only be updated when an undelegation occurs or when it expires. 
+- The "delegationEpoch" field will no longer have a double purpose as it is now necessary to keep track of both delegations and undelegations of an address separately.
+
+Any address will be allowed to delegate to an identity that has a pending undelegation, allowing it to become a pool.
+
+The discrimination criteria for an identity is not modified: an identity is discriminated if it has newbie status or has an address stored in its "pendingUndelegation" field.
 
 A number of non-discriminated delegators can be kept for every pool.
 - If this number is greater than 0, a pool has voting rights, otherwise it does not.  
@@ -53,13 +60,15 @@ This change allows identities to change pools or create their own ones while sti
 
 This change also removes the possibility of newbies bypassing their discriminated status by creating micro pools.
 
+It is necessary to keep track of both when delegations and undelegations occur separately because it is now possible to delegate to a different pool while still pending undelegation.
+
 The number of non-discriminated users from a pool is only decremented when an identity with voting powers leaves the pool or loses its validated status because there is not any other case where an identity that already has voting rights can lose them.
 
 It is not necessary to iterate over all delegators from a pool each time it votes on the blockchain.
 
 ### Backwards Compatibility
 
-The changes require a hard fork due to the voting consensus rules being modified.
+The changes require a hard fork due to the consensus rules being modified.
 
 ### Security Considerations
 
