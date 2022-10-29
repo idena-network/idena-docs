@@ -52,6 +52,8 @@ A number of non-discriminated delegators can be kept for every pool.
 
 If the pool address is validated itself, it should be considered for pool voting rights just like a regular delegator.
 
+Oracle voting contracts will continue to count only the last non-discriminated vote from a pool while still rewarding everyone voting.
+
 For the already existing pools, there will be an iteration over their delegators in order to initialize their non-discriminated delegators number.
 
 ### Rationale
