@@ -16,6 +16,8 @@ sidebar_label: IIP-6
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/101
 
+`Translations`: [🇷🇺](https://medium.com/idena/651ade00fcc) 
+
 ## Abstract
 
 Change in invitation rewards distribution. Calculate invitation rewards in proportion to the size of the stake to the power of `0.9` and distribute invitation rewards between the inviter and the invitee.

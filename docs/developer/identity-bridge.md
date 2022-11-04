@@ -1,10 +1,10 @@
 ---
 hide_title: true
-title: Idena Identity bridge
-sidebar_label: Identity bridge
+title: Idena<>ETH bridge
+sidebar_label: Idena<>ETH bridge
 ---
 
-# Idena Identity bridge
+# Idena to Ethereum identity bridge
 
 Transferring the ledger of the validated addresses from Idena to other blockchains can allow dApps to ensure the uniqueness and the humanness of the address owner while leaving them fully anonymous:
 

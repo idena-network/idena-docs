@@ -35,20 +35,20 @@ Newbies passing their first validation will be discriminated across 2 full epoch
 
 An undelegated identity can not delegate to a different pool address during the discrimination period. Delegating back to the previous pool address is accepted.
 
-Pool owners won't be able to terminate any identity that is currently not part of their pool (undelegated identities can not be terminated during the discrimination period).   
+Pool owners will not be able to terminate any identity that is currently not part of their pool (undelegated identities can not be terminated during the discrimination period).   
 
-During the time an identity's voting power is discriminated, they can still take part in oracles in order to receive rewards from prize pools. Their vote won't influence the outcome of an oracle voting, but if they are in consensus with the oracle's decision (or just participated in a poll) a discriminated identity will still be rewarded as a regular identity (like currently delegated identities do if they are not the last identity voting from that pool).
+During the time an identity's voting power is discriminated, they can still take part in oracles in order to receive rewards from prize pools. Their vote will not influence the outcome of an oracle voting, but if they are in consensus with the oracle's decision (or just participated in a poll) a discriminated identity will still be rewarded as a regular identity (like currently delegated identities do if they are not the last identity voting from that pool).
 
 To prevent a post-fork attack where discriminated identities run outdated node versions in order to get the block creation process get stuck, the votes of discriminated identities that were included in the block committee should not be counted. Adding to that:    
 - Discriminated identities will be rewarded for the mining as a regular identity.    
 - Discriminated identities' votes for blocks will only be used to identify their online mining status.   
 - Discriminated identities can propose blocks and get paid for that as a regular identity.   
 
-Discriminated identities won't be allowed to send 'Validation Evidence' transactions.   
+Discriminated identities will not be allowed to send 'Validation Evidence' transactions.   
 
 ### Rationale
 
-Having an identity wait for 2 epochs before taking part in governing the network would give enough time for a fork or oracle voting to expire thus pools won't be able to prepare any kind of setup where they'd be able to take part in a voting.
+Having an identity wait for 2 epochs before taking part in governing the network would give enough time for a fork or oracle voting to expire thus pools will not be able to prepare any kind of setup where they would be able to take part in a voting.
 
 Identities with newbie status have to be discriminated in order to remove the possibility of pools re-inviting their identities to take part in a voting.     
 Normally an identity can reach verified status after 3 validations (Candidate->**Newbie**->**Newbie**->Verified). Since the discrimination starts after they reach age 1 (first validation), this would mean an identity's discrimination will end once they reach Verified status.   
