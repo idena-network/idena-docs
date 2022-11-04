@@ -26,7 +26,7 @@ module.exports = {
         },
 
         {
-          to: 'docs/developer/node/general/',
+          to: 'docs/developer/desktop/sign-in/',
           activeBasePath: 'docs/developer',
           label: 'Developers',
           position: 'left',

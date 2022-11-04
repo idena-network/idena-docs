@@ -1,5 +1,11 @@
 module.exports = {
   developer: [
+    'developer/desktop/sign-in',
+    'developer/send-dna',
+    'developer/send-invite',
+    'developer/send-raw',
+    'developer/desktop/dna-url',
+    'developer/identity-bridge',
     {
       type: 'category',
       label: 'Idena node',
@@ -29,21 +35,9 @@ module.exports = {
         {
           type: 'category',
           label: 'IPFS',
-          items: [
-            'developer/ipfs/upload',
-          ],
-          },
+          items: ['developer/ipfs/upload'],
+        },
       ],
-    },
-    'developer/desktop/sign-in',
-    'developer/identity-bridge',
-    'developer/send-dna',
-    'developer/send-invite',
-    'developer/send-raw',
-    {
-      type: 'category',
-      label: 'Desktop app',
-      items: ['developer/desktop/dna-url'],
     },
   ],
 
@@ -73,5 +67,4 @@ module.exports = {
       ],
     },
   ],
-
 };
