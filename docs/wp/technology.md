@@ -132,7 +132,7 @@ Every account in Idena has two wallets: the Idena wallet and the stake. The stak
 
 The stake cannot be spent while account is valid. You receive these coins in your Idena wallet only when you voluntary terminate your Idena account - that is, when you terminate your cryptoidentity.
 
-When your account is killed by the network protocol, you lose your stake.
+When your account is killed by the network protocol, you may lose your stake depending on the age and status of the identity.
 
 Idena does not use the stake for governance purposes.
 
