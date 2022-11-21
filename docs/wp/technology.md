@@ -136,16 +136,6 @@ The stake cannot be spent while the account is valid. You can receive these coin
 
 You may also receive part or all of these coins when your identity is killed by the network protocol depending on the age and status of your identity.
 
-### Discrimination of identities with the Newbie status
-
-Only 20% of earned coins is mined to the main wallet for Newbies. The rest 80% is mined to the stake: in total 60% of earned coins is temporary locked in the stake until a Newbie becomes Verified.
-
-60% of earned coins will be sent back to the main wallet once a Newbie becomes Verified.
-
-Newbies cannot terminate their identities to withdraw the stake.
-
-Newbies cannot participate in the governance of the network. While adresses with this status can get rewards for mining and participating in oracle votes, their votes are not counted and do not make a difference in the final outcome of a voting: they cannot influence a hard fork voting or an oracle voting.
-
 ### Losing stake
 
 If cryptoidentity is killed by the network, then a part or the entire stake gets burnt depending on the age and status of the identity: identities receive stake protection according to the stake protection implemented with [IIP-4](/docs/iip/iip-4#validation-failure-stake-protection).
@@ -185,6 +175,16 @@ This protection affects identities that do not show up for a validation session.
 | any | Human           | Miss       | 0%                   | Suspended                        |
 | any | Suspended       | Miss       | 0%                   | Zombie                           |
 | any | Zombie          | Miss       | 100%                 | Killed                           |
+
+### Discrimination of identities with the Newbie status
+
+Only 20% of earned coins is mined to the main wallet for Newbies. The rest 80% is mined to the stake: in total 60% of earned coins is temporary locked in the stake until a Newbie becomes Verified.
+
+60% of earned coins will be sent back to the main wallet once a Newbie becomes Verified.
+
+Newbies cannot terminate their identities to withdraw the stake.
+
+Newbies cannot participate in the governance of the network. While adresses with this status can get rewards for mining and participating in oracle votes, their votes are not counted and do not make a difference in the final outcome of a voting: they cannot influence a hard fork voting or an oracle voting.
 
 ## Invitations
 
