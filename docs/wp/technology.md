@@ -130,11 +130,11 @@ In addition, you need to solve flips both correctly and fast. The first 6 flips 
 
 Every account in Idena has two wallets: the Idena wallet and the stake. The stake is like your pension account: 20% of all your Idena rewards (mining, validation rewards, flip rewards, valid invitation rewards, and so on) accumulate in the stake, while the remaining 80% goes directly to your Idena wallet.
 
-The stake cannot be spent while account is valid. You receive these coins in your Idena wallet only when you voluntary terminate your Idena account - that is, when you terminate your cryptoidentity.
-
-When your account is killed by the network protocol, you may lose your stake depending on the age and status of the identity.
-
 Idena does not use the stake for governance purposes.
+
+The stake cannot be spent while the account is valid. You can receive these coins in your Idena wallet when you voluntarily terminate your Idena account - that is when you terminate your cryptoidentity. 
+
+You may also receive part or all of these coins when your identity is killed by the network protocol depending on the age and status of your identity.
 
 ### Discrimination of identities with the Newbie status
 
@@ -151,6 +151,40 @@ Newbies cannot participate in the governance of the network. While adresses with
 If cryptoidentity is killed by the network, then a part or the entire stake gets burnt depending on the age and status of the identity: identities receive stake protection according to the stake protection implemented with [IIP-4](/docs/iip/iip-4#validation-failure-stake-protection).
 
 The coins stored on normal Idena wallets can not be burnt in any cases.
+
+#### Validation failure stake protection
+
+This protection affects identities that fail a validation session (not when they miss it).
+
+| Age | Identity status     | Validation | Share of stake burnt | Identity status after validation |
+| --- | ------------------- | ---------- | -------------------- | -------------------------------- |
+| 0   | Candidate           | Fail       | 100%                 | Killed                           |
+| 1   | Newbie              | Fail       | 100%                 | Killed                           |
+| 2+  | Newbie              | Fail       | 100%                 | Killed                           |
+| any | Verified            | Fail       | 100%                 | Killed                           |
+| any | Human               | Fail       | 0%                   | Suspended                        |
+| 4   | Suspended           | Fail       | 100%                 | Killed                           |
+| 5   | Suspended or Zombie | Fail       | 5%                   | Killed                           |
+| 6   | Suspended or Zombie | Fail       | 4%                   | Killed                           |
+| 7   | Suspended or Zombie | Fail       | 3%                   | Killed                           |
+| 8   | Suspended or Zombie | Fail       | 2%                   | Killed                           |
+| 9   | Suspended or Zombie | Fail       | 1%                   | Killed                           |
+| 10+ | Suspended or Zombie | Fail       | 0%                   | Killed                           |
+
+
+#### Missing validation stake protection
+
+This protection affects identities that do not show up for a validation session.
+
+| Age | Identity status | Validation | Share of stake burnt | Identity status after validation |
+| --- | --------------- | ---------- | -------------------- | -------------------------------- |
+| 0   | Candidate       | Miss       | 100%                 | Killed                           |
+| 1   | Newbie          | Miss       | 100%                 | Killed                           |
+| 2+  | Newbie          | Miss       | 100%                 | Killed                           |
+| any | Verified        | Miss       | 0%                   | Suspended                        |
+| any | Human           | Miss       | 0%                   | Suspended                        |
+| any | Suspended       | Miss       | 0%                   | Zombie                           |
+| any | Zombie          | Miss       | 100%                 | Killed                           |
 
 ## Invitations
 
