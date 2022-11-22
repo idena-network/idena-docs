@@ -20,7 +20,7 @@ sidebar_label: IIP-7
 
 ### Abstract
 
-Adjust the discrimination mechanism of pools, newbies, and discriminated identities.
+Adjust the discrimination mechanism of pools, and discriminated identities.
 
 ### Motivation
 
@@ -29,8 +29,6 @@ The old reward structure made it convenient for people to delegate to public poo
 
 This restriction was implemented as a way to prevent a micro pool attack where many discriminated identities would regain voting power by creating pools of size one.
 This makes it inconvenient for people to leave pools they were previously delegated to if they are not planning on solo mining.
-
-Newbies are allowed to delegate to any address, and thus are able to gain voting rights during the time they should be discriminated.
 
 ### Specification
 
@@ -60,8 +58,6 @@ For the already existing pools, there will be an iteration over their delegators
 
 This change allows identities to change pools or create their own ones while still preventing a micro pool attack, encouraging users to start a small pool on their own instead of being pressed to stay in the pool they were previously delegated to.
 
-This change also removes the possibility of newbies bypassing their discriminated status by creating micro pools.
-
 It is necessary to keep track of both when delegations and undelegations occur separately because it is now possible to delegate to a different pool while still pending undelegation.
 
 The number of non-discriminated users from a pool is only decremented when an identity with voting powers leaves the pool or loses its validated status because there is not any other case where an identity that already has voting rights can lose them.
@@ -74,4 +70,4 @@ The changes require a hard fork due to the consensus rules being modified.
 
 ### Security Considerations
 
-These changes help improve the security of blockchain governing by removing the possibility of newbies bypassing voting discrimination.
+These changes improve the delegation mechanism while maintaining governance security.
