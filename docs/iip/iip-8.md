@@ -34,35 +34,45 @@ This makes it inconvenient for people to leave pools they were previously delega
 
 A pool's vote will only be counted if and only if at least one of their delegators is not discriminated.
 
-Identities with pending undelegation status will be allowed to delegate to any address while still keeping track of their most recent undelegation.
-- This is done using the "pendingUndelegation" field and a new "undelegationEpoch" field in the identity's state, where "pendingUndelegation" stores the address from which the most recent undelegation occurred and "undelegationEpoch" stores the epoch when it happened. 
+Identities with pending undelegation status will be allowed to delegate to any address while still keeping track of their most recent undelegation.   
+Keeping track of this is done as follows:
+- The "pendingUndelegation" field and a new "undelegationEpoch" field in the identity's state are used to store data regarding the most recent undelegation, where "pendingUndelegation" stores the address from which the most recent undelegation occurred and "undelegationEpoch" stores the epoch when it happened. 
 - The "pendingUndelegation" field will no longer be cleared when a delegation happens, instead, it will only be updated when an undelegation occurs or when it expires. 
-- The "delegationEpoch" field will no longer have a double purpose as it is now necessary to keep track of both delegations and undelegations of an address separately.
+- The "delegationEpoch" field will no longer have a double purpose as it is now necessary to keep track of both delegations and undelegations of an address separately. It will store the epoch a delegation occurred.
+
+A number of non-discriminated delegators will be kept for every pool.
+- If this number is greater than 0, a pool has voting rights, otherwise it does not.  
+- This number is incremented when a new non-discriminated identity delegates to a pool, when a newbie reaches verified status and has no pending undelegations, or when an identity's pending undelegation is removed.
+- This number is decremented when an identity that is not discriminated undelegates from the pool (even if it will become discriminated afterward) or if their status is no longer validated (case in which the effective pool size shrinks too).
+- For the already existing pools, there will be an iteration over their delegators in order to initialize their non-discriminated delegators number (when the hard fork is activated).
 
 Any address will be allowed to delegate to an identity that has a pending undelegation, allowing it to become a pool.
 
 The discrimination criteria for an identity is not modified: an identity is discriminated if it has newbie status or has an address stored in its "pendingUndelegation" field.
 
-A number of non-discriminated delegators can be kept for every pool.
-- If this number is greater than 0, a pool has voting rights, otherwise it does not.  
-- This number is incremented when a new non-discriminated identity delegates to a pool, when a newbie reaches verified status and has no pending undelegations, or when an identity's pending undelegation is removed.
-- This number is decremented when an identity that is not discriminated undelegates from the pool (even if it will become discriminated afterward) or if their status is no longer validated (case in which the effective pool size shrinks too).
-
-If the pool address is validated itself, it should be considered for pool voting rights just like a regular delegator.
+If the pool address is validated itself, it is considered for pool voting rights just like a regular delegator.
 
 Oracle voting contracts will continue to count only the last non-discriminated vote from a pool while still rewarding everyone voting.
 
-For the already existing pools, there will be an iteration over their delegators in order to initialize their non-discriminated delegators number.
+#### Penalty system changes
+
+- When undelegating from a pool, the address inherits the pool's mining penalty if any.    
+- An address with an active mining penalty can not delegate its mining rights to any pool.     
+- The UndelegateTx will force a mining identity list update.
 
 ### Rationale
 
-This change allows identities to change pools or create their own ones while still preventing a micro pool attack, encouraging users to start a small pool on their own instead of being pressed to stay in the pool they were previously delegated to.
+This change allows identities to change pools or create their own ones easily while still preventing a micro pool attack, encouraging users to start a small pool on their own instead of being pressed to stay in the pool they were previously delegated to.
 
 It is necessary to keep track of both when delegations and undelegations occur separately because it is now possible to delegate to a different pool while still pending undelegation.
 
 The number of non-discriminated users from a pool is only decremented when an identity with voting powers leaves the pool or loses its validated status because there is not any other case where an identity that already has voting rights can lose them.
 
 It is not necessary to iterate over all delegators from a pool each time it votes on the blockchain.
+
+Mining penalties have to be inherited from the pool when undelegating in order to prevent the possibility of bypassing mining penalties.
+
+The UndelegateTx needs to force a mining identity list update for the penalty system changes to work properly.
 
 ### Backwards Compatibility
 
