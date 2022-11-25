@@ -58,7 +58,6 @@ Oracle voting contracts will continue to count only the last non-discriminated v
 
 - When undelegating from a pool, the address inherits the pool's mining penalty if any.    
 - An address with an active mining penalty can not delegate its mining rights to any pool.     
-- The UndelegateTx will force a mining identity list update.
 
 ### Rationale
 
@@ -71,8 +70,6 @@ The number of non-discriminated users from a pool is only decremented when an id
 It is not necessary to iterate over all delegators from a pool each time it votes on the blockchain.
 
 Mining penalties have to be inherited from the pool when undelegating in order to prevent the possibility of bypassing mining penalties.
-
-The UndelegateTx needs to force a mining identity list update for the penalty system changes to work properly.
 
 ### Backwards Compatibility
 
