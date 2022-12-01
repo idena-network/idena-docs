@@ -249,9 +249,7 @@ Candidates, suspended accounts, and zombies do not submit flips for the validati
 
 ### Flip distribution
 
-Flips are distributed randomly, but with two important exceptions: Identities are not permitted to solve flips created by themselves.
-
-As the network grows, the number of people solving the same flip goes down: In a network of 10,000 users, only two different participants will have the same flip to solve. When the network reaches 30,000 users, one single flip will appear in a validation session of only one participant.
+Flips are distributed randomly within each shard, with one important exception: identities are not permitted to solve flips created by themselves.
 
 ### Flip keywords
 
@@ -385,7 +383,7 @@ GasCost is calculated as a total amount of gas consumed by the smart contract op
 
 #### Validation ceremony transactions
 
-Validation ceremony transactions are not charged. However, they affect the fee rate because of the block consumtion.
+Validation ceremony transactions are not charged. However, they affect the fee rate because of the block consumption.
 
 ### Idena smart contracts
 
