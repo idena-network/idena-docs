@@ -16,6 +16,8 @@ sidebar_label: IIP-7
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/112
 
+`Translations`: [🇷🇺](https://medium.com/idena/64561375cd64) 
+
 ## Abstract
 
 Change in flip rewards distribution. Calculate rewards for extra flips in proportion to the size of the stake to the power of `0.9`.
