@@ -59,33 +59,35 @@ Total minting is capped at 51 840 iDNA per day depending on the actual number of
 
 Mining reward is capped at 25 920 iDNA per day. It includes block proposer reward (paid to block proposer) and block committee reward (distributed to members of final committee validating the block). The block reward is split between the block proposer and the block committee according to [IIP-5](/docs/iip/iip-5#specification).
 
-| Mining reward cap per day           | 25 920 iDNA        |
-| ----------------------------------- | ------------------ |
-| Block reward                        | 6 iDNA             |
-| Minimum block time                  | 20 sec             |
-| Maximum number of blocks per minute | 3                  |
-| Maximum block size                  | 300 Kb             |
-| Maximum number of blocks per day    | 4 320              |
+| Mining reward cap per day           | 25 920 iDNA |
+| ----------------------------------- | ----------- |
+| Block reward                        | 6 iDNA      |
+| Minimum block time                  | 20 sec      |
+| Maximum number of blocks per minute | 3           |
+| Maximum block size                  | 300 Kb      |
+| Maximum number of blocks per day    | 4 320       |
 
 Validation session fund is capped at 25 920 iDNA per day. It accumulates daily and gets distributed at the end of validation session as follows:
 
-| Total rewards            | 100% |
-| ------------------------ | ---- |
-| Staking rewards          | 18%  |
-| Candidate rewards        | 2%   |
-| Flip rewards             | 35%  |
-| Invitation rewards       | 18%  |
-| Reports rewards          | 15%  |
-| Idena foundation payouts | 10%  |
-| Zero wallet fund         | 2%   |
+| Total rewards            | Share    |
+| ------------------------ | -------- |
+| Staking rewards          | 18%      |
+| Candidate rewards        | 2%       |
+| Flip rewards             | 15%      |
+| Extra flip reward        | 20%      |
+| Invitation rewards       | 18%      |
+| Reports rewards          | 15%      |
+| Idena foundation payouts | 10%      |
+| Zero wallet fund         | 2%       |
+| **Total**                | **100%** |
 
 ### Staking reward fund
 
-The staking reward fund is distrubuted among all validated identities depending on their stake size. ([Quadratic Staking proposal](/docs/iip/iip-4))
+The staking reward fund is distrubuted among all validated identities depending on their stake size (proportional to stake<sup>0.9</sup>) ([Quadratic Staking proposal](/docs/iip/iip-4))
 
 ### Candidate reward fund
 
-The candidate reward fund is distributed to new users for passing their first validation.
+The candidate reward fund is distributed equally to new users for passing their first validation.
 
 ### Flip reward fund
 
@@ -112,15 +114,32 @@ Votes: [0, 1, 2, 2, 3, 4, 5, 5, 5, 5]
 Flip grade = Round(Avg(2, 2, 3, 4, 5, 5, 5, 5)) = 4 //`GradeB`
 ```
 
+### Extra flip reward fund
+
+The extra flip reward fund is distributed to those authors who created 4 or 5 qualified flips which are not reported. The reward is calculated proportionally to the author's stake<sup>0.9</sup> (see more details [here](/docs/iip/iip-7)).
+
+Flips with minimal grades are selected as extra flips.
+
 ### Invitation reward fund
 
-The invitation reward fund is distributed to all identities whose invitations have been validated. Invitation reward is paid up to 3 epochs in a row proportionally to the invited person's age:
+The invitation reward fund is distributed to all identities whose invitations have been validated. The rewards are calculated proportionally to the size of the inviter's stake to the power of 0.9 and the time when the invite is activated.
 
-- A `basic reward` is paid for the first successfull validation of invited Candidate.
-- A reward for the second validation of an invitee is 3 times bigger than a `basic reward` for a validated Candidate.
-- A reward for the third validation of an invitee is 6 times bigger than a `basic reward` for a validated Candidate.
+The invitation rewards are paid out for 3 successful validations in a row, with part of the reward sent and locked in the invitee's stake.
 
-`Basic reward` for the invitation is calculated based on how early in the epoch the invitation was activated. The later the invitation is activated, the lower the `basic reward`. The reduction factor _k_ is calculated for each invitation as `k = 1−t⁴ · 0.5`, where `t ∈ [0..1]` is the amount of time that has passed from the start of the epoch to the moment of the activation.
+| Epoch | Inviter's reward | Invitee's reward (staked) |
+| ----- | ---------------- | ------------------------- |
+| 1     | 20%              | 80%                       |
+| 2     | 50%              | 50%                       |
+| 3     | 80%              | 20%                       |
+
+80% of the reward that the inviter receives goes to the wallet, and 20% goes to the stake.
+
+The invitee’s reward is blocked in the stake and is not returned to the main wallet when the Verified status is reached. This encourages newcomers to run a node and get mining rewards.
+
+If the inviter was penalized for a reported flip, the invitation rewards are not paid neither to the inviter nor to the invitee.
+If the invitee was penalized for a reported flip, the invitation reward is not paid to the invitee.
+
+The invitation reward also depends on how early in the epoch the invitation is activated. The later the invitation is activated, the lower the reward. The reduction factor _k_ is calculated for each invitation as `k = 1−t⁴ · 0.5`, where `t ∈ [0..1]` is the amount of time that has passed from the start of the epoch to the moment of the activation.
 
 ![image](/img/wp/idena-invitation-rewards-curve.png)
 
