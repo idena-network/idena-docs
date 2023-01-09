@@ -8,7 +8,7 @@ sidebar_label: IIP-8
 
 `Author`: Zen
 
-`Status`: Review
+`Status`: Final
 
 `Type`: Standard
 
