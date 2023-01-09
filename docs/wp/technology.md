@@ -223,7 +223,7 @@ _Example of a flip: a meaningful story (left) and a meaningless sequence of pict
 
 A flip is not an IQ test but a test for common sense. A flip is submitted without the right answer. The network comes to a consensus about the right answer after the validation session. If consensus is not reached, then the flip is disqualified. Answers for disqualified flips are not counted.
 
-> Try to [test yourself](https://flips.idena.io/?pass=idena.io) to check whether you are bot or not.
+> Try to [test yourself](https://app.idena.io) to check whether you are bot or not.
 
 To make a flip truly AI-hard and to avoid the need for a trusted third party, flips must be human-generated. In Idena, flips are created by validated participants. The flips are stored as encrypted data in the network before validation, and then they are algorithmically distributed.
 
