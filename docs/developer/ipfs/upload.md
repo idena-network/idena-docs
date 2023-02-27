@@ -1,12 +1,16 @@
 ---
 hide_title: true
 title: How to upload content to IPFS
-sidebar_label: Uploading data
+sidebar_label: Idena IPFS
 ---
 
-# Uploading data to IPFS
+# Idena IPFS
 
-You can use the Idena Network for uploading and sharing your content. You can access the uploaded data by its `cid` using Idena node or IPFS node connected to the Idena Network or using any public Idena IPFS gateway (e.g: https://ipfs.idena.io)
+Every Idena node includes an IPFS node. Idena IPFS nodes do not connect to the IPFS public DHT, they form a private Idena IPFS network that is a public storage for the Idena blockchain data.
+
+## Uploading data to IPFS
+
+You can use the Idena IPFS network for uploading and sharing your own content. You can access the uploaded data by its `cid` using Idena node or IPFS node connected to the Idena Network or using any public Idena IPFS gateway (e.g: https://ipfs.idena.io)
 
 Example: https://ipfs.idena.io/ipfs/bafkreicfjmxqcmzqt7yvl6ljpwl3kbkvh2einxpilggbczsx44giha6dua
 
@@ -22,13 +26,13 @@ Let's upload the following `html` file into Idena IPFS network:
 		body {
 			background-color: #2D2D2D;
 		}
-		
+
 		h1 {
 			color: #C26356;
 			font-size: 30px;
 			font-family: Menlo, Monaco, fixed-width;
 		}
-		
+
 		p {
 			color: white;
 			font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
@@ -43,22 +47,27 @@ Let's upload the following `html` file into Idena IPFS network:
 ```
 
 ### 1. Convert text into bytes
+
 You can use online tool to convert text into bytes: https://onlineasciitools.com/convert-ascii-to-bytes
+
 ```
 3c21444f43545950452...
 ```
-### 2. Add prefix 
+
+### 2. Add prefix
+
 Add `0x` prefix to data as follows:
+
 ```
 0x3c21444f43545950452...
 ```
-### 3. Upload data
 
+### 3. Upload data
 
 Call Idena Node `ipfs_add` method to upload data to your Idena node.
 You can use https://rpc.idena.io to call methods of your Idena node.
 
-Example: 
+Example:
 
 ```
 {
@@ -78,9 +87,9 @@ Example:
 ```
 
 Parameters:
+
 - `data`: bytes
 - `pin`: bool
-
 
 Result of the method is `cid` which is also the hash of the data which should be used to access it.
 
@@ -95,11 +104,10 @@ You should use the `pin` parameter when uploading your content to make sure that
 Your Idena nodes will automatically delete all the unpinned data if there is a new data is uploaded (e.g. flips or blocks) and no free space left in your `/ipfs` folder.
 By default `/ipfs` folder data is limited by `10Gb`.
 
-
 ## Broadcasting your data
 
 You can call the `dna_storeToIpfs` method if you want other nodes to download your data.
-Transaction `StoreToIpfsTx` will be sent automatically for the specified `cid`. 
+Transaction `StoreToIpfsTx` will be sent automatically for the specified `cid`.
 
 Example:
 
@@ -124,7 +132,6 @@ Example:
 Once the `StoreToIpfsTx` transaction is confirmed, 20% of nodes are randomly selected to download the specified data.
 These Idena nodes do not pin your data so it may be deleted if there is no free space left in their `/ipfs` folder.
 
-
 ### Fees
 
 Fee for `StoreToIpfsTx` transaction is calculated automatically depending on the size of the data.
@@ -135,6 +142,3 @@ transactionFee = currFeeRate * (transactionSize  + dataSize * 0.20)
 ```
 
 _See more about [`currFeeRate`](/docs/developer/node/node-rpc#transaction-fees)_
-
-
-

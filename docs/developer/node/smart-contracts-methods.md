@@ -38,17 +38,17 @@ curl -X POST --data '{
 
 Smart contract methods may have a dynamic list of parameters `args` that is specific to each smart contract:
 
-```
+```json
 [
   {
     "index": 0,
     "format": "hex",
-    "value" : "0x11"
+    "value": "0x11"
   },
   {
     "index": 1,
     "format": "uint64",
-    "value" : "11"
+    "value": "11"
   }
 ]
 ```
@@ -56,7 +56,6 @@ Smart contract methods may have a dynamic list of parameters `args` that is spec
 - `Index`: index of parameter
 - `Format`: format of parameter `byte`, `uint64`, `string`, `bigint`, `hex` (default), `dna` (float representation).
 - `Value`: parameter value interpreted according to the specified format
-
 
 ## `contract_deploy` and `contract_estimateDeploy` methods
 
@@ -68,7 +67,7 @@ Method `contract_deploy` creates `DeployTx` transaction to deploy a smart contra
 - `codeHash`: predefined smart contract code
 - `amount`: amount of coins that will be blocked at the smart contract stake
 - `args`: dynamic list of parameters relevant to the specified smart contract
-- `maxFee`: must cover a sum of `txFee`+`gasCost` (see [more about `maxFee`](#gas-and-transaction-fee))
+- `maxFee`: must cover a sum of `txFee`+`gasCost` (see [more about `maxFee`](./smart-contracts#gas-and-transaction-fee))
 
 **Example:**
 
@@ -110,7 +109,7 @@ Method `contract_call` creates `CallTx` transaction to call a smart contract's m
 
 **Example:**
 
-```
+```json
 {
 {
   "method": "contract_estimateCall",
@@ -152,7 +151,7 @@ Method `contract_terminate` creates `TerminateTx` transaction to terminate the s
 
 **Example:**
 
-```
+```json
 {
   "method": "contract_estimateTerminate",
   "params": [
@@ -184,14 +183,10 @@ Returns requested data of the smart contract's state.
 
 **Example:**
 
-```
+```json
 {
   "method": "contract_readData",
-  "params": [
-    "<smart contract address>",
-    "key",
-    "hex"
-  ]
+  "params": ["<smart contract address>", "key", "hex"]
 }
 ```
 
@@ -209,7 +204,7 @@ Returns requested array data (`map`) of the smart contract's state and continuat
 
 **Example:**
 
-```js
+```json
 {
   "method": "contract_iterateMap",
   "params": [
@@ -236,7 +231,7 @@ Returns requested value for the given key from the array data (`map`) of the sma
 
 **Example:**
 
-```js
+```json
 {
   "method": "contract_readMap",
   "params": [
@@ -261,7 +256,7 @@ Calls specified smart contract's method without changing the state.
 
 **Example:**
 
-```
+```json
 {
   "method": "contract_readonlyCall",
   "params": [
@@ -291,12 +286,10 @@ Returns amount of coins blocked at the stake of the smart contract
 
 **Example:**
 
-```
+```json
 {
   "method": "contract_getStake",
-  "params": [
-    "<smart contract address>"
-  ]
+  "params": ["<smart contract address>"]
 }
 ```
 
@@ -306,22 +299,20 @@ Returns receipt of the specified transaction
 
 **Parameters:**
 
-- `hash`: transaction hash
+- `hash`: hash of mined transaction
 
 **Example:**
 
-```
+```json
 {
   "method": "bcn_txReceipt",
-  "params": [
-    "<transaction hash>"
-  ]
+  "params": ["<transaction hash>"]
 }
 ```
 
 **Response example:**
 
-```js
+```json
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -338,6 +329,15 @@ Returns receipt of the specified transaction
 }
 ```
 
+- `contract`: address of the called contract
+- `method`: called method of the smart contract
+- `success`: whether transaction changed the state or not
+- `gasUsed`: amount of gas used
+- `txHash`: contract transaction hash
+- `error`: error text
+- `gasCost`: gas cost, iDNA
+- `txFee`: transaction cost, iDNA
+
 **Errors:**
 
 - `index out of range`: `args` array has a missing element with required `index`.
@@ -352,7 +352,7 @@ Returns the list of events of the specified smart contract
 
 **Example:**
 
-```
+```json
 {
   "method": "contract_events",
   "params": [
@@ -374,23 +374,20 @@ Subscribes/unsubscribes from the specified event of the smart contract
 
 **Example:**
 
-```
+```json
 {
   "method": "contract_subscribeToEvent",
-  "params": [
-    "<smart contract address>",
-    "<event name>"
-  ]
+  "params": ["<smart contract address>", "<event name>"]
 }
 ```
 
 ## `bcn_feePerGas` method
 
-The method returns the current `GasPrice`.
+The method returns the current `gasPrice`.
 
 **Example:**
 
-```
+```json
 {
   "method": "bcn_feePerGas",
   "params": [],
@@ -398,3 +395,13 @@ The method returns the current `GasPrice`.
   "key": "<API key>"
 }
 ```
+
+Example:
+
+```json
+{
+  "result": 1651527663100 //0.0000016515276631 iDNA
+}
+```
+
+The minimum `gasPrice` is `0.01`/`NetworkSize`.

@@ -6,59 +6,52 @@ sidebar_label: Summary
 
 # Idena smart contracts
 
-_Note: Currently only predefined smart contracts available (see [below](#predefined-smart-contracts))._
+There are two types of smart contracts in Idena:
 
-## Gas and Transaction fee
+- **Custom contracts** that can be deployed by any developer
+- **Predefined contracts** built-in into the Idena node code (can be changed with hard fork updates)
 
-In addition to transaction fee per byte a gas consumption has to be paid when a smart contract is called.
+Custom contracts are executed in Wasmer runtime. Any language that compiles to WebAssembly (Wasm) can be used for developing contracts. Currently you can use TypeScript-like language [AssemblyScript](https://www.assemblyscript.org/) and compile your contracts into WebAssembly (see [Quick start](./quick-start)). For developing contracts in AssemblyScript [Idena-sdk-as](./idena-sdk-as) is recommended.
 
-Transaction fee and gas charged when calling the following for smart contracts:
+## Contract transactions
 
-- [`contract_deploy`](./smart-contracts-methods#contract_deploy-and-contract_estimatedeploy-methods)
-- [`contract_call`](./smart-contracts-methods#contract_call-and-contract_estimatecall-methods)
-- [`contract_terminate`](./smart-contracts-methods#contract_terminate-and-contract_estimateterminate-methods)
+There are three types of transactions to deal with Idena contracts:
 
-## `maxFee` parameter
+### 1. `DeployContractTx`
 
-Maximum transaction fee `maxFee` parameter must cover a sum of `txFee`+`gasCost`.
+#### Deploy custom contract
 
-`GasCost` is calculated as a total amount of gas consumed by the smart contract operations multiplied to the current `GasPrice`.
+`DeployContractTx` transaction deploys a custom contract specified by the `code` and `nonce` and executes the contract class constructor. Fields of `DeployContractTx` transaction for creating a custom contract:
 
-You can use estimation methods to get an expected amount of gas that will be consumed by the smart contract:
+- `from`: sender address
+- `code:  []byte`: compiled WebAssembly code (see [Quick start](./quick-start#building) to build a simple custom contract)
+- `nonce: []byte`: nonce allows you to generate unique addresses for published contracts
+- `args`: dynamic list of parameters of constructor which is specific to a particular contract
+- `maxFee`: must cover a sum of `txCost`+`gasCost` (see more about [`maxFee`](#maxfee-parameter))
 
-- [`contract_estimateDeploy`](./smart-contracts-methods#contract_deploy-and-contract_estimatedeploy-methods)
-- [`contract_estimateCall`](./smart-contracts-methods#contract_call-and-contract_estimatecall-methods)
-- [`contract_estimateTerminate`](./smart-contracts-methods#contract_terminate-and-contract_estimateterminate-methods)
+_Please note that that maximum size of the transaction payload is `MaxPayloadSize` = 3 MB_
 
-Response example:
+#### Deploy predefined contract
 
-```js
- "result": {
-    ...
-    "gasCost": "0.416",
-    "txFee": "0.56"
-  }
-```
+`DeployContractTx` transaction deploys a predefined contract specified by the `codeHash` and executes the contract class constructor. Fields of `DeployContractTx` transaction for creating a predefined contract:
 
-The `maxFee` parameter can be omitted when calling estimation methods.
+- `from`: sender address
+- `amount`: specifies amount of coins that will be blocked in the stake of the contract
+- `codeHash`: contract code
+- `args`: dynamic list of parameters of constructor which is specific to a particular contract
+- `maxFee`: must cover a sum of `txCost`+`gasCost` (see more about [`maxFee`](#maxfee-parameter))
 
-## GasPrice
+`codeHash` specifies the algorithm of a predefined contract:
 
-`GasPrice` is calculated automatically by the protocol. The minimum `GasPrice` is: `GasPrice`= `0.01`/`NetworkSize`.
+- `0x01`: [TimeLock](./time-lock)
+- `0x02`: OracleVoting (integrated into Idena app)
+- `0x03`: [OracleLock](./oracle-lock)
+- `0x04`: [RefundableOracleLock](./refundable-oracle-lock)
+- `0x05`: [Multisig](./multisig)
 
-The [`bcn_feePerGas`](smart-contracts-methods#bcn_feepergas-method) method should be called to get the current `GasPrice`.
+_Note: you can find the code of predefined contracts [here](https://github.com/idena-network/idena-go/tree/master/vm/embedde)_
 
-Example:
-
-```js
-{
-  "result": 1651527663100 //0.0000016515276631 iDNA
-}
-```
-
-## Smart contract stake
-
-In order to deploy a new Idena smart contract stake must be locked. The `amount` parameter has to be specified to lock the stake when `DeployTx` transaction is called. If the specified amount is less than a minimum stake then error message will be returned.
+`amount` specifies amount of iDNA transfered to the contract stake. Minimum contract stake is `gasPrice` \* `3,000,000`. If the specified amount is below the minimum stake then an error message will be returned:
 
 ```json
   "error": {
@@ -67,65 +60,41 @@ In order to deploy a new Idena smart contract stake must be locked. The `amount`
   }
 ```
 
-Minimum smart contract stake is calculated as `GasPrice` \* `3000000`
+### 2. `CallContractTx`
 
-50% of the stake will be refunded to its creator once the smart contract is terminated.
+`CallContractTx` transaction executes specified public method of the contract class. Fields of the `CallContractTx` transaction:
 
-## Smart contract termination
+- `from`: sender address
+- `contract`: smart contract address
+- `method`: name of the public contract method
+- `amount`: amount of coins transferred to the smart contract address
+- `args`: dynamic list of parameters which is specific to a particular method
 
-Termination of the smart contract removes all smart contract data from the state. 50% of the stake is burnt. Another 50% of the stake transferred to the creator of the smart contract.
+### 3. `TerminateContractTx`
 
-The contract might be terminated according to its internal rules.
+_Note: `TerminateContractTx` is available only for predefined contracts_
 
-For instance `OracleVoting` smart contract can be terminated after a termination delay once the public voting is finished. Termination delay is proportional to the amount of coins blocked at the smart contract stake. Termination delay, days = `round( (NetworkSize * Stake) ^ 1/3 )`
+`TerminateContractTx` transaction removes the contract's data from the Idena blockchain state. 50% of the stake is burnt. Another 50% of the stake is transferred to the creator of the smart contract. The contract might be terminated according to its internal rules. For instance `OracleVoting` smart contract can be terminated after a termination delay once the public voting is finished. Termination delay is proportional to the amount of coins blocked at the smart contract stake. Termination delay, days = `round( (NetworkSize * Stake) ^ 1/3 )`
 
-## Predefined smart contracts
+Fields of the `TerminateContractTx` transaction:
 
-Currently only predefined smart contracts available to deploy. You can find the code of the smart contracts [here](https://github.com/idena-network/idena-go/tree/master/vm/embedde).
+- `from`: sender address
+- `contract`: smart contract address
+- `args`: dynamic list of parameters which is specific to a particular predefined smart contract
 
-`CodeHash` represents the algorithm of a predefined smart contract:
+_Note: `TerminateContractTx` is not available for custom contracts. In the future to minimize the state of the Idena node a mechanism that suspends inactive contracts will be introduced. If a contract is not used (by validated users) then it might be suspended. After N epochs the state of suspended contract might be deleted. Only Merkle root will be saved so anyone who saved the state of the suspended contract offchain could initiate its recovery._
 
-- `0x01`: [TimeLock](./time-lock)
-- `0x02`: OracleVoting (integrated into Idena app)
-- `0x03`: [OracleLock](./oracle-lock)
-- `0x04`: [RefundableOracleLock](./refundable-oracle-lock)
-- `0x05`: [Multisig](./multisig)
+## Contract addresses
 
-## Smart contracts transactions
+#### Custom contracts address
 
-- `DeployTx`: Create smart contract
-- `CallTx`: Call method of the smart contract
-- `TerminateTx`: Delete smart contract and refund 50% of the locked stake
+The address of the custom contract is calculated as a hash from code hash, protobuf packed args and deploy attachment nonce. The contract address is the last 20 bytes of the hash.
 
-## Smart contracts transaction receipt
+#### Predefined contract address
 
-`TxReceipt` indicates result of mined smart contract transaction `DeployTx`, `CallTx` or `TerminateTx`
+The address of the predefined contract is calculated as a hash from tx sender, tx epoch and tx account nonce. The contract address is the last 20 bytes of the hash.
 
-```json
-{
-  "contract": "0xa9694569a6efe69f156a9f457bbd2163c78e4ef4",
-  "method": "transfer",
-  "success": true,
-  "gasUsed": 382,
-  "txHash": "0x7d48995a8f6a22e4d060a9471adc22e88e5303bb1129bf6c7a250438f370c5b5",
-  "error": "",
-  "gasCost": "114.6",
-  "txFee": "17.7"
-}
-```
-
-- `Contract`: address of the smart contract
-- `Method`: called method of the smart contract
-- `Success`: whether transaction changed the state or not
-- `gasUsed`: amount of gas used
-- `txHash`: smart contract transaction hash
-- `Error`: error text
-- `gasCost`: gas cost, iDNA
-- `txFee`: transaction fee, iDNA
-
-## Smart contract address
-
-You can calculate the address of the smart contract before it will be deployed as [following](https://github.com/idena-network/idena-rpc/blob/master/src/Components/Contracts.js#L315):
+You can calculate the address of the predefined contract before it will be deployed as [following](https://github.com/idena-network/idena-rpc/blob/master/src/Components/Contracts.js#L315)
 
 ```js
 const addr = toBuffer(hexToUint8Array(state.address));
@@ -152,3 +121,82 @@ Example:
   "address": "0x39bd250ac33f24b32af705617c0b46ead3c8f7c5"
 }
 ```
+
+## Contract transaction fee
+
+In Idena `gasPrice` is calculated [automatically](../../wp/economics#transaction-fees) for each block. `gasPrice` is used to calculate the cost of a transaction and the cost of the gas consumed by the contract called by this transaction. The [`bcn_feePerGas`](smart-contracts-methods#bcn_feepergas-method) method should be called to get the current `gasPrice`.
+
+The total amount of `fee` for the contract transaction is calculated as cost of transaction plus cost of the gas consumed by the called contract:
+
+`fee` = `txCost` + `gasCost`
+
+#### txCost
+
+The cost of transaction depends on its size:
+
+`txCost` = `txSize` \* 10 \* `gasPrice`
+
+So 1 byte of transaction has the same cost as 10 units of gas.
+
+#### gasCost
+
+The cost of the gas is calculated as the total amount of gas consumed by a contract multiplied to the current `gasPrice`:
+
+`gasCost` = `gasUsed` \* `gasPrice`
+
+`gasUsed` is the amount of gas consumed by the contract during its execution.
+
+### `maxFee` parameter
+
+For a successful transaction, maximum transaction fee `maxFee` parameter must be greater than the sum of `txCost`+`gasCost`.
+
+You can use estimation methods to get an expected amount of gas that will be consumed by the contract:
+
+- [`contract_estimateDeploy`](./smart-contracts-methods#contract_deploy-and-contract_estimatedeploy-methods)
+- [`contract_estimateCall`](./smart-contracts-methods#contract_call-and-contract_estimatecall-methods)
+- [`contract_estimateTerminate`](./smart-contracts-methods#contract_terminate-and-contract_estimateterminate-methods)
+
+Response example:
+
+```js
+ "result": {
+    ...
+    "gasCost": "0.416",
+    "txFee": "0.56"
+  }
+```
+
+- `gasCost`: gas cost, iDNA (see [`gasCost`](#gascost))
+- `txFee`: transaction cost, iDNA (see [`txCost`](#txcost))
+
+The `maxFee` parameter can be omitted when calling estimation methods.
+
+### Gas limit
+
+The max amount of gas per block is limited by 5,120,000.
+
+The max amount of gas that can be consumed by a transaction is limited by `gasLimit`, which can be calculated as follows:
+
+`gasLimit` = (`maxFee` - `txCost`) / `gasPrice`
+
+When developing contracts, you may need to specify an explicit limit of gas for some methods. For example if another contract is being called using `create_call_contract_promise`, then the gas limit has to be specified in units of `wasm_gas_limit`:
+
+`wasm_gas_limit` = `gasLimit` \* 100
+
+## Contract transaction receipt
+
+You can call Idena node method [`TxReceipt`](./smart-contracts-methods#bcn_txreceipt-method) to check the result of mined contract transaction `DeployContractTx`, `CallContractTx` or `TerminateContractTx`
+
+## Asynchronous calls
+
+In future, storage of the Idena blockchain state will be split between shards. As a result neither the contracts data nor contracts code will not be available within the execution on a single node.
+
+In sharded architecture the contract `C1` from shard A makes an asynchronous call to shard B, which holds the state of the contract `C2`. In Idena asynchronous calls for deployment, calling contracts and reading contracts data are supported. For more details about asynchronous calls see [idena-sdk-as](./idena-sdk-as).
+
+![image](/img/developer/smart-contracts-sharding.png)
+
+Unlike synchronous execution, in asynchronous calls, the result of the execution of the initial method can be successful, while the asynchronous calls end with errors. For example transaction `Tx1` calls a method of the contract `C1` in the Shart A. Contracts `C1` creates a promise by calling another contract `C2` that is executed in Shard B. If there are no errors, then the contract `C1` completes its execution and commits its results to the blockchain state. To get the result of the promise, the initial contract `C1` handles a callback of the contract `C2` and processes possible errors.
+
+Currently Idena node emulates asynchronous execution, while the execution takes place within a single block. However the commits to the blockchain state and the execution order of the promises correspond to the fully sharded architecture.
+
+For the convenience of debugging and developing contracts, a hierarchical `ActionResult` object is added to `TxReceipt`, which contains information about execution errors, used gas, resulting data, as well as information about all the results of the created promises.

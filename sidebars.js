@@ -1,11 +1,17 @@
 module.exports = {
   developer: [
-    'developer/desktop/sign-in',
-    'developer/send-dna',
-    'developer/send-invite',
-    'developer/send-raw',
-    'developer/desktop/dna-url',
-    'developer/identity-bridge',
+    {
+      type: 'category',
+      label: 'Idena app',
+      items: [
+        'developer/desktop/sign-in',
+        'developer/send-dna',
+        'developer/send-invite',
+        'developer/send-raw',
+        'developer/desktop/dna-url',
+      ],
+    },
+
     {
       type: 'category',
       label: 'Idena node',
@@ -13,30 +19,37 @@ module.exports = {
         'developer/node/general',
         'developer/node/node-rpc',
         'developer/node/shared',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Smart contracts',
+      items: [
+        'developer/node/smart-contracts',
+        'developer/node/quick-start',
+        'developer/node/idena-sdk-as',
+        'developer/node/smart-contracts-methods',
         {
           type: 'category',
-          label: 'Smart contracts',
+          label: 'Predefined contracts',
           items: [
-            'developer/node/smart-contracts',
-            'developer/node/smart-contracts-methods',
-            {
-              type: 'category',
-              label: 'Predefined contracts',
-              items: [
-                'developer/node/oracle-lock',
-                'developer/node/refundable-oracle-lock',
-                'developer/node/multisig',
-                'developer/node/time-lock',
-              ],
-            },
+            'developer/node/oracle-lock',
+            'developer/node/refundable-oracle-lock',
+            'developer/node/multisig',
+            'developer/node/time-lock',
           ],
         },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Architecture',
+      items: [
+        'developer/identity-bridge',
+        'developer/ipfs/upload',
         'developer/validation',
-        {
-          type: 'category',
-          label: 'IPFS',
-          items: ['developer/ipfs/upload'],
-        },
       ],
     },
   ],
