@@ -84,3 +84,45 @@ To run tests, use the command:
 ```
 yarn test
 ```
+
+## Deploying
+
+To deploy your contract you can use [rpc.idena.io](https://rpc.idena.io).
+
+- Connect to the Idena node
+- Enter your coinbase address
+- Select the compiled `.wasm` contract file
+- Enter unique `nonce`
+- Specify [`args`](./smart-contracts-methods#args) for the contract constructor if needed
+- You can call the `contract_estimateDeploy` method to calcaulte [`maxfee`](./smart-contracts#maxfee-parameter) parameter
+
+![image](/img/developer/quick-start-rpc-deploy.png)
+
+```json
+{
+  "method": "contract_Deploy",
+  "params": [
+    {
+      "from": "0x6899...",
+      "code": "0x0061736d01...",
+      "nonce": "0x01",
+      "args": [],
+      "maxFee": 2
+    }
+  ],
+  "id": 1,
+  "key": "..."
+}
+```
+
+**Response example:**
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0xdeb3..."
+}
+```
+
+As a `result` you will get a hash of [`DeployContractTx`](./smart-contracts#1-deploycontracttx) transaction. To get the address of the deployed contract, call [`bcn_txReceipt`](./smart-contracts-methods#bcn_txreceipt-method) method for this transaction hash.

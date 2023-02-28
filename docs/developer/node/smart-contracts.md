@@ -24,8 +24,8 @@ There are three types of transactions to deal with Idena contracts:
 `DeployContractTx` transaction deploys a custom contract specified by the `code` and `nonce` and executes the contract class constructor. Fields of `DeployContractTx` transaction for creating a custom contract:
 
 - `from`: sender address
-- `code:  []byte`: compiled WebAssembly code (see [Quick start](./quick-start#building) to build a simple custom contract)
-- `nonce: []byte`: nonce allows you to generate unique addresses for published contracts
+- `code`: compiled WebAssembly code (see [Quick start](./quick-start#building) to build a simple custom contract)
+- `nonce`: unique nonce that allows you to generate unique addresses for contracts with the same `code`
 - `args`: dynamic list of parameters of constructor which is specific to a particular contract
 - `maxFee`: must cover a sum of `txCost`+`gasCost` (see more about [`maxFee`](#maxfee-parameter))
 
@@ -89,6 +89,8 @@ _Note: `TerminateContractTx` is not available for custom contracts. In the futur
 #### Custom contracts address
 
 The address of the custom contract is calculated as a hash from code hash, protobuf packed args and deploy attachment nonce. The contract address is the last 20 bytes of the hash.
+
+You can call [`contract_estimateDeploy`](./smart-contracts-methods#contract_deploy-and-contract_estimatedeploy-methods) to calculate the address of the future contract.
 
 #### Predefined contract address
 

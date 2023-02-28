@@ -36,6 +36,8 @@ curl -X POST --data '{
                      }'
 ```
 
+#### Args
+
 Smart contract methods may have a dynamic list of parameters `args` that is specific to each smart contract:
 
 ```json
@@ -59,9 +61,42 @@ Smart contract methods may have a dynamic list of parameters `args` that is spec
 
 ## `contract_deploy` and `contract_estimateDeploy` methods
 
-Method `contract_deploy` creates `DeployTx` transaction to deploy a smart contract specified by `CodeHash`. Use `contract_estimateDeploy` to estimate gas consumption of the `contract_deploy` transaction.
+Method `contract_deploy` creates [`DeployContractTx`](./smart-contracts#1-deploycontracttx) transaction to deploy a custom contract specified by `code` and `nonce` or a predefined contract specified by `codeHash`. Use `contract_estimateDeploy` method to estimate gas consumption of the future `DeployContractTx` transaction and address of the future contract.
 
-**Parameters:**
+**Parameters for custom contract:**
+
+- `from`: sender address
+- `code`: compiled WebAssembly code of a custom contract
+- `nonce`: unique nonce for the custom contract
+- `args`: dynamic list of parameters of constructor which is specific to a particular contract
+- `maxFee`: must cover a sum of `txFee`+`gasCost` (see [more about `maxFee`](./smart-contracts#gas-and-transaction-fee))
+
+**Example:**
+
+```json
+{
+  "method": "contract_estimateDeploy",
+  "params": [
+    {
+      "from": "<address>",
+      "code": "0x0061736d01000000013...",
+      "nonce": "0x01",
+      "maxFee": 1,
+      "args": [
+        {
+          "index": 0,
+          "format": "uint64",
+          "value": "0"
+        }
+      ]
+    }
+  ],
+  "id": 1,
+  "key": "<key>"
+}
+```
+
+**Parameters for predefined contract:**
 
 - `from`: sender address
 - `codeHash`: predefined smart contract code
@@ -96,15 +131,15 @@ Method `contract_deploy` creates `DeployTx` transaction to deploy a smart contra
 
 ## `contract_call` and `contract_estimateCall` methods
 
-Method `contract_call` creates `CallTx` transaction to call a smart contract's method. Use `contract_estimateCall` method to estimate gas consumption of the `contract_call` transaction.
+Method `contract_call` creates [`CallContractTx`](./smart-contracts#2-callcontracttx) transaction to call specified contract's method. Use `contract_estimateCall` method to estimate gas consumption of the future `CallContractTx` transaction.
 
 **Parameters:**
 
 - `from`: sender address
-- `contract`: smart contract address
-- `method`: smart contract's method to call
-- `amount`: amount of coins transferred to the smart contract address
-- `args`: dynamic list of parameters relevant to specified smart contract's method
+- `contract`: contract address
+- `method`: name of the called contract's method
+- `amount`: amount of coins transferred to the contract address
+- `args`: dynamic list of parameters relevant to specified contract's method
 - `broadcastBlock`: block number when a postponed transaction should be published by the node
 
 **Example:**
@@ -141,13 +176,13 @@ Method `contract_call` creates `CallTx` transaction to call a smart contract's m
 
 ## `contract_terminate` and `contract_estimateTerminate` methods
 
-Method `contract_terminate` creates `TerminateTx` transaction to terminate the smart contract. Use `contract_estimateTerminate` method to estimates gas consumption of the `contract_terminate` transaction.
+Method `contract_terminate` creates [`TerminateContractTx`](./smart-contracts#3-terminatecontracttx) transaction to terminate the contract. Use `contract_estimateTerminate` method to estimates gas consumption of the future `TerminateContractTx` transaction.
 
 **Parameters:**
 
 - `from`: sender address
-- `contract`: smart contract address
-- `args`: dynamic list of parameters relevant to specified smart contract's method
+- `contract`: contract address
+- `args`: dynamic list of parameters relevant to specified contract's method
 
 **Example:**
 
