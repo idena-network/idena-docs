@@ -15,7 +15,7 @@ yarn add jest -D
 
 npx asinit .
 
-yarn add idena-sdk-as@0.0.28
+yarn add idena-sdk-as@0.0.29
 ```
 
 After project initialization, you will have the following project folder structure:
@@ -42,7 +42,7 @@ As an example, see the code of [hello-world](https://github.com/idena-network/id
 
 ## Building
 
-To build the contracts install [asbuild](https://github.com/AssemblyScript/asbuild):
+To build the contracts use [asbuild](https://github.com/AssemblyScript/asbuild):
 
 ```
 yarn asb

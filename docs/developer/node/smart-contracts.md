@@ -8,7 +8,7 @@ sidebar_label: Summary
 
 There are two types of smart contracts in Idena:
 
-- **Custom contracts** that can be deployed by any developer
+- **Custom contracts** that can be developed and deployed by any developer
 - **Predefined contracts** built-in into the Idena node code (can be changed with hard fork updates)
 
 Custom contracts are executed in Wasmer runtime. Any language that compiles to WebAssembly (Wasm) can be used for developing contracts. Currently you can use TypeScript-like language [AssemblyScript](https://www.assemblyscript.org/) and compile your contracts into WebAssembly (see [Quick start](./quick-start)). For developing contracts in AssemblyScript [Idena-sdk-as](./idena-sdk-as) is recommended.
@@ -25,11 +25,11 @@ There are three types of transactions to deal with Idena contracts:
 
 - `from`: sender address
 - `code`: compiled WebAssembly code (see [Quick start](./quick-start#building) to build a simple custom contract)
-- `nonce`: unique nonce that allows you to generate unique addresses for contracts with the same `code`
 - `args`: dynamic list of parameters of constructor which is specific to a particular contract
+- `nonce`: unique nonce that allows you to generate unique addresses for contracts with the same `code` and `args`
 - `maxFee`: must cover a sum of `txCost`+`gasCost` (see more about [`maxFee`](#maxfee-parameter))
 
-_Please note that that maximum size of the transaction payload is `MaxPayloadSize` = 3 MB_
+> _Please note that that maximum size of the transaction payload is `MaxPayloadSize` = 3 MB_
 
 #### Deploy predefined contract
 
@@ -49,7 +49,7 @@ _Please note that that maximum size of the transaction payload is `MaxPayloadSiz
 - `0x04`: [RefundableOracleLock](./refundable-oracle-lock)
 - `0x05`: [Multisig](./multisig)
 
-_Note: you can find the code of predefined contracts [here](https://github.com/idena-network/idena-go/tree/master/vm/embedde)_
+> _Note: you can find the code of predefined contracts [here](https://github.com/idena-network/idena-go/tree/master/vm/embedded)_
 
 `amount` specifies amount of iDNA transfered to the contract stake. Minimum contract stake is `gasPrice` \* `3,000,000`. If the specified amount is below the minimum stake then an error message will be returned:
 
@@ -72,7 +72,7 @@ _Note: you can find the code of predefined contracts [here](https://github.com/i
 
 ### 3. `TerminateContractTx`
 
-_Note: `TerminateContractTx` is available only for predefined contracts_
+> _Note: `TerminateContractTx` is available only for predefined contracts_
 
 `TerminateContractTx` transaction removes the contract's data from the Idena blockchain state. 50% of the stake is burnt. Another 50% of the stake is transferred to the creator of the smart contract. The contract might be terminated according to its internal rules. For instance `OracleVoting` smart contract can be terminated after a termination delay once the public voting is finished. Termination delay is proportional to the amount of coins blocked at the smart contract stake. Termination delay, days = `round( (NetworkSize * Stake) ^ 1/3 )`
 
@@ -82,13 +82,13 @@ Fields of the `TerminateContractTx` transaction:
 - `contract`: smart contract address
 - `args`: dynamic list of parameters which is specific to a particular predefined smart contract
 
-_Note: `TerminateContractTx` is not available for custom contracts. In the future to minimize the state of the Idena node a mechanism that suspends inactive contracts will be introduced. If a contract is not used (by validated users) then it might be suspended. After N epochs the state of suspended contract might be deleted. Only Merkle root will be saved so anyone who saved the state of the suspended contract offchain could initiate its recovery._
+> _Note: `TerminateContractTx` is not available for custom contracts. In the future to minimize the state of the Idena node a mechanism that suspends inactive contracts will be introduced. If a contract is not used (by validated users) then it might be suspended. After N epochs the state of suspended contract might be deleted. Only Merkle root will be saved so anyone who saved the state of the suspended contract offchain could initiate its recovery._
 
 ## Contract addresses
 
 #### Custom contracts address
 
-The address of the custom contract is calculated as a hash from code hash, protobuf packed args and deploy attachment nonce. The contract address is the last 20 bytes of the hash.
+The address of the custom contract is calculated as a hash from code hash, protobuf packed args and deploy attachment nonce. The contract address is the last 20 bytes of the hash (see [example](https://github.com/idena-network/idena-go/blob/master/vm/wasm/util.go#L19))
 
 You can call [`contract_estimateDeploy`](./smart-contracts-methods#contract_deploy-and-contract_estimatedeploy-methods) to calculate the address of the future contract.
 
@@ -197,7 +197,7 @@ In sharded architecture the contract `C1` from shard A makes an asynchronous cal
 
 ![image](/img/developer/smart-contracts-sharding.png)
 
-Unlike synchronous execution, in asynchronous calls, the result of the execution of the initial method can be successful, while the asynchronous calls end with errors. For example transaction `Tx1` calls a method of the contract `C1` in the Shart A. Contracts `C1` creates a promise by calling another contract `C2` that is executed in Shard B. If there are no errors, then the contract `C1` completes its execution and commits its results to the blockchain state. To get the result of the promise, the initial contract `C1` handles a callback of the contract `C2` and processes possible errors.
+Unlike synchronous execution, in asynchronous calls, the result of the execution of the initial method can be successful, while the asynchronous calls end with errors. For example transaction `Tx1` calls a method of the contract `C1` in the Shard A. Contracts `C1` creates a promise by calling another contract `C2` that is executed in Shard B. If there are no errors, then the contract `C1` completes its execution and commits its results to the blockchain state. To get the result of the promise, the initial contract `C1` handles a callback of the contract `C2` and processes possible errors.
 
 Currently Idena node emulates asynchronous execution, while the execution takes place within a single block. However the commits to the blockchain state and the execution order of the promises correspond to the fully sharded architecture.
 
