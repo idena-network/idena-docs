@@ -118,7 +118,7 @@ export function hello(): void {
 }
 ```
 
-If you need to get the transformed code for debugging purposes, then add the following line to the very beginning of the transformed file:
+If you need to get the transformed code for debugging purposes, then add the following line to the very beginning of the source file:
 
 ```js
 //@idenafile out
@@ -180,3 +180,49 @@ Every method execution has an environment associated with information such as:
 To access the environment idena-sdk-as provides wrappers [Context](https://github.com/idena-network/idena-sdk-as/blob/master/sdk-core/assembly/context.ts) and [Host](https://github.com/idena-network/idena-sdk-as/blob/master/sdk-core/assembly/host.ts).
 
 > _Note: Complete list of environment methods can be found [here](https://github.com/idena-network/idena-sdk-as/blob/master/sdk-core/assembly/env.ts)_
+
+### Context
+
+`Context` provides data related to the execution of the called method.
+
+| SDK method                   | Description                                                                                                                                                                                                                          |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Context.caller()`           | Returns the address that called the method. It can either be the address that signed the original transaction or the contract that created the asynchronous call.                                                                    |
+| `Context.originalCaller()`   | Returns the address that signed the transaction                                                                                                                                                                                      |
+| `Context.blockTimestamp()`   | Timestamp of the block in which the transaction is included                                                                                                                                                                          |
+| `Context.blockSeed()`        | [VRF](https://www.google.com/url?q=https://en.wikipedia.org/wiki/Verifiable_random_function&sa=D&source=docs&ust=1677666033921413&usg=AOvVaw1ozF2R5Tr_mIXA75yGKmUo) seed for the current block (can be used as seed for randomizers) |
+| `Context.blockNumber()`      | Height of the block in which the transaction is included                                                                                                                                                                             |
+| `Context.minFeePerGas()`     | Current [`gasPrice`](./smart-contracts#contract-transaction-fee)                                                                                                                                                                     |
+| `Context.networkSize()`      | Current network size                                                                                                                                                                                                                 |
+| `Context.contractAddress()`  | Address of the current contract                                                                                                                                                                                                      |
+| `Context.contractBalance()`  | Balance of the current contract                                                                                                                                                                                                      |
+| `Context.contractCodeHash()` | Code hash of the current contract                                                                                                                                                                                                    |
+| `Context.contractCode()`     | Code of the current contract                                                                                                                                                                                                         |
+| `Context.epoch()`            | Current epoch                                                                                                                                                                                                                        |
+| `Context.payAmount()`        | Amount of iDNA sent with transaction (tx.amount)                                                                                                                                                                                     |
+| `Context.gasLimit()`         | Total amount of gas allocated for the execution of the method                                                                                                                                                                        |
+| `Context.gasLeft()`          | Amount of remaining gas                                                                                                                                                                                                              |
+
+### Host
+
+`Host` provides methods for reading\writing to state and global functions
+
+| SDK method                                                                          | Description                                                                            |
+| ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `Host.setStorage<K, V>(key: K, value: V)`                                           | Writes `value` to state by given `key`                                                 |
+| `Host.getStorage<K, V>(key: K, defaultValue: V): V`                                 | Reads value from state, if it does not exist, then returns `defaultValue`              |
+| `Host.getSome<K, V>(key: K): V`                                                     | Reads value from state, if it does not exist, then aborts current execution with error |
+| `Host.hasStorage<K>(key: K): bool`                                                  | Checks if given `key` exists in the state                                              |
+| `Host.removeStorage<K>(key: K): void`                                               | Removes value by given `key`                                                           |
+| `Host.contractAddressByHash(codeHash: Bytes, args: Bytes[], nonce: Bytes): Address` | Calculates the address of the contract based on the given parameters                   |
+| `Host.emitEvent(eventName: string, args: Bytes[])`                                  | Triggers event                                                                         |
+| `Host.blockHeader(height: u64): models.ProtoBlockHeader`                            | Returns block header by specified `height`                                             |
+| `Host.keccac256(data: Uint8Array): Bytes`                                           | Calculates keccak256 hash                                                              |
+| `Host.ecrecover(data: Uint8Array, sig: Uint8Array): Bytes`                          | Extracts the public key from the data signature                                        |
+| `Host.createCallFunctionPromise`                                                    | Method for processing asynchronous calls                                               |
+| `Host.createDeployContractPromise`                                                  | Method for processing asynchronous calls                                               |
+| `Host.createTransferPromise`                                                        | Method for processing asynchronous calls                                               |
+| `Host.createReadContractDataPromise`                                                | Method for processing asynchronous calls                                               |
+| `Host.createGetIdentityPromise`                                                     | Method for processing asynchronous calls                                               |
+| `Host.promiseResult`                                                                | Method for processing asynchronous calls                                               |
+| `Host.burn(amount: Balance): void`                                                  | Burns specified amount of iDNA                                                         |
