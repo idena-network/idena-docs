@@ -185,23 +185,23 @@ To access the environment idena-sdk-as provides wrappers [Context](https://githu
 
 `Context` provides data related to the execution of the called method.
 
-| SDK method                   | Description                                                                                                                                                                                                                          |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Context.caller()`           | Returns the address that called the method. It can either be the address that signed the original transaction or the contract that created the asynchronous call.                                                                    |
-| `Context.originalCaller()`   | Returns the address that signed the transaction                                                                                                                                                                                      |
-| `Context.blockTimestamp()`   | Timestamp of the block in which the transaction is included                                                                                                                                                                          |
-| `Context.blockSeed()`        | [VRF](https://www.google.com/url?q=https://en.wikipedia.org/wiki/Verifiable_random_function&sa=D&source=docs&ust=1677666033921413&usg=AOvVaw1ozF2R5Tr_mIXA75yGKmUo) seed for the current block (can be used as seed for randomizers) |
-| `Context.blockNumber()`      | Height of the block in which the transaction is included                                                                                                                                                                             |
-| `Context.minFeePerGas()`     | Current [`gasPrice`](./smart-contracts#contract-transaction-fee)                                                                                                                                                                     |
-| `Context.networkSize()`      | Current network size                                                                                                                                                                                                                 |
-| `Context.contractAddress()`  | Address of the current contract                                                                                                                                                                                                      |
-| `Context.contractBalance()`  | Balance of the current contract                                                                                                                                                                                                      |
-| `Context.contractCodeHash()` | Code hash of the current contract                                                                                                                                                                                                    |
-| `Context.contractCode()`     | Code of the current contract                                                                                                                                                                                                         |
-| `Context.epoch()`            | Current epoch                                                                                                                                                                                                                        |
-| `Context.payAmount()`        | Amount of iDNA sent with transaction (tx.amount)                                                                                                                                                                                     |
-| `Context.gasLimit()`         | Total amount of gas allocated for the execution of the method                                                                                                                                                                        |
-| `Context.gasLeft()`          | Amount of remaining gas                                                                                                                                                                                                              |
+| SDK method                   | Description                                                                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Context.caller()`           | Returns the address that called the method. It can either be the address that signed the original transaction or the contract that created the asynchronous call. |
+| `Context.originalCaller()`   | Returns the address that signed the transaction                                                                                                                   |
+| `Context.blockTimestamp()`   | Timestamp of the block in which the transaction is included                                                                                                       |
+| `Context.blockSeed()`        | [VRF](https://en.wikipedia.org/wiki/Verifiable_random_function) seed for the current block (can be used as seed for randomizers)                                  |
+| `Context.blockNumber()`      | Height of the block in which the transaction is included                                                                                                          |
+| `Context.minFeePerGas()`     | Current [`gasPrice`](./smart-contracts#contract-transaction-fee)                                                                                                  |
+| `Context.networkSize()`      | Current network size                                                                                                                                              |
+| `Context.contractAddress()`  | Address of the current contract                                                                                                                                   |
+| `Context.contractBalance()`  | Balance of the current contract                                                                                                                                   |
+| `Context.contractCodeHash()` | Code hash of the current contract                                                                                                                                 |
+| `Context.contractCode()`     | Code of the current contract                                                                                                                                      |
+| `Context.epoch()`            | Current epoch                                                                                                                                                     |
+| `Context.payAmount()`        | Amount of iDNA sent with transaction (tx.amount)                                                                                                                  |
+| `Context.gasLimit()`         | Total amount of gas allocated for the execution of the method                                                                                                     |
+| `Context.gasLeft()`          | Amount of remaining gas                                                                                                                                           |
 
 ### Host
 
