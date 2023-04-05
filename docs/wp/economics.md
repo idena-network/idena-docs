@@ -159,17 +159,27 @@ Zero wallet fund is paid to [Zero wallet (DAO)](#zero-wallet-dao)
 
 ## Transaction fees
 
-The transaction fee is calculated automatically by protocol. Fees are estimated based on the average occupancy of blocks, targeting 50% fill rate. The fee goes up or down based on how full the previous block was, targeting an average block utilization of 50%. When the previous block is more than 50% full, the transaction fee goes up proportionally. When it is below 50% usage, fees go down.
+The transaction fee is calculated as follows:
 
 ```
-transactionFee = currFeeRate * transactionSize
+txFee = gasPrice * txSize * 10 + gasPrice * gasUsed
+```
 
-currFeeRate = max(
-     1e-16,
-     0.1/networkSize,
-     prevFeeRate*(1+0.25*(prevBlockSize/300Kb-0.5))
+> Read more about transaction fees [here](./../developer/node/smart-contracts#contract-transaction-fee)
+
+`gasPrice` is estimated automatically by protocol based on the average occupancy of blocks, targeting 50% fill rate. `gasPrice` goes up or down based on how full the previous block was, targeting an average block utilization of 50%. When the previous block is more than 50% full, the transaction `gasPrice` goes up proportionally. When it is below 50% usage, fees go down.
+
+```
+gasPrice = max(
+        gasPrice * (1 + 0.25 * (prevBlockGasUsed / maxBlockGas - 0.5)),
+        0.01 / networkSize,
+        0.000000000000000010
     )
+
+maxBlockGas = 5000 * 1024
 ```
+
+Minimum `gasPrice` is `0.01 / networkSize`. `gasPrice` can not be below `0.000000000000000010` iDNA.
 
 Miners get 10% of transaction fees, 90% of the fees are burnt.
 
