@@ -52,6 +52,7 @@ _Click `Edit this page` below to add your project_
 ### Usefull links
 
 - [Idena node manager](https://gitlab.com/crackowich/idena-manager) - tool used for easier installation, maintenance and update of idena nodes
+- [Idena Sibling](https://github.com/ltraveler/idena-sibling) - Ansible Playbook for fast Idena Shared and Regular Node Deployment and management ✦ [The complete Idena Sibling Manual](https://medium.com/@idna.project/6ff31873101b)
 - [Idena runner](https://github.com/ltraveler/idena-runner) - script that deploys multiple instances of Idena node on Ubuntu (x64, Arm64), import keys and secure your server in user friendly way
 - [Idena armer](https://github.com/ltraveler/idena-armer) - script that helps to install Idena node client on your mobile device with ARM64 architecture in
 simple and user-friendly way
