@@ -37,6 +37,7 @@ _Click `Edit this page` below to add your project_
 - [My-Idena](https://github.com/redDwarf03/my-idena/releases) - Idena wallet app for iOS/Android
 - [Idena Ledger](https://github.com/idelse/idena-ledger) - Idena wallet application framework for Nano S and Nano X
 - [Idena CLI wallet](https://github.com/Toni-d-e-v/Idena-cli-wallet) - Idena Comand line wallet for managing idena without using idena client
+- [Phaos Wallet](https://www.phaos.app) - Phaos Wallet: 1st Proof-of-Personhood purse based on the Idena Blockchain ✦ [GitHub Repository](https://github.com/ltraveler/phaos-wallet)
 
 
 ### Extensions
@@ -52,6 +53,7 @@ _Click `Edit this page` below to add your project_
 ### Usefull links
 
 - [Idena node manager](https://gitlab.com/crackowich/idena-manager) - tool used for easier installation, maintenance and update of idena nodes
+- [Idena Sibling](https://github.com/ltraveler/idena-sibling) - Ansible Playbook for fast Idena Shared and Regular Node Deployment and management ✦ [The complete Idena Sibling Manual](https://medium.com/@idna.project/6ff31873101b)
 - [Idena runner](https://github.com/ltraveler/idena-runner) - script that deploys multiple instances of Idena node on Ubuntu (x64, Arm64), import keys and secure your server in user friendly way
 - [Idena armer](https://github.com/ltraveler/idena-armer) - script that helps to install Idena node client on your mobile device with ARM64 architecture in
 simple and user-friendly way
