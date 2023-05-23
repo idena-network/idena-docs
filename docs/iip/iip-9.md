@@ -4,7 +4,7 @@ title: IIP-9
 sidebar_label: IIP-9
 ---
 
-# IIP-9: Minimum epoch length
+# IIP-9: Change the epoch length
 
 `Author`: midenaio
 
@@ -18,16 +18,17 @@ sidebar_label: IIP-9
 
 ## Abstract
 
-Set the minimum period for an epoch to 14 days.
+Change the minimum epoch length to 14 days for the network that exceeds 291 identities.
 
 ## Motivation
 
 Increasing frequency of validations could result in an exodus of people, as they would need to dedicate more time to producing flips and making time available for validations. 
-This proposal suggests setting a minimum epoch duration of 14 days for the network that exceeds 291 identities.
 
 ## Specification
 
-If the majority of the network approves this proposal through a hard fork, the duration (or frequency) of epochs should be determined as outlined below:
+This proposal suggests setting a minimum epoch duration of 14 days for the network with a size between 291 and 5,845 identities. The epoch duration can be set to 13 days to adjust validation date to Saturdays.
+
+If the majority of the network approves this proposal through a hard fork, the duration (or frequency) of epochs will be determined as outlined below:
 
 | Network size | Frequency, days              |
 | ------------ | ---------------------------- |
