@@ -22,3 +22,5 @@ Having a IIP here does not make it a formally accepted standard until its status
 | 7      | [Quadratic rewards for extra flips](/docs/iip/iip-7)          | midenaio | Standard | Final     | [🇷🇺](https://medium.com/idena/64561375cd64) |
 | 8      | [Pool voting rights](/docs/iip/iip-8)                         | Zen      | Standard | Final     |                                             |
 | 9      | [Change the epoch length](/docs/iip/iip-9)                    | midenaio | Standard | Review    |                                             |
+| 10     | [Stake protection for Zombie status](/docs/iip/iip-10)        | midenaio | Standard | Review    |                                             |
+
