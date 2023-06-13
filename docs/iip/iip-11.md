@@ -35,7 +35,7 @@ The calculation of the threshold includes to following steps:
 2. Calculate the threshold value as 0.5% of the `median_top100`:
 
 ```
- Threshold = 0.005 \* median_top100
+ Threshold = 0.005 * median_top100
 ```
 
 The threshold will be calculated once per epoch immediately after validation ceremony and will not change during the epoch (for example, due to stake replenishments or identity terminations).
