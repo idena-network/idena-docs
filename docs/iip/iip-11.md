@@ -57,6 +57,7 @@ Let’s see the current state of the network and calculate the threshold.
 The current network size = 1639 identities
 
 The median of top 100 accounts = 64,582 IDNA
+
 The threshold = 0.5% \* 64,582 IDNA = 323 IDNA
 
 The number of identities with stake amount below the threshold = 861 identities
