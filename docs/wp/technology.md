@@ -128,17 +128,15 @@ In addition, you need to solve flips both correctly and fast. The first 6 flips 
 
 ### Stake wallet
 
-Every account in Idena has two wallets: the Idena wallet and the stake. The stake is like your pension account: 20% of all your Idena rewards (mining, validation rewards, flip rewards, valid invitation rewards, and so on) accumulate in the stake, while the remaining 80% goes directly to your Idena wallet.
+Every validated identity in Idena has two wallets: the Idena wallet and the stake. The stake is like a pension account: 20% of all Idena rewards (mining and validation rewards) accumulate in the stake, while the remaining 80% goes directly to Idena wallet.
 
 Idena does not use the stake for governance purposes.
 
-The stake cannot be spent while the account is valid. You can receive these coins in your Idena wallet when you voluntarily terminate your Idena account - that is when you terminate your cryptoidentity. 
-
-You may also receive part or all of these coins when your identity is killed by the network protocol depending on the age and status of your identity.
+The stake of validated identity or identity with status `Suspended` or `Zombie` can be replenished. The stake cannot be spent while the account is valid. The stake can be withdrawn to the Idena wallet only upon voluntary termination of the identity.
 
 ### Losing stake
 
-If cryptoidentity is killed by the network, then a part or the entire stake gets burnt depending on the age and status of the identity: identities receive stake protection according to the stake protection implemented with [IIP-4](/docs/iip/iip-4#validation-failure-stake-protection).
+If identity is killed by the protocol, then a part or the entire stake gets burnt depending on the age and status of the identity: identities receive stake protection according to the stake protection implemented with [IIP-4](/docs/iip/iip-4#validation-failure-stake-protection).
 
 The coins stored on normal Idena wallets can not be burnt in any cases.
 
@@ -160,7 +158,6 @@ This protection affects identities that fail a validation session (not when they
 | 8   | Suspended or Zombie | Fail       | 2%                   | Killed                           |
 | 9   | Suspended or Zombie | Fail       | 1%                   | Killed                           |
 | 10+ | Suspended or Zombie | Fail       | 0%                   | Killed                           |
-
 
 #### Missing validation stake protection
 
