@@ -24,3 +24,4 @@ Having a IIP here does not make it a formally accepted standard until its status
 | 9      | [Change the epoch length](/docs/iip/iip-9)                    | midenaio | Standard | Review    |                                             |
 | 10     | [Stake protection for Zombie status](/docs/iip/iip-10)        | midenaio | Standard | Review    |                                             |
 | 11     | [Increasing the cost of 51% attack](/docs/iip/iip-11)         | midenaio | Standard | Review    |                                             |
+| 12     | [Locking invitee rewards](/docs/iip/iip-12)         | midenaio | Standard | Review    |                                             |
