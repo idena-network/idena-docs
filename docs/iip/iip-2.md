@@ -22,7 +22,7 @@ Change the time of validation ceremony from 13:30 UTC to 15:00 UTC
 
 ### Motivation
 
-This proposal is aimed to make the time of the validation ceremony accessible for people located in the Western Hemisphere and encourage broader participation in that region. As validations fall on Saturdays (see [IIP-9](/iip/iip-9)), the later validation time in the Eastern Hemisphere is justified by the next non-working day.
+This proposal is aimed to make the time of the validation ceremony accessible for people located in the Western Hemisphere and encourage broader participation in that region. As validations fall on Saturdays (see [IIP-9](./iip-9)), the later validation time in the Eastern Hemisphere is justified by the next non-working day.
 
 ### Specification
 
