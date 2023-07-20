@@ -8,7 +8,7 @@ sidebar_label: IIP-12
 
 `Author`: midenaio
 
-`Status`: New
+`Status`: Final
 
 `Type`: Standard
 

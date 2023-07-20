@@ -23,39 +23,39 @@ To be allowed to take part in the next validation round, the participant must pr
 
 ### Validation session schedule
 
-The date of the validation session is calculated by the network and is shown in the Idena app. The time is always fixed: 13:30 UTC.
+The date of the validation session is calculated by the network and is shown in the Idena app. The time is always fixed: 15:00 UTC.
 
 The bigger the network is, the less frequently the validation sessions happen.
 
-The validation date will be adjusted to Saturdays once the network reaches 9441 identities. The total epoch duration is limited to 28 days.
+The validation date is adjusted to Saturdays once the network reaches 291 identities. The total epoch duration is limited to 28 days.
 
-| Network size | Frequency days              |
-| ------------ | --------------------------- |
-| 17+          | 3                           |
-| 45+          | 4                           |
-| 96+          | 5                           |
-| 176+         | 6                           |
-| 291+         | 7                           |
-| 449+         | 8                           |
-| N            | round(N^0.33)               |
-| ...          | ...                         |
-| 9441+        | 21 if Saturday 20 otherwise |
-| N            | round(N^(0.33)/7)\*7        |
-| ...          | ...                         |
-| 16203+       | 28                          |
+| Network size | Frequency days                      |
+| ------------ | ----------------------------------- |
+| 17+          | 3                                   |
+| 45+          | 4                                   |
+| 96+          | 5                                   |
+| 176+         | 6                                   |
+| 291+         | 14 if Saturday, 13 or 15 otherwise* |
+| 5845+        | 21                                  |
+| 16203+       | 28                                  |
 
-The validation time of 13:30 UTC covers most countries when most people are awake. These are the local times for some of the world's cities (as of June 1, 2019):
+`*` 13 days for Sunday, Monday, or Tuesday and 15 days for Wednesday, Thursday, or Friday
 
-- San Francisco, USA 6:30
-- New York, USA 9:30
-- Tunis, Tunisia 14:30
-- Berlin, Germany 15:30
-- Moscow, Russia 16:30
-- Delhi, India 19:00
-- Beijing, China 21:30
-- Sydney, Australia 23:30
-- Auckland, New Zealand 01:30
-- Honolulu, Hawaii, USA 03:30
+The validation time of 15:00 UTC covers most countries when most people are awake. These are the local times for some of the world's cities (as of June 22nd, 2023):
+
+- San Francisco, USA 8:00
+- New York, USA 11:00
+- Tunis, Tunisia 16:00
+- Berlin, Germany 17:00
+- Cairo, Egypt 18:00
+- Moscow, Russia 18:00
+- Delhi, India 20:30
+- Jakarta, Indonesia 22:00
+- Beijing, China 23:00
+- Seoul, South Korea 00:00 + 1 day
+- Sydney, Australia 01:00 + 1 day
+- Auckland, New Zealand 03:00 + 1 day
+- Honolulu, Hawaii, USA 05:00 + 1 day
 
 ### Short session and Long session
 
