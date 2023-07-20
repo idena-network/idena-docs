@@ -39,6 +39,8 @@ The validation date is adjusted to Saturdays once the network reaches 291 identi
 | 5845+        | 21                                  |
 | 16203+       | 28                                  |
 
+* 13 days for Sunday, Monday, or Tuesday and 15 days for Wednesday, Thursday, or Friday
+
 The validation time of 15:00 UTC covers most countries when most people are awake. These are the local times for some of the world's cities (as of June 1, 2019):
 
 - San Francisco, USA 8:00
