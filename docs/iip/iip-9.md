@@ -22,23 +22,25 @@ Change the minimum epoch length to 14 days for the network that exceeds 291 iden
 
 ## Motivation
 
-Increasing frequency of validations could result in an exodus of people, as they would need to dedicate more time to producing flips and making time available for validations. 
+Increasing the frequency of validations could result in an exodus of people, as they would need to dedicate more time to producing flips and making time available for validations. 
 
 ## Specification
 
-This proposal suggests setting a minimum epoch duration of 14 days for the network with a size between 291 and 5,845 identities. The epoch duration can be set to 13 days to adjust validation date to Saturdays.
+This proposal suggests setting a minimum epoch duration of 14 days for the network with a size between 291 and 5,845 identities. The epoch duration can be set to 13 or 15 days to adjust the validation date to Saturdays.
 
 If the majority of the network approves this proposal through a hard fork, the duration (or frequency) of epochs will be determined as outlined below:
 
-| Network size | Frequency, days              |
-| ------------ | ---------------------------- |
-| 17+          |       3                      |
-| 45+          |       4                      |
-| 96+          |       5                      |
-| 176+         |       6                      |
-| 291+         | 14 if Saturday, 13 otherwise |
-| 5,845+       |       21                     |
-| 16,203+      |       28                     |
+| Network size | Frequency, days                     |
+| ------------ | ----------------------------------- |
+| 17+          |       3                             |
+| 45+          |       4                             |
+| 96+          |       5                             |
+| 176+         |       6                             |
+| 291+         | 14 if Saturday, 13 or 15 otherwise* |
+| 5,845+       |       21                            |
+| 16,203+      |       28                            |
+
+* 13 days for Sunday, Monday, or Tuesday and 15 days for Wednesday, Thursday, or Friday
 
 
 ## Rationale
