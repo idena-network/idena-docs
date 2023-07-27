@@ -171,7 +171,12 @@ This protection affects identities that do not show up for a validation session.
 | any | Verified        | Miss       | 0%                   | Suspended                        |
 | any | Human           | Miss       | 0%                   | Suspended                        |
 | any | Suspended       | Miss       | 0%                   | Zombie                           |
-| any | Zombie          | Miss       | 100%                 | Killed                           |
+| 5   | Zombie          | Miss       | 5%                   | Killed                           |
+| 6   | Zombie          | Miss       | 4%                   | Killed                           |
+| 7   | Zombie          | Miss       | 3%                   | Killed                           |
+| 8   | Zombie          | Miss       | 2%                   | Killed                           |
+| 9   | Zombie          | Miss       | 1%                   | Killed                           |
+| 10+ | Zombie          | Miss       | 0%                   | Killed                           |
 
 ### Discrimination of identities with the Newbie status
 
