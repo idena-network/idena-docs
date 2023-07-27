@@ -134,7 +134,7 @@ The invitation rewards are paid out for 3 successful validations in a row, with 
 
 80% of the reward that the inviter receives goes to the wallet, and 20% goes to the stake.
 
-The invitee’s reward is blocked in the stake and is not returned to the main wallet when the Verified status is reached. This encourages newcomers to run a node and get mining rewards.
+The invitee’s reward is blocked in the stake and is not returned to the main wallet when the Verified status is reached. This encourages newcomers to run a node and get mining rewards. If the invitee is terminated or if it is killed due to missing or failing validations before reaching age 10, the entire sum of invitee rewards is burned.
 
 If the inviter was penalized for a reported flip, the invitation rewards are not paid neither to the inviter nor to the invitee.
 If the invitee was penalized for a reported flip, the invitation reward is not paid to the invitee.
