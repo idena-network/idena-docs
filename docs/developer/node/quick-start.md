@@ -8,7 +8,7 @@ sidebar_label: Quick start
 
 Let’s make a simple custom contract. First, create npm project and install the dependencies:
 
-```
+```bash
 npm init
 yarn add assemblyscript -D
 yarn add jest -D
@@ -44,7 +44,7 @@ As an example, see the code of [hello-world](https://github.com/idena-network/id
 
 To build the contracts use [asbuild](https://github.com/AssemblyScript/asbuild):
 
-```
+```bash
 yarn asb
 ```
 
@@ -59,7 +59,7 @@ As a result, a file will be created:
 For testing, we recommend using [jest](https://jestjs.io/).
 Run the command to install it:
 
-```
+```bash
 yarn add jest -D
 ```
 
@@ -81,7 +81,7 @@ To execute the contract code and run the test, you need to install and run Idena
 
 To run tests, use the command:
 
-```
+```bash
 yarn test
 ```
 

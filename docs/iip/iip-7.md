@@ -1,10 +1,11 @@
 ---
 hide_title: true
 title: IIP-7
-sidebar_label: IIP-7
+sidebar_label: IIP-7 Extra flips rewards
+sidebar_position: 1
 ---
 
-# IIP-7: Quadratic rewards for extra flips
+## IIP-7: Quadratic rewards for extra flips
 
 `Author`: midenaio
 
@@ -16,7 +17,7 @@ sidebar_label: IIP-7
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/112
 
-`Translations`: [🇷🇺](https://medium.com/idena/64561375cd64) 
+`Translations`: [🇷🇺](https://medium.com/idena/64561375cd64)
 
 ## Abstract
 

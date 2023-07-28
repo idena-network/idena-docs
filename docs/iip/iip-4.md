@@ -1,10 +1,11 @@
 ---
 hide_title: true
 title: IIP-4
-sidebar_label: IIP-4
+sidebar_label: IIP-4 Quadratic staking
+sidebar_position: 1
 ---
 
-# IIP-4: Quadratic Staking
+## IIP-4: Quadratic Staking
 
 `Author`: midenaio
 
@@ -244,7 +245,9 @@ This type of staking is undesirable since it leads to the domination of large co
 
 Let's also consider the alternative when p=0.5
 
-> _Note: The name of quadratic staking is taken from the name of quadratic funding where the weight of each investor depends on the square root of his contribution (power of 0.5). This allows taking into account the interests of many small independent investors_
+:::note
+The name of quadratic staking is taken from the name of quadratic funding where the weight of each investor depends on the square root of his contribution (power of 0.5). This allows taking into account the interests of many small independent investors
+:::
 
 | Investor | Stake, iDNA | Number of users | Weight (stake^0.5) | Epoch percentage yield |
 | -------- | ----------- | --------------- | ------------------ | ---------------------- |

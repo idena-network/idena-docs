@@ -10,7 +10,8 @@ The Internet has democratized information sharing, but, like any complex socio-t
 
 The World Wide Web is centered around the cloud infrastructure of super conglomerates like Amazon, Microsoft, and Facebook. They enjoy economy of scale and have access to the best engineering teams to create even more gravity for the solid core.
 
-> ## `We are all citizens of Google and Apple`
+:::danger We are all citizens of Google and Apple
+:::
 
 We are happier, fitter, more productive, but... dependent, monetized, surveilled.
 
@@ -18,19 +19,21 @@ Even best-in-class secure email and messaging services like ProtonMail or Signal
 
 Ten years ago, Bitcoin paved the way for reliable censorship-resistant digital cash, truly distributed infrastructure, and innovative leaderless governance. It was followed by Ethereum, which has proven the concept of global general-purpose computing and formed a vibrant ecosystem of decentralized application developers.
 
-> ## `While blockchain technology is still in its infancy, it has already experienced its own concentration of power`
+:::caution While blockchain technology is still in its infancy, it has already experienced its own concentration of power
+:::
 
 Over time, the validation of public blockchains got pooled in the hands of a few miners, making it easy to form cartels and distort governance. There are 13 controlling pools in Bitcoin, 20 distinct miners in Ethereum, and 21 block producers in EOS. Fifty percent of Ethers are owned by 400 addresses. The Proof-of-Stake mechanism will only make the distribution more extreme - the rich become richer. Such is the nature of money.
 
-> ## `We believe that cryptoidentity is the building block of the decentralized future`
+:::tip We believe that proof of pesonhood is the building block of the decentralized future
+:::
 
 There is a call for a solution to the growing imbalance of power in blockchain and Internet applications.
 
 ## Why Idena
 
-#### Unique cryptoidentity
+#### Proof of Personhood
 
-We believe that a cryptoidentity is the building block of the decentralized future. Such an identity can be constructed to be anonymous, self-managed, and valid globally, no matter where the person lives. No trusted authorities are needed to achieve this. All we need to know about the account is that there is a single living person to whom that account belongs. We call it Idena.
+We believe that a Proof of Personhood is the building block of the decentralized future. Such a proof can be anonymous, self-managed, and valid globally, no matter where the person lives. No trusted authorities are needed to achieve this. All we need to know about the account is that there is a single living person to whom that account belongs. We call it cryptoidentity.
 
 #### One person - one vote
 
@@ -42,7 +45,7 @@ A peer-to-peer web without servers and censors would empower people, not wealth 
 
 #### Universal basic income
 
-Blockchain mining must be democratic: The blockchain node should be light enough to run on an average computer or laptop. In Idena all participants are empowered to maintain the network. Participation in Idena is rewarded in a form of a UBI.
+Blockchain mining must be democratic: The blockchain node should be light enough to run on an average computer or laptop. In Idena all participants are empowered to maintain the network. Participation in Idena is rewarded both in a form of a UBI and rewards proportional to stake.
 
 #### Freedom of speech
 

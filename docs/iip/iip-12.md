@@ -1,14 +1,14 @@
 ---
 hide_title: true
 title: IIP-12
-sidebar_label: IIP-12
+sidebar_label: IIP-12 Invitee rewards
 ---
 
-# IIP-12: Locking invitee rewards
+## IIP-12: Locking invitee rewards
 
 `Author`: midenaio
 
-`Status`: Final
+`Status`: New
 
 `Type`: Standard
 

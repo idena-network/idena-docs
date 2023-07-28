@@ -8,17 +8,6 @@ sidebar_label: Resources
 
 _Click `Edit this page` below to add your project_
 
-### Apps
-
-- [fairdrop](https://fairdrop.io/) - Fair Airdrops in a snap
-- [idenary](https://idenary.com/) - Fresh air, a colorful game and art project
-
-### Idena blockchain snapshots
-
-- [GitHub Repository](https://github.com/ltraveler/idenachain.db) - Mirror 1
-- [Idena.site](https://sync.idena.site/idenachain.db.zip) - Mirror 2
-- [Idena Arabic](https://sync.idena-ar.com/idenachain.db.zip) - Mirror 3
-
 ### Websites
 
 - [Idena.site](https://idena.site/) - The comprehensive How-to Guide and FAQ about running Idena node on VPS
@@ -26,9 +15,11 @@ _Click `Edit this page` below to add your project_
 - [Idena - Identity Explorer](https://idena.hardcoder.xyz) - A lightweight identity-only explorer built with `PHP` on top of `idena-indexer-api`
 - [iDNA.bet ✦ Sports Betting Platform](https://idna.bet) - The 1st Proof-of-Personhood betting platform based on IDENA Blockchain ✧ 100% KYC Free ✧ 100% anonymous bets ✦ [GitHub Repository](https://github.com/Toni-d-e-v/iDNA-BET)
 
-### Stats
+### Idena blockchain snapshots
 
-- [Idena.today](https://idena.today/) - Idena network metrics
+- [GitHub Repository](https://github.com/ltraveler/idenachain.db) - Mirror 1
+- [Idena.site](https://sync.idena.site/idenachain.db.zip) - Mirror 2
+- [Idena Arabic](https://sync.idena-ar.com/idenachain.db.zip) - Mirror 3
 
 ### Wallets
 
@@ -39,13 +30,17 @@ _Click `Edit this page` below to add your project_
 - [Idena CLI wallet](https://github.com/Toni-d-e-v/Idena-cli-wallet) - Idena Comand line wallet for managing idena without using idena client
 - [Phaos Wallet](https://www.phaos.app) - Phaos Wallet: 1st Proof-of-Personhood purse based on the Idena Blockchain ✦ [GitHub Repository](https://github.com/ltraveler/phaos-wallet)
 
-
 ### Extensions
 
 - [Chrome extension](https://chrome.google.com/webstore/detail/kjofkncddljaibaboapilmhoanacaoil/) - Unofficial chrome extension which adds extra information to official blockchain explorer
 
+### Stats
+
+- [Idena.today](https://idena.today/) - Idena network metrics
+
 ### Bots
 
+- [MyIdena bot](https://t.me/MyIdenaBot) - Official Idena telegram bot
 - [Discord bot](https://github.com/iyomisc/idenauth) - Discord bot to authenticate users with Idena
 - [Price bot](https://t.me/idenarobot) - Telegram price, charts and whalewatcher
 - [Discord Idena Node Watcher](https://github.com/Toni-d-e-v/discord-idena-node-watcher/) - Checks if your node is offline and notfy you before you get penal!
@@ -56,7 +51,7 @@ _Click `Edit this page` below to add your project_
 - [Idena Sibling](https://github.com/ltraveler/idena-sibling) - Ansible Playbook for fast Idena Shared and Regular Node Deployment and management ✦ [The complete Idena Sibling Manual](https://medium.com/@idna.project/6ff31873101b)
 - [Idena runner](https://github.com/ltraveler/idena-runner) - script that deploys multiple instances of Idena node on Ubuntu (x64, Arm64), import keys and secure your server in user friendly way
 - [Idena armer](https://github.com/ltraveler/idena-armer) - script that helps to install Idena node client on your mobile device with ARM64 architecture in
-simple and user-friendly way
+  simple and user-friendly way
 - [Idena node public docker](https://hub.docker.com/r/rinzlerfr/idena-node) - A ready to run idena-node public docker image
 - [Idena node public docker](https://hub.docker.com/repository/docker/idenadev/idena) - A ready to run idena-node public docker image
 - [Idena auto-update script](https://github.com/codev911/idena-autoupdate-windows) - Idena auto-update for windows with powershell (script)
