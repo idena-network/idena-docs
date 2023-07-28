@@ -29,7 +29,9 @@ There are three types of transactions to deal with Idena contracts:
 - `nonce`: unique nonce that allows you to generate unique addresses for contracts with the same `code` and `args`
 - `maxFee`: must cover a sum of `txCost`+`gasCost` (see more about [`maxFee`](#maxfee-parameter))
 
-> _Please note that that maximum size of the transaction payload is `MaxPayloadSize` = 3 MB_
+:::caution
+Please note that that maximum size of the transaction payload is `MaxPayloadSize` = 3 MB
+:::
 
 #### Deploy predefined contract
 
@@ -49,7 +51,9 @@ There are three types of transactions to deal with Idena contracts:
 - `0x04`: [RefundableOracleLock](./refundable-oracle-lock)
 - `0x05`: [Multisig](./multisig)
 
-> _Note: you can find the code of predefined contracts [here](https://github.com/idena-network/idena-go/tree/master/vm/embedded)_
+:::tip
+You can find the code of predefined contracts [here](https://github.com/idena-network/idena-go/tree/master/vm/embedded)
+:::
 
 `amount` specifies amount of iDNA transfered to the contract stake. Minimum contract stake is `gasPrice` \* `3,000,000`. If the specified amount is below the minimum stake then an error message will be returned:
 
@@ -72,7 +76,9 @@ There are three types of transactions to deal with Idena contracts:
 
 ### 3. `TerminateContractTx`
 
-> _Note: `TerminateContractTx` is available only for predefined contracts_
+:::caution
+`TerminateContractTx` is available only for predefined contracts
+:::
 
 `TerminateContractTx` transaction removes the contract's data from the Idena blockchain state. 50% of the stake is burnt. Another 50% of the stake is transferred to the creator of the smart contract. The contract might be terminated according to its internal rules. For instance `OracleVoting` smart contract can be terminated after a termination delay once the public voting is finished. Termination delay is proportional to the amount of coins blocked at the smart contract stake. Termination delay, days = `round( (NetworkSize * Stake) ^ 1/3 )`
 
@@ -82,7 +88,9 @@ Fields of the `TerminateContractTx` transaction:
 - `contract`: smart contract address
 - `args`: dynamic list of parameters which is specific to a particular predefined smart contract
 
-> _Note: `TerminateContractTx` is not available for custom contracts. In the future to minimize the state of the Idena node a mechanism that suspends inactive contracts will be introduced. If a contract is not used (by validated users) then it might be suspended. After N epochs the state of suspended contract might be deleted. Only Merkle root will be saved so anyone who saved the state of the suspended contract offchain could initiate its recovery._
+:::note
+`TerminateContractTx` is not available for custom contracts. In the future to minimize the state of the Idena node a mechanism that suspends inactive contracts will be introduced. If a contract is not used (by validated users) then it might be suspended. After N epochs the state of suspended contract might be deleted. Only Merkle root will be saved so anyone who saved the state of the suspended contract offchain could initiate its recovery.
+:::
 
 ## Contract addresses
 

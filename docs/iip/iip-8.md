@@ -1,7 +1,8 @@
 ---
 hide_title: true
 title: IIP-8
-sidebar_label: IIP-8
+sidebar_label: IIP-8 Pool voting rights
+sidebar_position: 1
 ---
 
 ## IIP-8: Pool voting rights
@@ -16,7 +17,7 @@ sidebar_label: IIP-8
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/104
 
-`Translations`: 
+`Translations`:
 
 ### Abstract
 
@@ -38,8 +39,8 @@ Identities with pending undelegation status will be allowed to delegate to any a
 
 #### Penalty system changes
 
-- When undelegating from a pool, the address inherits the pool's mining penalty if any.    
-- An address with an active mining penalty can not delegate its mining rights to any pool.     
+- When undelegating from a pool, the address inherits the pool's mining penalty if any.
+- An address with an active mining penalty can not delegate its mining rights to any pool.
 
 ### Rationale
 

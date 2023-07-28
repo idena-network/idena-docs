@@ -8,7 +8,9 @@ sidebar_label: Idena-sdk-as
 
 Idena-sdk-as provides convenient tools for developing the [Idena smart contracts](./smart-contracts) in the AssemblyScript language. AssemblyScript code of your contract can be easily compiled into WebAssembly (see [Quick start](./quick-start)) and run in Wasmer runtime.
 
-> _Note: idena-sdk-as is a fork from [near-sdk-as](https://github.com/near/near-sdk-as/)_
+:::tip
+idena-sdk-as is a fork from [near-sdk-as](https://github.com/near/near-sdk-as/)
+:::
 
 Idena-sdk-as Github repo: https://github.com/idena-network/idena-sdk-as
 
@@ -24,7 +26,9 @@ The state of the main contract class (in `index.ts` file) is represented in a fo
 
 If you need the state not to be saved (e.g. to reduce gas) you can use `@view` decorator for the method.
 
-> _Note that you can fetch the state of the main contract class using the `STATE` key_
+:::tip
+You can fetch the state of the main contract class using the `STATE` key
+:::
 
 ### Transformation example
 
@@ -148,7 +152,9 @@ The following types `T` are supported:
 - arrays of objects that have encode/decode methods
 - any other objects that have been [decorated](#decorators) with `@idenaBindgen`
 
-> _Note: You can find the implementation of convertions [here](https://github.com/idena-network/idena-sdk-as/blob/master/bindgen/assembly/index.ts#L503)_
+:::tip
+You can find the implementation of convertions [here](https://github.com/idena-network/idena-sdk-as/blob/master/bindgen/assembly/index.ts#L503)
+:::
 
 ### Decorators
 
@@ -165,7 +171,9 @@ Idena-sdk-as exposes a series of structures (`Vector`, `PersistentMap`, `KeyValu
 - `Vector`<`T`>: array that allows you to store the value by index
 - `KeyValue`<`K`,`V`>: saves a single value for a given key
 
-> _Note that all structures need to be initialized using a unique prefix, which will be used to identify the structure's keys in the serialized state. The data is not loaded during the contract instantiation (lazy loading). The data is fetched from the state once the value is read on a particular key._
+:::caution
+All structures need to be initialized using a unique prefix, which will be used to identify the structure's keys in the serialized state. The data is not loaded during the contract instantiation (lazy loading). The data is fetched from the state once the value is read on a particular key.
+:::
 
 ## Environment
 
@@ -179,7 +187,9 @@ Every method execution has an environment associated with information such as:
 
 To access the environment idena-sdk-as provides wrappers [Context](https://github.com/idena-network/idena-sdk-as/blob/master/sdk-core/assembly/context.ts) and [Host](https://github.com/idena-network/idena-sdk-as/blob/master/sdk-core/assembly/host.ts).
 
-> _Note: Complete list of environment methods can be found [here](https://github.com/idena-network/idena-sdk-as/blob/master/sdk-core/assembly/env.ts)_
+:::tip
+Complete list of environment methods can be found [here](https://github.com/idena-network/idena-sdk-as/blob/master/sdk-core/assembly/env.ts)
+:::
 
 ### Context
 

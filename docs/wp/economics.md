@@ -1,6 +1,6 @@
 ---
 hide_title: true
-title: Idena economics
+title: Idena Whitepaper - Economics
 sidebar_label: Economics
 ---
 
@@ -83,7 +83,7 @@ Validation session fund is capped at 25 920 iDNA per day. It accumulates daily a
 
 ### Staking reward fund
 
-The staking reward fund is distrubuted among all validated identities depending on their stake size (proportional to stake<sup>0.9</sup>) ([Quadratic Staking proposal](/docs/iip/iip-4))
+The staking reward fund is distrubuted among all validated identities depending on their stake size (proportional to stake<sup>0.9</sup>)
 
 ### Candidate reward fund
 
@@ -134,7 +134,7 @@ The invitation rewards are paid out for 3 successful validations in a row, with 
 
 80% of the reward that the inviter receives goes to the wallet, and 20% goes to the stake.
 
-The invitee’s reward is blocked in the stake and is not returned to the main wallet when the Verified status is reached. This encourages newcomers to run a node and get mining rewards.
+The invitee’s reward is blocked in the stake and is not returned to the main wallet when the Verified status is reached. This encourages newcomers to run a node and get mining rewards. If the invitee is terminated or if it is killed due to missing or failing validations before reaching age 10, the entire sum of invitee rewards is burned.
 
 If the inviter was penalized for a reported flip, the invitation rewards are not paid neither to the inviter nor to the invitee.
 If the invitee was penalized for a reported flip, the invitation reward is not paid to the invitee.
@@ -165,7 +165,9 @@ The transaction fee is calculated as follows:
 txFee = gasPrice * txSize * 10 + gasPrice * gasUsed
 ```
 
-> Read more about transaction fees [here](./../developer/node/smart-contracts#contract-transaction-fee)
+:::tip Read more
+Read more about [transaction fees](./../developer/node/smart-contracts#contract-transaction-fee)
+:::
 
 `gasPrice` is estimated automatically by protocol based on the average occupancy of blocks, targeting 50% fill rate. `gasPrice` goes up or down based on how full the previous block was, targeting an average block utilization of 50%. When the previous block is more than 50% full, the transaction `gasPrice` goes up proportionally. When it is below 50% usage, fees go down.
 
