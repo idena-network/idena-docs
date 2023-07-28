@@ -8,7 +8,7 @@ const katex = require('rehype-katex');
 const config = {
   title: 'Idena documentation',
   tagline: 'Proof of Personhood is the building block for Web 3.0',
-  url: 'https://idena.io',
+  url: 'https://docs.idena.io',
   baseUrl: '/',
   organizationName: 'Idena',
   projectName: 'idena-docs',
