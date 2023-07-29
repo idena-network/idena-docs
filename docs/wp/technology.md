@@ -343,7 +343,7 @@ The public blockchain structure is used to store the state of validated identiti
 
 Idena implements a Proof-of-Person Sybil control mechanism and committee-based consensus with fast finaility.
 
-Validated participants have an equal voting power in the network to produce blocks and validate transactions. Randomly selected participants generate block proposals and broadcast them into the network. A random committee is selected to reach consensus about whether to include a block into the blockchain.
+Validated participants have equal voting power to produce blocks and validate transactions. Randomly selected participants generate block proposals and broadcast them into the network. A random committee is selected to reach consensus about whether to include a block into the blockchain.
 
 ### Identities discrimination
 
