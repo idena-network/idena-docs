@@ -35,7 +35,7 @@ From the perspective of reward distribution, currently, there is no difference b
 
 ## Specification
 
-The validation rewards of identities that have reported flips during validation ceremonies will be sent to the [zero wallet](https://scan.idena.io/address/0x0000000000000000000000000000000000000000) instead of being redistributed to the rest of the ceremony participants.
+The validation rewards of identities that have had at least one of their flips reported during validation ceremonies will be sent to the [zero wallet](https://scan.idena.io/address/0x0000000000000000000000000000000000000000) instead of being redistributed to the rest of the ceremony participants.
 
 ## Rationale
 
