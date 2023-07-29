@@ -21,8 +21,8 @@ Having a IIP here does not make it a formally accepted standard until its status
 | 6      | [Quadratic invitation rewards](/docs/iip/iip-6)                 | midenaio | Standard | Final  | [🇷🇺](https://medium.com/idena/651ade00fcc)  |
 | 7      | [Quadratic rewards for extra flips](/docs/iip/iip-7)            | midenaio | Standard | Final  | [🇷🇺](https://medium.com/idena/64561375cd64) |
 | 8      | [Pool voting rights](/docs/iip/iip-8)                           | Zen      | Standard | Final  |                                             |
-| 9      | [Change the epoch length](/docs/iip/iip-9)                      | midenaio | Standard | Review |                                             |
-| 10     | [Stake protection for Zombie status](/docs/iip/iip-10)          | midenaio | Standard | Review |                                             |
-| 11     | [Increasing the cost of 51% attack](/docs/iip/iip-11)           | midenaio | Standard | Review |                                             |
-| 12     | [Locking invitee rewards](/docs/iip/iip-12)                     | midenaio | Standard | Review |                                             |
+| 9      | [Change the epoch length](/docs/iip/iip-9)                      | midenaio | Standard | Final  |                                             |
+| 10     | [Stake protection for Zombie status](/docs/iip/iip-10)          | midenaio | Standard | Final  |                                             |
+| 11     | [Increasing the cost of 51% attack](/docs/iip/iip-11)           | midenaio | Standard | Final  |                                             |
+| 12     | [Locking invitee rewards](/docs/iip/iip-12)                     | midenaio | Standard | Final  |                                             |
 | 13     | [Burning the rewards of penalized identities](/docs/iip/iip-13) | Zen      | Standard | Review |                                             |

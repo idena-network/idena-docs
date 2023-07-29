@@ -8,7 +8,7 @@ sidebar_label: IIP-10 Protection for zombie
 
 `Author`: midenaio
 
-`Status`: New
+`Status`: Final
 
 `Type`: Standard
 
