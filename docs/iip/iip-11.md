@@ -8,7 +8,7 @@ sidebar_label: IIP-11 Minimal stake
 
 `Author`: midenaio
 
-`Status`: New
+`Status`: Final
 
 `Type`: Standard
 

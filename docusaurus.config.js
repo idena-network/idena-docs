@@ -9,6 +9,7 @@ const config = {
   title: 'Idena documentation',
   tagline: 'Proof of Personhood is the building block for Web 3.0',
   url: 'https://docs.idena.io',
+  favicon: '/img/favicon.ico',
   baseUrl: '/',
   organizationName: 'Idena',
   projectName: 'idena-docs',
