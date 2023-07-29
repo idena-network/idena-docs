@@ -1,6 +1,6 @@
 ---
 hide_title: true
-title: Idena economics
+title: Idena Whitepaper - Economics
 sidebar_label: Economics
 ---
 
@@ -83,7 +83,7 @@ Validation session fund is capped at 25 920 iDNA per day. It accumulates daily a
 
 ### Staking reward fund
 
-The staking reward fund is distrubuted among all validated identities depending on their stake size (proportional to stake<sup>0.9</sup>) ([Quadratic Staking proposal](/docs/iip/iip-4))
+The staking reward fund is distrubuted among all validated identities depending on their stake size (proportional to stake<sup>0.9</sup>)
 
 ### Candidate reward fund
 
@@ -165,7 +165,9 @@ The transaction fee is calculated as follows:
 txFee = gasPrice * txSize * 10 + gasPrice * gasUsed
 ```
 
-> Read more about transaction fees [here](./../developer/node/smart-contracts#contract-transaction-fee)
+:::tip Read more
+Read more about [transaction fees](./../developer/node/smart-contracts#contract-transaction-fee)
+:::
 
 `gasPrice` is estimated automatically by protocol based on the average occupancy of blocks, targeting 50% fill rate. `gasPrice` goes up or down based on how full the previous block was, targeting an average block utilization of 50%. When the previous block is more than 50% full, the transaction `gasPrice` goes up proportionally. When it is below 50% usage, fees go down.
 

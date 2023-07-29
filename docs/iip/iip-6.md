@@ -1,10 +1,11 @@
 ---
 hide_title: true
 title: IIP-6
-sidebar_label: IIP-6
+sidebar_label: IIP-6 Invitation rewards
+sidebar_position: 1
 ---
 
-# IIP-6: Quadratic invitation rewards
+## IIP-6: Quadratic invitation rewards
 
 `Author`: midenaio
 
@@ -16,7 +17,7 @@ sidebar_label: IIP-6
 
 `Discussion`: https://github.com/idena-network/idena-docs/discussions/101
 
-`Translations`: [🇷🇺](https://medium.com/idena/651ade00fcc) 
+`Translations`: [🇷🇺](https://medium.com/idena/651ade00fcc)
 
 ## Abstract
 

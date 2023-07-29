@@ -1,4 +1,3 @@
-/* stylelint-disable docusaurus/copyright-header */
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -7,58 +6,35 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #578fff;
-  --ifm-color-primary-dark: #4e89ff;
-  --ifm-color-primary-darker: #3b7cff;
-  --ifm-color-primary-darkest: #2970ff;
-  --ifm-color-primary-light: #6598fd;
-  --ifm-color-primary-lighter: #7aa6ff;
-  --ifm-color-primary-lightest: #88afff;
+  --ifm-color-primary: #6087ea;
+  --ifm-color-primary-dark: #5e7ac0;
+  --ifm-color-primary-darker: #5469a0;
+  --ifm-color-primary-darkest: #2a405e;
+  --ifm-color-primary-light: #6c91ed;
+  --ifm-color-primary-lighter: #7196f4;
+  --ifm-color-primary-lightest: #80a1f4;
   --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  --ifm-code-padding-horizontal: 0.35rem;
+  --ifm-code-padding-vertical: 0.2rem;
+  --ifm-code-background: #f2f2f2;
 }
 
-html[data-theme='light'] .hero--primary {
-  background-image: url('/img/bk.png');
-  background-color: white;
-  background-repeat: repeat;
-  background-size: 220px;
+code {  
+  border: 0;
 }
 
-html[data-theme='dark'] .hero--primary {
-  background-image: url('/img/bk-dark.png');
-  background-color: black;
-  background-repeat: repeat;
-  background-size: 220px;
-}
-
-html[data-theme='light'] .hero__title,
-html[data-theme='light'] .hero__subtitle {
-  color: black;
-}
-
-html[data-theme='dark'] .hero__title,
-html[data-theme='dark'] .hero__subtitle {
-  color: white;
-}
-
-.docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
-html[data-theme='light'] .projects {
-  background-color: #f5f6f7;
-}
-
-html[data-theme='dark'] .projects {
-  background-color: rgb(98 102 109);
-}
-
-.footer--dark {
-  --ifm-footer-background-color: #53565c;
-  --ifm-footer-color: var(--ifm-footer-link-color);
-  --ifm-footer-link-color: var(--ifm-color-secondary);
-  --ifm-footer-title-color: var(--ifm-color-white);
-}
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #6087ea;
+  --ifm-color-primary-dark: #5e7ac0;
+  --ifm-color-primary-darker: #5973b5;
+  --ifm-color-primary-darkest: #2e486c;
+  --ifm-color-primary-light: #6c91ed;
+  --ifm-color-primary-lighter: #7196f4;
+  --ifm-color-primary-lightest: #80a1f4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-code-padding-horizontal: 0.35rem;
+  --ifm-code-padding-vertical: 0.2rem;
+  }

@@ -1,7 +1,8 @@
 ---
 hide_title: true
 title: IIP-1
-sidebar_label: IIP-1
+sidebar_label: IIP-1 Proposal Process
+sidebar_position: 1
 ---
 
 ## IIP-1: Idena Improvement Proposal Process

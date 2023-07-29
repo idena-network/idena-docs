@@ -1,14 +1,15 @@
 ---
 hide_title: true
 title: IIP-2
-sidebar_label: IIP-2
+sidebar_label: IIP-2 Validation ceremony time
+sidebar_position: 1
 ---
 
 ## IIP-2: Change the time of validation ceremony
 
 `Author`: midenaio
 
-`Status`: Review
+`Status`: Final
 
 `Type`: Standard
 

@@ -18,7 +18,7 @@ Example: https://ipfs.idena.io/ipfs/bafkreicfjmxqcmzqt7yvl6ljpwl3kbkvh2einxpilgg
 
 Let's upload the following `html` file into Idena IPFS network:
 
-```
+```html
 <!DOCTYPE html>
 <head>
 	<title>HTML and CSS "Hello World"</title>

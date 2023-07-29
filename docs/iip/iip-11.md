@@ -1,14 +1,14 @@
 ---
 hide_title: true
 title: IIP-11
-sidebar_label: IIP-11
+sidebar_label: IIP-11 Minimal stake
 ---
 
-# IIP-11: Increasing the cost of 51% attack
+## IIP-11: Increasing the cost of 51% attack
 
 `Author`: midenaio
 
-`Status`: Final
+`Status`: New
 
 `Type`: Standard
 

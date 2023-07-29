@@ -1,13 +1,13 @@
 ---
 hide_title: true
-title: Idena introduction
-sidebar_label: Introduction
+title: Idena Whitepaper
+sidebar_label: Whitepaper
 ---
 
-<img src="/img/idena_logo_square.svg" alt="Idena validation flow" width="20%"
-style={{display: "block", margin: "auto", padding: "40px"}} />
-
 _This document introduces the foundational concepts of the Idena blockchain and provides a formal specification of iDNA, its native coin_
+
+<img src="/img/idena_logo_square.png" alt="Idena logo" width="30%"
+style={{display: "block", margin: "auto", padding: "50px 0"}} />
 
 ## What is Idena
 

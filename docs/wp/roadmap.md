@@ -1,6 +1,6 @@
 ---
 hide_title: true
-title: Idena Idena roadmap
+title: Idena roadmap
 sidebar_label: Roadmap
 ---
 
