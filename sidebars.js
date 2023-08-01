@@ -34,6 +34,7 @@ const sidebars = {
 
       items: [
         'developer/desktop/sign-in',
+        'developer/sign',
         'developer/send-dna',
         'developer/send-invite',
         'developer/send-raw',
