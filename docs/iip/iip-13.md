@@ -1,10 +1,10 @@
 ---
 hide_title: true
 title: IIP-13
-sidebar_label: IIP-13 Burning rewards
+sidebar_label: IIP-13 Penalty management
 ---
 
-## IIP-13: Burning the rewards of penalized identities
+## IIP-13: Sending the rewards of penalized identities to the zero wallet
 
 `Author`: Zen
 
