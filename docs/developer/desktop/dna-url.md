@@ -84,3 +84,20 @@ dna://invite/v1?address=0x01234567891...
 ```
 
 See more details about [Send invites with Idena App](./../send-invite).
+
+## 6. Sing a message
+
+URL example:
+
+```
+dna://sign/v1?message=some_message_to_sign&
+            callback_url=https%3A%2F%2Fmywebsite.com
+```
+
+Once the message is signed the `callback_url` will be opened in the user's browser with `signature` parameter as follows:
+
+```
+https://mywebsite.com?signature=0x09e4fef26dcec9418e...
+```
+
+See more details about [Sign messages with Idena App](./../sign).
