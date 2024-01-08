@@ -45,7 +45,7 @@ _Click `Edit this page` below to add your project_
 - [Price bot](https://t.me/idenarobot) - Telegram price, charts and whalewatcher
 - [Discord Idena Node Watcher](https://github.com/Toni-d-e-v/discord-idena-node-watcher/) - Checks if your node is offline and notfy you before you get penal!
 
-### Usefull links
+### Useful links
 
 - [Idena node manager](https://gitlab.com/crackowich/idena-manager) - tool used for easier installation, maintenance and update of idena nodes
 - [Idena Sibling](https://github.com/ltraveler/idena-sibling) - Ansible Playbook for fast Idena Shared and Regular Node Deployment and management ✦ [The complete Idena Sibling Manual](https://medium.com/@idna.project/6ff31873101b)
