@@ -85,7 +85,7 @@ dna://invite/v1?address=0x01234567891...
 
 See more details about [Send invites with Idena App](./../send-invite).
 
-## 6. Sing a message
+## 6. Sign a message
 
 URL example:
 
