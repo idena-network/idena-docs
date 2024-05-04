@@ -1,7 +1,7 @@
 ---
 hide_title: true
-title: Idena app URL for singing messages
-sidebar_label: Sing message
+title: Idena app URL for signing messages
+sidebar_label: Sign message
 ---
 
 # Sign message
