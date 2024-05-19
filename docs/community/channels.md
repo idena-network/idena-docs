@@ -10,7 +10,7 @@ _Click `Edit this page` below to add your community channel_
 
 ### Discord
 
-- [Discord](https://discord.gg/8BusRj7) English-speaking server with local rooms in 20+ languages (Sign-in with Idena enabled)
+- [Discord](https://discord.gg/idena-community-634481767352369162) English-speaking server with local rooms in 20+ languages (Sign-in with Idena enabled)
 
 ### Telegram
 
