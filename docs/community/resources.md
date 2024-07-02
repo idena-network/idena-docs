@@ -14,6 +14,7 @@ _Click `Edit this page` below to add your project_
 - [Idena Arabic](https://idena-ar.com/) - Arabic website about Idena project
 - [Idena - Identity Explorer](https://idena.hardcoder.xyz) - A lightweight identity-only explorer built with `PHP` on top of `idena-indexer-api`
 - [iDNA.bet ✦ Sports Betting Platform](https://idna.bet) - The 1st Proof-of-Personhood betting platform based on IDENA Blockchain ✧ 100% KYC Free ✧ 100% anonymous bets ✦ [GitHub Repository](https://github.com/Toni-d-e-v/iDNA-BET)
+- [holismo.org](https://holismo.org) - Decentralized Human Democracy Project
 
 ### Idena blockchain snapshots
 
