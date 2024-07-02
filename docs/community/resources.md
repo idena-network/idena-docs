@@ -34,10 +34,6 @@ _Click `Edit this page` below to add your project_
 
 - [Chrome extension](https://chrome.google.com/webstore/detail/kjofkncddljaibaboapilmhoanacaoil/) - Unofficial chrome extension which adds extra information to official blockchain explorer
 
-### Stats
-
-- [Idena.today](https://idena.today/) - Idena network metrics
-
 ### Bots
 
 - [MyIdena bot](https://t.me/MyIdenaBot) - Official Idena telegram bot
