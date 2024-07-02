@@ -48,6 +48,7 @@ _Click `Edit this page` below to add your project_
 ### Useful links
 
 - [Idena node manager](https://gitlab.com/crackowich/idena-manager) - tool used for easier installation, maintenance and update of idena nodes
+- [Ad Refresher](https://github.com/Zen-44/ad-refresher) - tool used to maintain Idena ads visible
 - [Idena Sibling](https://github.com/ltraveler/idena-sibling) - Ansible Playbook for fast Idena Shared and Regular Node Deployment and management ✦ [The complete Idena Sibling Manual](https://medium.com/@idna.project/6ff31873101b)
 - [Idena runner](https://github.com/ltraveler/idena-runner) - script that deploys multiple instances of Idena node on Ubuntu (x64, Arm64), import keys and secure your server in user friendly way
 - [Idena armer](https://github.com/ltraveler/idena-armer) - script that helps to install Idena node client on your mobile device with ARM64 architecture in
@@ -59,7 +60,7 @@ _Click `Edit this page` below to add your project_
 - [idena public shared node monitor](https://github.com/pocoloko/idena-shared-node-monitor/) - Remote monitor for idena public shared node
 - [Idena shared node guide](https://github.com/pocoloko/idena-shared-node-guide/) - Idena public shared node setup guide using your own SSL termination
 - [Idena node proxy logparser](https://github.com/pocoloko/idena-node-proxy-logparser/) - A command-line log parser for idena-node-proxy logs
-- [Idena node mining monitor](https://github.com/pocoloko/idena-mining-monitor/) -Script to check if an idena identity is mining...
+- [Idena node mining monitor](https://github.com/pocoloko/idena-mining-monitor/) - Script to check if an idena identity is mining...
 - [Idena AIO](https://github.com/idena-Egyptian-Pharoh/idena-aio/) -Idena-AIO install and manage your node to make it easier than before - Egyptian Pharaoh
 
 ### Developers
