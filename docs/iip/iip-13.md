@@ -8,7 +8,7 @@ sidebar_label: IIP-13 Penalty management
 
 `Author`: Zen
 
-`Status`: Review
+`Status`: Withdrawn
 
 `Type`: Standard
 
