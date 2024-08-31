@@ -11,16 +11,11 @@ _Click `Edit this page` below to add your project_
 ### Websites
 
 - [Idena.site](https://idena.site/) - The comprehensive How-to Guide and FAQ about running Idena node on VPS
-- [Idena Arabic](https://idena-ar.com/) - Arabic website about Idena project
-- [Idena - Identity Explorer](https://idena.hardcoder.xyz) - A lightweight identity-only explorer built with `PHP` on top of `idena-indexer-api`
-- [iDNA.bet ✦ Sports Betting Platform](https://idna.bet) - The 1st Proof-of-Personhood betting platform based on IDENA Blockchain ✧ 100% KYC Free ✧ 100% anonymous bets ✦ [GitHub Repository](https://github.com/Toni-d-e-v/iDNA-BET)
 - [holismo.org](https://holismo.org) - Decentralized Human Democracy Project
 
 ### Idena blockchain snapshots
 
 - [GitHub Repository](https://github.com/ltraveler/idenachain.db) - Mirror 1
-- [Idena.site](https://sync.idena.site/idenachain.db.zip) - Mirror 2
-- [Idena Arabic](https://sync.idena-ar.com/idenachain.db.zip) - Mirror 3
 
 ### Wallets
 
@@ -43,7 +38,6 @@ _Click `Edit this page` below to add your project_
 - [Discord Idena Node Watcher](https://github.com/Toni-d-e-v/discord-idena-node-watcher/) - Checks if your node is offline and notfy you before you get penal!
 
 ### Useful links
-
 - [Idena node manager](https://gitlab.com/crackowich/idena-manager) - tool used for easier installation, maintenance and update of idena nodes
 - [Ad Refresher](https://github.com/Zen-44/ad-refresher) - tool used to maintain Idena ads visible
 - [Idena Sibling](https://github.com/ltraveler/idena-sibling) - Ansible Playbook for fast Idena Shared and Regular Node Deployment and management ✦ [The complete Idena Sibling Manual](https://medium.com/@idna.project/6ff31873101b)
