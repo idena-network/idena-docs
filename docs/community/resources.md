@@ -12,6 +12,7 @@ _Click `Edit this page` below to add your project_
 
 - [Idena.site](https://idena.site/) - The comprehensive How-to Guide and FAQ about running Idena node on VPS
 - [holismo.org](https://holismo.org) - Decentralized Human Democracy Project
+- [Oracle Loan](https://oracle-loan.idena.cloud/) - This service allows you to borrow iDNA to run oracle votes on the Idena Blockchain
 
 ### Idena blockchain snapshots
 
