@@ -107,7 +107,7 @@ Request body example:
 
 ```
  {
-  "token": "428489af-3ca1-4861-b1c7-5f634f6466e2",
+  "token": "example-session-token",
   "address": "0xFf893698faC953dBbCdC3276e8aD13ed3267fB06"
 }
 ```
@@ -140,7 +140,7 @@ Request body example:
 
 ```
 {
-  "token": "428489af-3ca1-4861-b1c7-5f634f6466e2",
+  "token": "example-session-token",
   "signature": "0xe0434ea8ff5123a570b6b7e5f1b837af4524372d4552021bfcede66219abe00c
                 376a8c8417299be23938b9644ba922ffd36bbbdd1cdf15719da9b2af9affdec601"
 }
@@ -230,7 +230,7 @@ These methods are not used for the Idena authentication protocol.
 Request example:
 
 ```
-/get-account?token=428489af-3ca1-4861-b1c7-5f634f6466e2
+/get-account?token=example-session-token
 ```
 
 Successful response example:
@@ -259,7 +259,7 @@ Request body example:
 
 ```
 {
-  "token": "428489af-3ca1-4861-b1c7-5f634f6466e2",
+  "token": "example-session-token",
 }
 ```
 

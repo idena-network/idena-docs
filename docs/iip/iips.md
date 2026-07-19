@@ -26,3 +26,4 @@ Having a IIP here does not make it a formally accepted standard until its status
 | 11     | [Increasing the cost of 51% attack](/docs/iip/iip-11)                              | midenaio | Standard | Final  |                                             |
 | 12     | [Locking invitee rewards](/docs/iip/iip-12)                                        | midenaio | Standard | Final  |                                             |
 | 13     | [Sending the rewards of penalized identities to the zero wallet](/docs/iip/iip-13) | Zen      | Standard | Review |                                             |
+| 14     | [Repeated reported-flip penalty](/docs/iip/iip-14)                                | ubiubi18 | Standard | Draft  |                                             |

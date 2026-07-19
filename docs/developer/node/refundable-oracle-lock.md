@@ -21,7 +21,7 @@ All money locked on the RefundableOracleLock-loser contract is sent to the addre
 
 ![image](https://user-images.githubusercontent.com/47352542/105392562-28129900-5c3d-11eb-85c0-402829951a2d.png)
 
-In order to deploy several smart contracts having recursive references to each other see [how to calculate the address of the smart contract beforehand](./smart-contracts-methods#smart-contract-address).
+In order to deploy several smart contracts having recursive references to each other see [how to calculate the address of the smart contract beforehand](./smart-contracts#custom-contracts-address).
 
 ## Smart contract data
 

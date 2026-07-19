@@ -167,9 +167,9 @@ You can find the implementation of convertions [here](https://github.com/idena-n
 
 Idena-sdk-as exposes a series of structures (`Vector`, `PersistentMap`, `KeyValue`) to simplify storing data in an efficient way.
 
-- `PersistentMap`<`K`, `V`>: key-value map. Any type that can be marshaled (see [Marshaling](#marshaling)) into bytes can be used as a key and value
-- `Vector`<`T`>: array that allows you to store the value by index
-- `KeyValue`<`K`,`V`>: saves a single value for a given key
+- `PersistentMap<K, V>`: key-value map. Any type that can be marshaled (see [Marshaling](#marshaling)) into bytes can be used as a key and value
+- `Vector<T>`: array that allows you to store the value by index
+- `KeyValue<K, V>`: saves a single value for a given key
 
 :::caution
 All structures need to be initialized using a unique prefix, which will be used to identify the structure's keys in the serialized state. The data is not loaded during the contract instantiation (lazy loading). The data is fetched from the state once the value is read on a particular key.

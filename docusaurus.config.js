@@ -1,11 +1,14 @@
 // @ts-check
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const math = require('remark-math');
-const katex = require('rehype-katex');
+const {themes: prismThemes} = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+module.exports = async function createConfig() {
+  const [{default: math}, {default: katex}] = await Promise.all([
+    import('remark-math'),
+    import('rehype-katex'),
+  ]);
+
+  const config = {
   title: 'Idena documentation',
   tagline: 'Proof of Personhood is the building block for Web 3.0',
   url: 'https://docs.idena.io',
@@ -15,7 +18,11 @@ const config = {
   projectName: 'idena-docs',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -185,11 +192,12 @@ const config = {
         copyright: `Idena Docs ${new Date().getFullYear()}`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
         defaultLanguage: 'javascript',
       },
     }),
-};
+  };
 
-module.exports = config;
+  return config;
+};

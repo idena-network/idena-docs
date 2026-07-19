@@ -69,7 +69,7 @@ Method `contract_deploy` creates [`DeployContractTx`](./smart-contracts#1-deploy
 - `code`: compiled WebAssembly code of a custom contract
 - `args`: dynamic list of parameters of constructor which is specific to a particular contract
 - `nonce`: unique nonce for the custom contract (allows you to generate unique addresses for contracts with the same `code` and `args`)
-- `maxFee`: must cover a sum of `txFee`+`gasCost` (see [more about `maxFee`](./smart-contracts#gas-and-transaction-fee))
+- `maxFee`: must cover a sum of `txFee`+`gasCost` (see [more about `maxFee`](./smart-contracts#contract-transaction-fee))
 
 **Example:**
 
@@ -102,7 +102,7 @@ Method `contract_deploy` creates [`DeployContractTx`](./smart-contracts#1-deploy
 - `codeHash`: predefined smart contract code
 - `amount`: amount of coins that will be blocked at the smart contract stake
 - `args`: dynamic list of parameters relevant to the specified smart contract
-- `maxFee`: must cover a sum of `txFee`+`gasCost` (see [more about `maxFee`](./smart-contracts#gas-and-transaction-fee))
+- `maxFee`: must cover a sum of `txFee`+`gasCost` (see [more about `maxFee`](./smart-contracts#contract-transaction-fee))
 
 **Example:**
 
